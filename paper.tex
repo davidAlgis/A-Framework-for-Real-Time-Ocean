@@ -495,8 +495,8 @@ To reduce the complexity of this problem, \framework opts for an interpolation s
 % More precisely, in \framework the velocity is obtained using around 10 IFFTs only.
 
 More concretely, the velocity must be computed at any horizontal position in $I=[y_{min}, y_{max}]$.
-In \framework, $N$ growing depths $y_i$ are chosen in this interval $I$.
-For each of these depths $y_i$, the $i$-th velocity $\mathbf{v_i}(\mathbf x,y_i,t)$ is computed using one IFFT, leading to $N$ IFFTs for all the sampled depths $y_i$.
+In \framework, $d$ growing depths $y_i$ are chosen in this interval $I$.
+For each of these depths $y_i$, the $i$-th velocity $\mathbf{v_i}(\mathbf x,y_i,t)$ is computed using one IFFT, leading to $d$ IFFTs for all the sampled depths $y_i$.
 Then, the velocity $\mathbf{v}(\mathbf x,y,t)$ at any depth $y\in I$ is computed using an ad hoc interpolation from the different $\mathbf{v_i}$.
 
 A first way to do this interpolation mechanism relies on a linear scheme.
@@ -527,7 +527,7 @@ Hence, a regular sampling along the depth seems inappropriate, albeit the expone
 
 \Framework uses the following logarithmic distribution:
 \begin{equation}
-	d(y_i) =
+	l_d(y_i) =
 	\begin{cases}
 		\beta \ln(\alpha|y_i|^2+1) ~~\text{if}~y_i>0     \\
 		-\beta \ln(\alpha|y_i|^2+1) ~~\text{if}~y_i\leq0 \\
@@ -539,8 +539,8 @@ This distribution is designed based on the following considerations.
 First, while the velocity decays exponentially, it relies on a logarithmic similar to $y_i\mapsto \ln(|y_i|+1)$.
 Since this function transforms the negative $y_i$ into a positive one, the result is multiplied by the sign of $y_i$.
 Also, this function decreases slowly (actually with $\ln(250+1)=5.5$), hence the logarithmic distribution uses the square of $|y_1|$.
-Lastly, the parameter $\alpha$ controls the “squeezing” in the center, while the parameter $\beta$ controls the deepest value of $d$.
-Notice that $\beta$ is chosen as the solution of $d(y_{min})=\frac{y_{min}}{2}$ but not at $y_{min}$: it is the solution giving the best accuracy after multiple tries.
+Lastly, the parameter $\alpha$ controls the “squeezing” in the center, while the parameter $\beta$ controls the deepest value of $l_d$.
+Notice that $\beta$ is chosen as the solution of $l_d(y_{min})=\frac{y_{min}}{2}$ but not at $y_{min}$: it is the solution giving the best accuracy after multiple tries.
 
 Figure \ref{fig:comparisonGrid} compares the logarithmic discretization to the uniform discretization. As expected, the behavior with the former leads to fewer points close to $y_{min}$ and more points close to $y_{max}$.
 Note also the higher density of points close to $y=0$.
@@ -554,7 +554,7 @@ Note also the higher density of points close to $y=0$.
 	\label{fig:comparisonGrid}
 \end{figure}
 
-Moreover, using the logarithmic distribution leads to $d(y_{min})=\frac{y_{min}}{2}$.
+Moreover, using the logarithmic distribution leads to $l_d(y_{min})=\frac{y_{min}}{2}$.
 Assuming that the velocity at $y_{min}$ is null, then for any depth between $y_{min}$ and $\frac{y_{min}}{2}$ the velocity can be computed between the one at $\frac{y_{min}}{2}$ and $0$.
 
 Figure \ref{fig:interpolationAccuracyComparison} compares the accuracy using linear mechanism and the exponential interpolation with the logarithmic discretization.
