@@ -1,0 +1,68 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\ProvidesPackage{extensionAlgis}[2022 extension David Algis, V1.0]
+
+\usepackage{xcolor,colortbl,xparse}
+
+%display algorithm
+\usepackage{listings}
+ 
+\lstset{
+    backgroundcolor=\color{whiteLavender},   
+    commentstyle=\color{greenF},
+    keywordstyle=\color{bleuF},
+    keywordstyle = [2]{\color{pinkCrayola}},
+    stringstyle=\color{purpleF},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    % numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+}
+
+%I create a new language to add more keywords to c
+\lstdefinelanguage{CCustom}{
+    language     = C,
+    morekeywords = {numthreads,uint, uint2, uint3, StructuredBuffer},
+    % morekeywords = [2]{ht,]}
+}
+
+
+
+
+%To add a background color to lsstinline cf. https://tex.stackexchange.com/questions/357227/adding-background-color-to-verb-or-lstinline-command-without-colorbox
+\usepackage{realboxes}
+
+\DeclareDocumentCommand{\clstinline}{v}{%
+    \Colorbox{whiteLavender}{\csname lstinline\endcsname!#1!}}
+
+
+%color
+\definecolor{bleuC}{rgb}{0.55,0.79,0.90}
+\definecolor{bleuF}{rgb}{0.12,0.61,0.73}
+\definecolor{noirC}{rgb}{0,0.18,0.27}
+\definecolor{jauneC}{rgb}{1,0.71,0}
+\definecolor{orangeF}{rgb}{1,0.52,0}
+\definecolor{whiteLavender}{rgb}{0.84,0.85,0.90}
+\definecolor{greyGainsboro}{rgb}{0.86,0.86,0.86}
+\definecolor{purpleF}{rgb}{0.69,0.1,0.78}
+\definecolor{pinkCrayola}{rgb}{1.0,0.41,0.92}
+\definecolor{redF}{rgb}{0.85,0.31,0.29}
+\definecolor{redC}{rgb}{1.0,0.43,0.34}
+\definecolor{greenC}{rgb}{0.85,0.94,0.7}
+\definecolor{greenF}{rgb}{0.41,0.71,0.27}
+
+%command
+\newcommand\todo[1]{\textcolor{red}{#1}}
+\newcommand\Wij{W_{ij}}
+\newcommand\gradWij{\nabla W_{ij}}
+
+%+ and - for itemize
+\newcommand\pro{\item[\textcolor{bleuF}{+}]}
+\newcommand\con{\item[\textcolor{red}{-}]}
