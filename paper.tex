@@ -39,7 +39,6 @@
 \def\framework{the Arc Blanc framework\xspace}
 \def\etal{\emph{et al.}\xspace}
 \def\ie{\emph{i.e.}\xspace}
-\def\cf{\emph{cf.}\xspace}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Arc Blanc: a real time ocean simulation framework}
@@ -91,7 +90,7 @@ The computational power of modern GPUs and CPUs, coupled with the latest high-sp
 They make it possible to perform real-time simulations on large discrete grids surrounded by solids, albeit with some physical approximations, thanks to their massively parallel capabilities.
 
 While there are many articles describing different parts of ocean simulation, the literature lacks papers that bring all the pieces together.
-This article proposes a fully described real-time framework designed to simulate the free surface of the ocean and the interactions between solid objects and the surrounding fluid in real time (\cf Figure \ref{fig:overviewFramework}).
+This article proposes a fully described real-time framework designed to simulate the free surface of the ocean and the interactions between solid objects and the surrounding fluid in real time (see Figure \ref{fig:overviewFramework}).
 This new framework incorporates three different methods from the literature:
 \begin{itemize}
 	\item The simulation of the free surface of the ocean, initially developed by Tessendorf (2004) \cite{tessendorfSimulatingOceanWater1999} and its improvements along the years \cite{horvathEmpiricalDirectionalWave2015,tessendorfGilliganPrototypeFramework2017}.
@@ -185,14 +184,14 @@ It also presents our first contributions: calculation of the fluid velocity at a
 
 Let us introduce some notations as follows:
 \begin{itemize}
-	\item The scalar $H\in\mathbb R^+$ denotes the depth of the water. \Framework assumes \textbf{deep water} and therefore supposes that $H$ tends towards $+\infty$\footnote{\cf appendix \ref{sec:annexe} for more details on this assumption.}.
+	\item The scalar $H\in\mathbb R^+$ denotes the depth of the water. \Framework assumes \textbf{deep water} and therefore supposes that $H$ tends towards $+\infty$\footnote{see appendix \ref{sec:annexe} for more details on this assumption.}.
 	\item The scalar $h(\mathbf x, t)\in\mathbb R$ is the height of the water surface at the horizontal position $\mathbf x=\left[x z\right]^T$ and at time $t$.
 	\item The vector $\mathbf{v}(\mathbf x, y, t) =  \left[v_x(\mathbf x, y, t)\ v_y(\mathbf x, y, t)\ v_z(\mathbf x, y, t)\right]^T\in\mathbb R^3$ represents the velocity of the fluid at the horizontal position $\mathbf x$, depth $y$ and time $t$.
 	\item The vector $\phi(\mathbf x,y,t)\in\mathbb R^3$ is the potential velocity of fluid at the horizontal position $\mathbf x$, depth $y$ and time $t$.
 	\item The scalar $g=9.80665~m.s^{-2}$ denotes the standard gravity, while $\mathbf g\in\mathbb R^3$ is the gravitational field.
 \end{itemize}
 
-Tessendorf method is based on the following approximations of the Navier-Stokes equations\footnote{\cf appendix \ref{sec:annexe-NS}.}:
+Tessendorf method is based on the following approximations of the Navier-Stokes equations\footnote{see appendix \ref{sec:annexe-NS}.}:
 \begin{equation}
 	\label{equa:systemTessendorf}
 	\left\lbrace
@@ -218,7 +217,7 @@ where $\mathbf{k}=\left[k_x\ k_z\right]^T$ is the wave vector with $k_x=\frac{2\
 	\label{equa:heightWaterBis}
 	\tilde{h}(t, \mathbf{k}) = \tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t),
 \end{equation}
-where $k$ is the Euclidean norm of the wave vector $\mathbf{k}$, $\omega(k)=\sqrt{gk}$ is the \textbf{dispersion relation}\footnote{The dispersion relation is defined for deep water, \cf appendix \ref{sec:annexe} for more details on this assumption.} and $\tilde{h}_0^*$ the conjugate of $\tilde{h}_0$.
+where $k$ is the Euclidean norm of the wave vector $\mathbf{k}$, $\omega(k)=\sqrt{gk}$ is the \textbf{dispersion relation}\footnote{The dispersion relation is defined for deep water, see appendix \ref{sec:annexe} for more details on this assumption.} and $\tilde{h}_0^*$ the conjugate of $\tilde{h}_0$.
 Researchers in oceanography have made statistical measurements on the ocean to compute $\tilde{h}_0$, leading to many \textit{ocean spectra} \cite{tessendorfGilliganPrototypeFramework2017}.
 In its original paper, Tessendorf (2004) \cite{tessendorfSimulatingOceanWater1999} used the \textit{Phillips Spectrum} with Gaussian fluctuation, leading to the following expression of $\tilde{h}_0(\mathbf{k})$:
 \begin{equation}
@@ -336,7 +335,7 @@ Computed using $10000$ random samples, the normalization integral (Equation \ref
 
 Note that we applied a first normalization factor $Q_{DB}$ to the simple Donelan Banner spectrum \ref{equa:ddb} before calculating this second normalization factor $\widetilde{Q_{DB\xi}}(r_{omega})$. In fact, if we simply approximate the full-spectrum normalization factor before applying it, we'll be faced with a normalization problem, because for small values of $r_{omega}$, $Q_{DB\xi}(\omega)$ will be very low and therefore numerically difficult to normalize.
 
-Finally, \framework uses a last parameter $\delta\in[0,1]$ that represents how much the waves orientation is constant ($\delta = 0$) or not ($\delta = 1$) (\cf Figure \ref{fig:dispersionEffect}).
+Finally, \framework uses a last parameter $\delta\in[0,1]$ that represents how much the waves orientation is constant ($\delta = 0$) or not ($\delta = 1$) (see Figure \ref{fig:dispersionEffect}).
 Its meaning is as follows:
 \begin{itemize}
 	\item $\delta = 0$ indicates a \emph{neutral} directional spectrum, that has no consequence on $\tilde{h}_0$;
@@ -417,7 +416,7 @@ Moreover, the different cascades are cut off at arbitrary value to avoid overlap
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Velocity of water}
 \label{subsec:velWater}
-Starting from the system \ref{equa:systemTessendorf}, \framework proposes to compute the velocity of the water at any depth $y$, as follows\footnote{\cf appendix \ref{sec:annexe} for more details on the origin of this expression}:
+Starting from the system \ref{equa:systemTessendorf}, \framework proposes to compute the velocity of the water at any depth $y$, as follows\footnote{see appendix \ref{sec:annexe} for more details on the origin of this expression}:
 \begin{equation}\label{equa:velocity}
 	% \left[
 	%   \begin{array}{c} \displaystyle v_x(\mathbf x,y,t) \\ \displaystyle v_y(x,y,z,t) \\ \displaystyle v_z(x,y,z,t) \end{array}
@@ -470,7 +469,7 @@ Nevertheless, using the standard IFFT algorithm (such as the one of Cooley and T
 Unlike usual IFFT, the used range is $\left[-N/2, N/2\right]$ and so the wave vectors have negative components (\emph{e.g.} the height).
 To fit with the theory of Fourier transforms, in \framework each value at index $i,j$ of the 2D matrices is multiplied by $(-1)^{i+j}$.
 
-In \framework, the number of IFFT applications is divided by two using Theorem \ref{theorem:ifft} on Hermitian matrices\footnote{A matrix $X=(x_{n,m})$ is Hermitian if it is equal to its own conjugate transpose: $X = X^{\dagger}$ or $x_{n,m}=x^*_{m,n}$.} (\cf annex \ref{sec:annexe-2IFFT} for its demonstration).
+In \framework, the number of IFFT applications is divided by two using Theorem \ref{theorem:ifft} on Hermitian matrices\footnote{A matrix $X=(x_{n,m})$ is Hermitian if it is equal to its own conjugate transpose: $X = X^{\dagger}$ or $x_{n,m}=x^*_{m,n}$.} (see annex \ref{sec:annexe-2IFFT} for its demonstration).
 \begin{theorem}
 	\label{theorem:ifft}
 	Let: $X=(x_{n,m}), Y=(y_{n,m}) \in M_n(\mathbb{C})$ be two Hermitian matrices.
@@ -593,7 +592,7 @@ Hence, this optimization function $J$ is defined as follows:
 \end{equation}
 where $d$ is the interpolation degree, $P(d)$ measures the performance of the velocity interpolation, $A(d)$ measures the accuracy of the velocity interpolation, and $\alpha$ and $\beta$ are the weight arbitrary assigned to the performances and the accuracy functions.
 
-To make $P(d)$ and $A(d)$ having the same order of magnitude, the units are the \textbf{decisecond} for performance and the \textbf{meter per seconds} for accuracy (\cf figure \ref{fig:interpolationCriteria}).
+To make $P(d)$ and $A(d)$ having the same order of magnitude, the units are the \textbf{decisecond} for performance and the \textbf{meter per seconds} for accuracy (see figure \ref{fig:interpolationCriteria}).
 Moreover, the performance being the more important for real-time process, the following arbitrary choice are made for the coefficients of $J$:
 \begin{equation}
 	\begin{cases}
@@ -618,7 +617,7 @@ It is the value used in \framework.
 	\centering
 	\includegraphics[width=0.8\textwidth]{Figures/multiObjectiveAccuracy1Duration2.png}
 	\caption{Multi-objective function $P$ to optimize, with two objectives: performance and accuracy.
-		Its minimum is reached by the interpolation degree of $8$. For more details on each objective, \cf Figures \ref{fig:interpolationCriteria} which represent them individually.}
+		Its minimum is reached by the interpolation degree of $8$. For more details on each objective, see Figures \ref{fig:interpolationCriteria} which represent them individually.}
 	\label{fig:multiObjectiveFunction}
 \end{figure}
 
@@ -836,7 +835,7 @@ Then, the integration scheme can be rewritten as follows:
 \end{equation}
 
 Since $M$ moves, the shift indexes $k$, $l$, $o,$ and $p$ can be outside the boundary of the simulation zone $Z$.
-To solve this problem, the size $m$ of the boundary of $Z$ is increased such that $m>1$ (\cf Figure \ref{fig:examGrid}).
+To solve this problem, the size $m$ of the boundary of $Z$ is increased such that $m>1$ (see Figure \ref{fig:examGrid}).
 \Framework takes $m=16$ which is large enough for large translations.
 
 % Pattern Info
@@ -943,7 +942,7 @@ While $h_b$ is defined by the user, the value of $w_f$ is estimated as follows:
 \begin{equation}
 	h_f = \mathbf{v_M}h_{M}\times i_f\times\frac{v_w}{v_{M}},
 \end{equation}
-where $\mathbf{v_M}$ is the velocity of the body $M$, $h_M$ is the full height of $M$, $i_f$ is a user parameter allowing more user control, $v_w$ is the submerged volume of $M$ (\cf Section~\ref{sec:fluidToSolidAction}), and $v_{M}$ is the full volume of $M$.
+where $\mathbf{v_M}$ is the velocity of the body $M$, $h_M$ is the full height of $M$, $i_f$ is a user parameter allowing more user control, $v_w$ is the submerged volume of $M$ (see Section~\ref{sec:fluidToSolidAction}), and $v_{M}$ is the full volume of $M$.
 Hence, for more realism $h_f$ is made proportional to the velocity of $M$:
 the faster $M$ moves, the bigger the waves generated by $M$ at its front are.
 
@@ -1122,7 +1121,7 @@ Indeed, \framework processes each solid and each FDM grid simulation in parallel
 \section{Conclusions}\label{sec:conclusions}
 This article presents three methods that together produce a realistic albeit approximate simulation of the ocean, and the way used to combine them together. % indiquer la nouveauté du papier ici...
 These methods are simple to implement and fully parallelizable on GPU.
-\Framework is a demonstration that these methods achieve real-time performance on a desktop PC (\cf section \ref{sec:results_and_discussions}).
+\Framework is a demonstration that these methods achieve real-time performance on a desktop PC (see section \ref{sec:results_and_discussions}).
 
 This article gives an original expression for the ocean velocity associated with the Tessendorf method, as well as the key details of its implementation. This velocity is an important input for the realistic calculation of fluid-induced forces on solids.
 This also improves the stability and physical coherence of the FDM for wave generation.
@@ -1332,7 +1331,7 @@ They are discussed below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Incompressibility}
-As mention in Section~3.3.2 of Hulin \etal (2001) \cite{hulinHydrodynamiquePhysique2001}, a fluid can be considered incompressible if $u<<c_{sound}$ where $c_{sound}$ if the sound speed in ocean which is approximately equal to $c_{sound} = 1530m.s^{-1}$\footnote{\cf \url{https://en.wikipedia.org/wiki/Sound_speed_profile}.}.
+As mention in Section~3.3.2 of Hulin \etal (2001) \cite{hulinHydrodynamiquePhysique2001}, a fluid can be considered incompressible if $u<<c_{sound}$ where $c_{sound}$ if the sound speed in ocean which is approximately equal to $c_{sound} = 1530m.s^{-1}$\footnote{see \url{https://en.wikipedia.org/wiki/Sound_speed_profile}.}.
 Aside from phenomena such as hurricane, this inequality seems reasonable for oceans, and leads to consider that ocean is incompressible.
 More formally:
 \begin{equation}
@@ -1342,8 +1341,8 @@ Consequently, density can be factorized in each term of equations \ref{equa:ns0}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Inviscid}
-A fluid can be considered inviscid if $Re>>1$ (\cf Section~2.3.1 of Hulin \etal (2001) \cite{hulinHydrodynamiquePhysique2001}) where $Re=VL/\nu$ is the \emph{Reynolds number} of the fluid defined by the order of magnitude of its velocity $V$, its characteristic length $L$ and its dynamic viscosity $\nu$.
-For Tessendorf derivation, $V$ is the velocity of waves, $L$ its wave length and for seawater at $20$°C its is stated that $\nu=1.0508.10^{-6}$ (\cf the measure of the ITTC \cite{ittcFreshWaterSeawater2011}).
+A fluid can be considered inviscid if $Re>>1$ (see Section~2.3.1 of Hulin \etal (2001) \cite{hulinHydrodynamiquePhysique2001}) where $Re=VL/\nu$ is the \emph{Reynolds number} of the fluid defined by the order of magnitude of its velocity $V$, its characteristic length $L$ and its dynamic viscosity $\nu$.
+For Tessendorf derivation, $V$ is the velocity of waves, $L$ its wave length and for seawater at $20$°C its is stated that $\nu=1.0508.10^{-6}$ (see the measure of the ITTC \cite{ittcFreshWaterSeawater2011}).
 Therefore, the inequality is true for product $VL >> 10^{-5}$.
 For these values the ocean can be considered as flat.
 Hence, the viscosity term $\nu$ of Navier-Stokes equations \ref{equa:ns0} can be neglected.
@@ -1353,9 +1352,9 @@ Hence, the viscosity term $\nu$ of Navier-Stokes equations \ref{equa:ns0} can be
 If a fluid is irrotational at time $t_0$, it must remain irrotational unless there are changes in the boundary conditions.
 Clearly, flat sea are irrotational fluid, corresponding to $\nabla\times\mathbf{u} = \mathbf{0}$.
 Therefore, it can assume that for calm waves the fluid remains irrotational.
-Then, there exists a scalar field called \textbf{velocity potential} defined by $\phi = \mathbf{\nabla} \phi$ from \emph{Helmholtz decomposition}\footnote{\cf \url{https://en.wikipedia.org/wiki/Helmholtz_decomposition}.}.
+Then, there exists a scalar field called \textbf{velocity potential} defined by $\phi = \mathbf{\nabla} \phi$ from \emph{Helmholtz decomposition}\footnote{see \url{https://en.wikipedia.org/wiki/Helmholtz_decomposition}.}.
 
-These three assumptions lead to the Bernoulli equation (\cf Section~5.3.2 of Hulin \etal (2001), which is the following simplified version of the Cauchy momentum equation:
+These three assumptions lead to the Bernoulli equation (see Section~5.3.2 of Hulin \etal (2001), which is the following simplified version of the Cauchy momentum equation:
 \begin{equation}
 	\frac{\partial \phi}{\partial t} + \frac{1}{2}\|\nabla\phi\|^2 + \frac{p}{\rho} + gy = 0
 	\label{equa:bernoulli}
