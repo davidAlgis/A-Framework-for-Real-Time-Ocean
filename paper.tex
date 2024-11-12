@@ -938,9 +938,9 @@ The idea is that a moving body displaces the water from its submerged hull, prod
 This effect is modeled using a quite simple affine function $g(z)=a\cdot z+b$.
 The slope coefficient $a$ is defined considering the maximum height $h_b$ on the back of the mask and the height $h_f$ on its front.
 
-While $h_b$ is defined by the user, the value of $w_f$ is estimated as follows:
+While $h_b$ is defined by the user, the value of $h_f$ is estimated as follows:
 \begin{equation}
-	h_f = \mathbf{v_M}h_{M}\times i_f\times\frac{v_w}{v_{M}},
+	h_f = ||\mathbf{v_M}||h_{M}\times i_f\times\frac{v_w}{v_{M}},
 \end{equation}
 where $\mathbf{v_M}$ is the velocity of the body $M$, $h_M$ is the full height of $M$, $i_f$ is a user parameter allowing more user control, $v_w$ is the submerged volume of $M$ (see Section~\ref{sec:fluidToSolidAction}), and $v_{M}$ is the full volume of $M$.
 Hence, for more realism $h_f$ is made proportional to the velocity of $M$:
