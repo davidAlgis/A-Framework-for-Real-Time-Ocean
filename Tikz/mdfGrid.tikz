@@ -1,0 +1,148 @@
+\tikzset{
+        pattern size/.store in=\mcSize,
+        pattern size = 5pt,
+        pattern thickness/.store in=\mcThickness,
+        pattern thickness = 0.3pt,
+        pattern radius/.store in=\mcRadius,
+        pattern radius = 1pt}
+    \makeatletter
+    \pgfutil@ifundefined{pgf@pattern@name@_ej9ftc0ab}{
+        \pgfdeclarepatternformonly[\mcThickness,\mcSize]{_ej9ftc0ab}
+        {\pgfqpoint{0pt}{-\mcThickness}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {
+            \pgfsetcolor{\tikz@pattern@color}
+            \pgfsetlinewidth{\mcThickness}
+            \pgfpathmoveto{\pgfqpoint{0pt}{\mcSize}}
+            \pgfpathlineto{\pgfpoint{\mcSize+\mcThickness}{-\mcThickness}}
+            \pgfusepath{stroke}
+        }}
+    \makeatother
+
+    % Pattern Info
+
+    \tikzset{
+        pattern size/.store in=\mcSize,
+        pattern size = 5pt,
+        pattern thickness/.store in=\mcThickness,
+        pattern thickness = 0.3pt,
+        pattern radius/.store in=\mcRadius,
+        pattern radius = 1pt}
+    \makeatletter
+    \pgfutil@ifundefined{pgf@pattern@name@_gzs542kby}{
+        \pgfdeclarepatternformonly[\mcThickness,\mcSize]{_gzs542kby}
+        {\pgfqpoint{0pt}{-\mcThickness}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {
+            \pgfsetcolor{\tikz@pattern@color}
+            \pgfsetlinewidth{\mcThickness}
+            \pgfpathmoveto{\pgfqpoint{0pt}{\mcSize}}
+            \pgfpathlineto{\pgfpoint{\mcSize+\mcThickness}{-\mcThickness}}
+            \pgfusepath{stroke}
+        }}
+    \makeatother
+
+    % Pattern Info
+
+    \tikzset{
+        pattern size/.store in=\mcSize,
+        pattern size = 5pt,
+        pattern thickness/.store in=\mcThickness,
+        pattern thickness = 0.3pt,
+        pattern radius/.store in=\mcRadius,
+        pattern radius = 1pt}
+    \makeatletter
+    \pgfutil@ifundefined{pgf@pattern@name@_if0d7hgzw}{
+        \pgfdeclarepatternformonly[\mcThickness,\mcSize]{_if0d7hgzw}
+        {\pgfqpoint{0pt}{-\mcThickness}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {
+            \pgfsetcolor{\tikz@pattern@color}
+            \pgfsetlinewidth{\mcThickness}
+            \pgfpathmoveto{\pgfqpoint{0pt}{\mcSize}}
+            \pgfpathlineto{\pgfpoint{\mcSize+\mcThickness}{-\mcThickness}}
+            \pgfusepath{stroke}
+        }}
+    \makeatother
+
+    % Pattern Info
+
+    \tikzset{
+        pattern size/.store in=\mcSize,
+        pattern size = 5pt,
+        pattern thickness/.store in=\mcThickness,
+        pattern thickness = 0.3pt,
+        pattern radius/.store in=\mcRadius,
+        pattern radius = 1pt}
+    \makeatletter
+    \pgfutil@ifundefined{pgf@pattern@name@_t5vgpnhjz}{
+        \pgfdeclarepatternformonly[\mcThickness,\mcSize]{_t5vgpnhjz}
+        {\pgfqpoint{0pt}{-\mcThickness}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {\pgfpoint{\mcSize}{\mcSize}}
+        {
+            \pgfsetcolor{\tikz@pattern@color}
+            \pgfsetlinewidth{\mcThickness}
+            \pgfpathmoveto{\pgfqpoint{0pt}{\mcSize}}
+            \pgfpathlineto{\pgfpoint{\mcSize+\mcThickness}{-\mcThickness}}
+            \pgfusepath{stroke}
+        }}
+    \makeatother
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,564); %set diagram left start at 0, and has height of 564
+
+        %Shape: Grid [id:dp18421760386327657] 
+        \draw  [draw opacity=0][fill=noirC  ,fill opacity=0 ][line width=0.75]  (136.36,40.92) -- (450,40.92) -- (450,350) -- (136.36,350) -- cycle ; \draw  [color=noirC  ,draw opacity=0.05 ][line width=0.75]  (136.36,40.92) -- (136.36,350)(142.36,40.92) -- (142.36,350)(148.36,40.92) -- (148.36,350)(154.36,40.92) -- (154.36,350)(160.36,40.92) -- (160.36,350)(166.36,40.92) -- (166.36,350)(172.36,40.92) -- (172.36,350)(178.36,40.92) -- (178.36,350)(184.36,40.92) -- (184.36,350)(190.36,40.92) -- (190.36,350)(196.36,40.92) -- (196.36,350)(202.36,40.92) -- (202.36,350)(208.36,40.92) -- (208.36,350)(214.36,40.92) -- (214.36,350)(220.36,40.92) -- (220.36,350)(226.36,40.92) -- (226.36,350)(232.36,40.92) -- (232.36,350)(238.36,40.92) -- (238.36,350)(244.36,40.92) -- (244.36,350)(250.36,40.92) -- (250.36,350)(256.36,40.92) -- (256.36,350)(262.36,40.92) -- (262.36,350)(268.36,40.92) -- (268.36,350)(274.36,40.92) -- (274.36,350)(280.36,40.92) -- (280.36,350)(286.36,40.92) -- (286.36,350)(292.36,40.92) -- (292.36,350)(298.36,40.92) -- (298.36,350)(304.36,40.92) -- (304.36,350)(310.36,40.92) -- (310.36,350)(316.36,40.92) -- (316.36,350)(322.36,40.92) -- (322.36,350)(328.36,40.92) -- (328.36,350)(334.36,40.92) -- (334.36,350)(340.36,40.92) -- (340.36,350)(346.36,40.92) -- (346.36,350)(352.36,40.92) -- (352.36,350)(358.36,40.92) -- (358.36,350)(364.36,40.92) -- (364.36,350)(370.36,40.92) -- (370.36,350)(376.36,40.92) -- (376.36,350)(382.36,40.92) -- (382.36,350)(388.36,40.92) -- (388.36,350)(394.36,40.92) -- (394.36,350)(400.36,40.92) -- (400.36,350)(406.36,40.92) -- (406.36,350)(412.36,40.92) -- (412.36,350)(418.36,40.92) -- (418.36,350)(424.36,40.92) -- (424.36,350)(430.36,40.92) -- (430.36,350)(436.36,40.92) -- (436.36,350)(442.36,40.92) -- (442.36,350)(448.36,40.92) -- (448.36,350) ; \draw  [color=noirC  ,draw opacity=0.23 ][line width=0.75]  (136.36,40.92) -- (450,40.92)(136.36,46.92) -- (450,46.92)(136.36,52.92) -- (450,52.92)(136.36,58.92) -- (450,58.92)(136.36,64.92) -- (450,64.92)(136.36,70.92) -- (450,70.92)(136.36,76.92) -- (450,76.92)(136.36,82.92) -- (450,82.92)(136.36,88.92) -- (450,88.92)(136.36,94.92) -- (450,94.92)(136.36,100.92) -- (450,100.92)(136.36,106.92) -- (450,106.92)(136.36,112.92) -- (450,112.92)(136.36,118.92) -- (450,118.92)(136.36,124.92) -- (450,124.92)(136.36,130.92) -- (450,130.92)(136.36,136.92) -- (450,136.92)(136.36,142.92) -- (450,142.92)(136.36,148.92) -- (450,148.92)(136.36,154.92) -- (450,154.92)(136.36,160.92) -- (450,160.92)(136.36,166.92) -- (450,166.92)(136.36,172.92) -- (450,172.92)(136.36,178.92) -- (450,178.92)(136.36,184.92) -- (450,184.92)(136.36,190.92) -- (450,190.92)(136.36,196.92) -- (450,196.92)(136.36,202.92) -- (450,202.92)(136.36,208.92) -- (450,208.92)(136.36,214.92) -- (450,214.92)(136.36,220.92) -- (450,220.92)(136.36,226.92) -- (450,226.92)(136.36,232.92) -- (450,232.92)(136.36,238.92) -- (450,238.92)(136.36,244.92) -- (450,244.92)(136.36,250.92) -- (450,250.92)(136.36,256.92) -- (450,256.92)(136.36,262.92) -- (450,262.92)(136.36,268.92) -- (450,268.92)(136.36,274.92) -- (450,274.92)(136.36,280.92) -- (450,280.92)(136.36,286.92) -- (450,286.92)(136.36,292.92) -- (450,292.92)(136.36,298.92) -- (450,298.92)(136.36,304.92) -- (450,304.92)(136.36,310.92) -- (450,310.92)(136.36,316.92) -- (450,316.92)(136.36,322.92) -- (450,322.92)(136.36,328.92) -- (450,328.92)(136.36,334.92) -- (450,334.92)(136.36,340.92) -- (450,340.92)(136.36,346.92) -- (450,346.92) ; \draw  [color=noirC  ,draw opacity=0.23 ][line width=0.75]   ;
+        %Shape: Rectangle [id:dp547080242263563] 
+        \draw  [color=bleuF  ,draw opacity=1 ][line width=2]  (136.36,40.92) -- (450,40.92) -- (450,350) -- (136.36,350) -- cycle ;
+        %Shape: Free Drawing [id:dp16389717932057302] 
+        \draw  [color=redF  ,draw opacity=0.75 ][line width=3] [line join = round][line cap = round] (283.08,208.61) .. controls (289.35,208.61) and (295.62,208.61) .. (301.89,208.61) ;
+        %Shape: Free Drawing [id:dp6514381276869639] 
+        \draw  [color=redF  ,draw opacity=0.75 ][line width=3] [line join = round][line cap = round] (282.73,206.89) .. controls (282.73,196.47) and (282.72,186.01) .. (283.77,175.64) ;
+        %Shape: Free Drawing [id:dp13092878561093435] 
+        \draw  [color=redF  ,draw opacity=0.75 ][line width=3] [line join = round][line cap = round] (302.59,207.92) .. controls (302.47,197.51) and (302.36,187.09) .. (302.24,176.67) ;
+        %Shape: Free Drawing [id:dp5462520472144785] 
+        \draw  [color=redF  ,draw opacity=0.75 ][line width=3] [line join = round][line cap = round] (283.08,176.33) .. controls (284.56,171.93) and (293.16,160.51) .. (298.76,166.03) .. controls (301.23,168.46) and (300.16,171.9) .. (301.2,174.96) ;
+        %Shape: Rectangle [id:dp9704870933714468] 
+        \draw  [color=bleuF  ,draw opacity=1 ][dash pattern={on 1.69pt off 2.76pt}][line width=1.5]  (171.21,75.26) -- (415.15,75.26) -- (415.15,315.66) -- (171.21,315.66) -- cycle ;
+        %Straight Lines [id:da38855254386882176] 
+        \draw    (139.36,116.47) -- (161.22,116.47) -- (168.21,116.47) ;
+        \draw [shift={(171.21,116.47)}, rotate = 180] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+        \draw [shift={(136.36,116.47)}, rotate = 0] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+        %Shape: Free Drawing [id:dp3540042623046231] 
+        \draw  [color=bleuF  ,draw opacity=0.75 ][dash pattern={on 0.84pt off 2.51pt}][line width=2] [line join = round][line cap = round] (303.98,194.87) .. controls (310.26,194.87) and (316.53,194.87) .. (322.8,194.87) ;
+        %Shape: Free Drawing [id:dp8775965632933027] 
+        \draw  [color=bleuF  ,draw opacity=0.75 ][dash pattern={on 0.84pt off 2.51pt}][line width=2] [line join = round][line cap = round] (303.64,193.16) .. controls (303.64,182.73) and (303.63,172.28) .. (304.68,161.91) ;
+        %Shape: Free Drawing [id:dp5311149288572253] 
+        \draw  [color=bleuF  ,draw opacity=0.75 ][dash pattern={on 0.84pt off 2.51pt}][line width=2] [line join = round][line cap = round] (323.5,194.19) .. controls (323.38,183.77) and (323.27,173.35) .. (323.15,162.94) ;
+        %Shape: Free Drawing [id:dp08731645654343467] 
+        \draw  [color=bleuF  ,draw opacity=0.75 ][dash pattern={on 0.84pt off 2.51pt}][line width=2] [line join = round][line cap = round] (303.98,162.59) .. controls (305.47,158.19) and (314.06,146.77) .. (319.67,152.29) .. controls (322.14,154.73) and (321.07,158.17) .. (322.11,161.22) ;
+        %Straight Lines [id:da6328717969591378] 
+        \draw  [dash pattern={on 4.5pt off 4.5pt}]  (292.83,189.13) -- (307.32,174.84)(294.93,191.26) -- (309.43,176.97) ;
+        \draw [shift={(314.79,169.59)}, rotate = 135.42] [fill=noirC  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- cycle    ;
+        \draw [shift={(293.88,190.19)}, rotate = 315.42] [color=noirC  ][fill=noirC  ][line width=0.75]      (0, 0) circle [x radius= 4.02, y radius= 4.02]   ;
+        %Shape: Rectangle [id:dp24283171619060062] 
+        \draw  [draw opacity=0][pattern=_ej9ftc0ab,pattern size=6pt,pattern thickness=0.75pt,pattern radius=0pt, pattern color={rgb, 255:red, 0; green, 0; blue, 0}][dash pattern={on 1.69pt off 2.76pt}][line width=1.5]  (136.36,40.92) -- (450,40.92) -- (450,75.26) -- (136.36,75.26) -- cycle ;
+        %Shape: Rectangle [id:dp10861726753012169] 
+        \draw  [draw opacity=0][pattern=_gzs542kby,pattern size=6pt,pattern thickness=0.75pt,pattern radius=0pt, pattern color={rgb, 255:red, 0; green, 0; blue, 0}][dash pattern={on 1.69pt off 2.76pt}][line width=1.5]  (136.36,315.66) -- (450,315.66) -- (450,350) -- (136.36,350) -- cycle ;
+        %Shape: Rectangle [id:dp5141618659391596] 
+        \draw  [draw opacity=0][pattern=_if0d7hgzw,pattern size=6pt,pattern thickness=0.75pt,pattern radius=0pt, pattern color={rgb, 255:red, 0; green, 0; blue, 0}][dash pattern={on 1.69pt off 2.76pt}][line width=1.5]  (136.36,75.26) -- (171.21,75.26) -- (171.21,315.66) -- (136.36,315.66) -- cycle ;
+        %Shape: Rectangle [id:dp23578330881890452] 
+        \draw  [draw opacity=0][pattern=_t5vgpnhjz,pattern size=6pt,pattern thickness=0.75pt,pattern radius=0pt, pattern color={rgb, 255:red, 0; green, 0; blue, 0}][dash pattern={on 1.69pt off 2.76pt}][line width=1.5]  (415.15,75.26) -- (450,75.26) -- (450,315.66) -- (415.15,315.66) -- cycle ;
+
+        % Text Node
+        \draw (87.58,182.06) node [anchor=north west][inner sep=0.75pt]  [font=\Large,color=bleuF  ,opacity=1 ]  {$Z( t)$};
+        % Text Node
+        \draw (245.21,210.03) node [anchor=north west][inner sep=0.75pt]  [color=redF  ,opacity=1 ]  {$M(t+dt)$};
+        % Text Node
+        \draw (184.92,102.4) node [anchor=north west][inner sep=0.75pt]  [font=\large,color=noirC  ,opacity=1 ]  {$m=5$};
+        % Text Node
+        \draw (311.37,133.64) node [anchor=north west][inner sep=0.75pt]  [color=bleuF  ,opacity=1 ]  {$M(t)$};
+        % Text Node
+        \draw (180.62,123.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {Dirichlet\\Boundary\\Condition};
+    \end{tikzpicture}

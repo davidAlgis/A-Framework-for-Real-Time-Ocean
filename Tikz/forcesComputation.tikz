@@ -1,0 +1,65 @@
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Free Drawing [id:dp49208310323847604] 
+\draw  [color=noirC  ,draw opacity=1 ] [line join = round][line cap = round] (323.05,134.3) .. controls (321.49,101.18) and (319.93,68.07) .. (318.38,34.96) ;
+%Shape: Triangle [id:dp21450793538584334] 
+\draw  [color=noirC  ,draw opacity=1 ][fill=noirC  ,fill opacity=1 ] (298.53,43.21) -- (319.45,49.25) -- (319.05,35.88) -- cycle ;
+%Straight Lines [id:da9684371008260857] 
+\draw [color=jauneC  ,draw opacity=1 ][line width=1.5]   (311.73,180.27) -- (311.73,93.27) ;
+\draw [shift={(311.73,90.27)}, rotate = 90] [fill=jauneC  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+
+\draw  [color=bleuF  ,draw opacity=1 ][line width=1.25] (124,169.13) .. controls (128.08,169.45) and (131.98,169.76) .. (136.5,169.76) .. controls (141.02,169.76) and (144.92,169.45) .. (149,169.13) .. controls (153.08,168.81) and (156.98,168.5) .. (161.5,168.5) .. controls (166.02,168.5) and (169.92,168.81) .. (174,169.13) .. controls (178.08,169.45) and (181.98,169.76) .. (186.5,169.76) .. controls (191.02,169.76) and (194.92,169.45) .. (199,169.13) .. controls (203.08,168.81) and (206.98,168.5) .. (211.5,168.5) .. controls (216.02,168.5) and (219.92,168.81) .. (224,169.13) .. controls (228.08,169.45) and (231.98,169.76) .. (236.5,169.76) .. controls (241.02,169.76) and (244.92,169.45) .. (249,169.13) .. controls (253.08,168.81) and (256.98,168.5) .. (261.5,168.5) .. controls (266.02,168.5) and (269.92,168.81) .. (274,169.13) .. controls (278.08,169.45) and (281.98,169.76) .. (286.5,169.76) .. controls (291.02,169.76) and (294.92,169.45) .. (299,169.13) .. controls (303.08,168.81) and (306.98,168.5) .. (311.5,168.5) .. controls (316.02,168.5) and (319.92,168.81) .. (324,169.13) .. controls (328.08,169.45) and (331.98,169.76) .. (336.5,169.76) .. controls (341.02,169.76) and (344.92,169.45) .. (349,169.13) .. controls (353.08,168.81) and (356.98,168.5) .. (361.5,168.5) .. controls (366.02,168.5) and (369.92,168.81) .. (374,169.13) .. controls (378.08,169.45) and (381.98,169.76) .. (386.5,169.76) .. controls (391.02,169.76) and (394.92,169.45) .. (399,169.13) .. controls (403.08,168.81) and (406.98,168.5) .. (411.5,168.5) .. controls (416.02,168.5) and (419.92,168.81) .. (424,169.13) .. controls (428.08,169.45) and (431.98,169.76) .. (436.5,169.76) .. controls (441.02,169.76) and (444.92,169.45) .. (449,169.13) .. controls (453.08,168.81) and (456.98,168.5) .. (461.5,168.5) .. controls (466.02,168.5) and (469.92,168.81) .. (474,169.13) .. controls (478.08,169.45) and (481.98,169.76) .. (486.5,169.76) .. controls (491.02,169.76) and (494.92,169.45) .. (499,169.13) .. controls (503.08,168.81) and (506.98,168.5) .. (511.5,168.5) .. controls (516.02,168.5) and (519.92,168.81) .. (524,169.13) .. controls (528.08,169.45) and (531.98,169.76) .. (536.5,169.76) .. controls (541.02,169.76) and (544.92,169.45) .. (549,169.13) .. controls (549.52,169.09) and (550.04,169.05) .. (550.56,169.01) ;
+%Shape: Chord [id:dp9222212078666753] 
+\draw   (434.66,131.22) .. controls (434.66,131.36) and (434.67,131.49) .. (434.67,131.63) .. controls (435.82,164.74) and (386.65,193.32) .. (324.86,195.45) .. controls (263.07,197.59) and (212.05,172.48) .. (210.9,139.37) .. controls (210.88,138.77) and (210.88,138.17) .. (210.89,137.57) -- cycle ;
+\draw  [color=jauneC  ,draw opacity=1 ][line width=1.2] (307.43,177.01) -- (315.31,184.5)(314.93,177.01) -- (307.81,184.5) ;
+\draw  [color=redF  ,draw opacity=1 ][line width=1.2] (326.18,143.79) -- (334.06,151.28)(333.68,143.79) -- (326.56,151.28) ;
+\draw  [color=greenF  ,draw opacity=1 ][line width=1.2] (317.18,159.76) -- (325.06,167.25)(324.68,159.76) -- (317.56,167.25) ;
+%Straight Lines [id:da6833085719175513] 
+\draw [color=noirC  ,draw opacity=1 ] [line width=1.5]  [dash pattern={on 0.84pt off 2.51pt}](380.73,75.93) -- (460.73,45.4) ;
+\draw [shift={(463.53,44.33)}, rotate = 159.11] [fill=noirC  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Straight Lines [id:da7530514536019823] 
+\draw [color=redF  ,draw opacity=1 ][line width=1.5]   [dash pattern={on 0.84pt off 2.51pt}](380.73,75.93) -- (336.55,76.39) ;
+\draw [shift={(333.55,76.42)}, rotate = 359.41] [fill=redF  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Straight Lines [id:da05372263080021544] 
+\draw [color=bleuF  ,draw opacity=1 ][line width=1.5]   [dash pattern={on 0.84pt off 2.51pt}](380.73,75.93) -- (409.73,75.9) ;
+\draw [shift={(412.73,75.9)}, rotate = 179.94] [fill=bleuF  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Straight Lines [id:da7579020242850126] 
+\draw [color=greenF  ,draw opacity=1 ][line width=1.5]   (321,163.33) -- (321,235.33) ;
+\draw [shift={(321,238.33)}, rotate = 270] [fill=greenF  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da8160608699048041] 
+\draw [color=purpleF  ,draw opacity=1 ][line width=1.5]   (311.27,180.63) -- (361.16,150.9) ;
+\draw [shift={(363.73,149.37)}, rotate = 149.21] [fill=purpleF  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Straight Lines [id:da27174483878422506] 
+\draw [color=redF  ,draw opacity=1 ][line width=1.5]   (330.07,147.2) -- (301.23,159.14) ;
+\draw [shift={(298.46,160.29)}, rotate = 337.51] [fill=redF  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+
+% Text Node
+\draw (298.12,99.03) node   [align=left] {\begin{minipage}[lt]{15.46pt}\setlength\topsep{0pt}
+$\displaystyle \mathbf{\textcolor{jauneC}{F}}\textcolor{jauneC}{_{b}}$
+\end{minipage}};
+% Text Node
+\draw (332.37,225.08) node   [align=left] {\begin{minipage}[lt]{15.46pt}\setlength\topsep{0pt}
+$\displaystyle \mathbf{\textcolor{greenF}{F}}\textcolor{greenF}{_{g}}$
+\end{minipage}};
+% Text Node
+\draw (379.74,149) node   [align=left] {\begin{minipage}[lt]{15.46pt}\setlength\topsep{0pt}
+$\displaystyle \mathbf{\textcolor{purpleF}{F}}\textcolor{purpleF}{_{w}}$
+\end{minipage}};
+\draw (297.07,144.96) node   [align=left] {\begin{minipage}[lt]{15.46pt}\setlength\topsep{0pt}
+$\displaystyle \mathbf{\textcolor{redF}{F}}\textcolor{redF}{_{a}}$
+\end{minipage}};
+\draw (423.23,48.8) node   [align=left] {\begin{minipage}[lt]{16.65pt}\setlength\topsep{0pt}
+$\displaystyle \mathbf{\textcolor{noirC}{v}}$
+\end{minipage}};
+% Text Node
+\draw (356.74,88.41) node  [color=redF  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{15.46pt}\setlength\topsep{0pt}
+$\displaystyle \mathbf{v}_{a}$
+\end{minipage}};
+% Text Node
+\draw (394.5,88.07) node  [color=bleuF  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{15.46pt}\setlength\topsep{0pt}
+$\displaystyle \mathbf{v}_{w}$
+\end{minipage}};
+
+
+\end{tikzpicture}

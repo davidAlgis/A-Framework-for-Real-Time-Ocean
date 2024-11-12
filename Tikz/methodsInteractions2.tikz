@@ -1,0 +1,195 @@
+       
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,455); %set diagram left start at 0, and has height of 455
+%Shape: Free Drawing [id:dp8603531921559896] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (390.22,339.28) .. controls (393.07,339.45) and (396.02,339.02) .. (398.69,338.46) ;
+%Shape: Free Drawing [id:dp2500240637589526] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (397.56,338.73) .. controls (400.67,338.28) and (402.42,338.38) .. (405.76,339.15) ;
+%Shape: Free Drawing [id:dp22807396048683826] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (406.63,339.42) .. controls (408.41,339.08) and (410.18,338.73) .. (411.96,338.39) ;
+%Shape: Free Drawing [id:dp6568094837332833] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (412.25,338.46) .. controls (414.03,338.5) and (415.81,338.55) .. (417.6,338.59) ;
+%Shape: Free Drawing [id:dp4416594790336241] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (417.98,338.73) .. controls (420.02,336.76) and (424.72,336.27) .. (427.71,335.41) ;
+%Shape: Free Drawing [id:dp49902282602899084] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (428.09,335.55) .. controls (429.14,335.7) and (430.19,335.9) .. (431.15,336.24) ;
+%Shape: Free Drawing [id:dp8209494812040591] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (431.93,335.9) .. controls (431.93,333.53) and (438.42,335.26) .. (440.19,333.2) ;
+%Shape: Free Drawing [id:dp43784664426183084] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (440.12,333.34) .. controls (441.64,333.41) and (447.35,334) .. (447.94,334.86) ;
+%Shape: Free Drawing [id:dp9979291407728784] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (447.37,334.44) .. controls (449.13,335.43) and (451.35,335.91) .. (453.48,336.38) ;
+%Shape: Free Drawing [id:dp7174373866747644] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (479.43,336.38) .. controls (481.41,336.47) and (483.38,336.57) .. (485.35,336.66) ;
+%Shape: Free Drawing [id:dp35571541755225833] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (485.81,336.43) .. controls (487.82,335.83) and (490,335.38) .. (492.23,335.3) ;
+%Shape: Free Drawing [id:dp6517745773954128] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (493.56,335.27) .. controls (496.12,335.62) and (499.35,335.18) .. (501.19,336.52) ;
+%Shape: Free Drawing [id:dp11943834783012486] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (454.24,336.66) .. controls (457.82,337.01) and (461.27,337.86) .. (464.74,338.59) ;
+%Shape: Free Drawing [id:dp08096241721079589] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (465.12,338.32) .. controls (467.58,338.09) and (470.35,338.12) .. (472.37,337.07) ;
+%Shape: Free Drawing [id:dp4586440055085247] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (472.18,336.93) .. controls (475.05,336.64) and (477.88,336.09) .. (480.77,335.97) ;
+%Shape: Free Drawing [id:dp8643520997973324] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (310.47,86.17) .. controls (310.66,87.44) and (311.37,87.59) .. (313.11,88.21) ;
+%Shape: Free Drawing [id:dp41053931568761937] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (313.94,88.54) .. controls (315.88,89.95) and (319.25,89.57) .. (321.95,89.92) ;
+%Shape: Free Drawing [id:dp8753550133218676] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (321.57,89.92) .. controls (325.62,89.04) and (333.67,86.34) .. (334.74,90.61) ;
+%Shape: Free Drawing [id:dp6044104097984935] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (335.42,90.75) .. controls (338.27,90.92) and (341.22,90.48) .. (343.89,89.93) ;
+%Shape: Free Drawing [id:dp1133664675065813] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (342.76,90.2) .. controls (345.87,89.75) and (347.62,89.85) .. (350.96,90.61) ;
+%Shape: Free Drawing [id:dp14641265929551495] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (351.83,90.89) .. controls (353.61,90.54) and (355.38,90.2) .. (357.16,89.86) ;
+%Shape: Free Drawing [id:dp04468526292008057] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (357.45,89.92) .. controls (359.23,89.97) and (361.01,90.01) .. (362.8,90.06) ;
+%Shape: Free Drawing [id:dp3169152267293517] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (363.18,90.2) .. controls (365.22,88.22) and (369.92,87.74) .. (372.91,86.88) ;
+%Shape: Free Drawing [id:dp8683222294654521] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (373.29,87.02) .. controls (374.34,87.17) and (375.39,87.36) .. (376.35,87.71) ;
+%Shape: Free Drawing [id:dp7064207947091747] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (377.13,87.36) .. controls (377.13,85) and (383.62,86.73) .. (385.39,84.67) ;
+%Shape: Free Drawing [id:dp2826786374991679] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (385.32,84.8) .. controls (386.84,84.87) and (392.55,85.47) .. (393.14,86.33) ;
+%Shape: Free Drawing [id:dp35738787304064756] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (392.57,85.91) .. controls (394.33,86.89) and (396.55,87.37) .. (398.68,87.85) ;
+%Shape: Free Drawing [id:dp3469101468710549] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (424.63,87.85) .. controls (426.61,87.94) and (428.58,88.03) .. (430.55,88.12) ;
+%Shape: Free Drawing [id:dp8601565341054169] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (431.01,87.89) .. controls (433.02,87.3) and (435.2,86.84) .. (437.43,86.76) ;
+%Shape: Free Drawing [id:dp8016761339542061] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (438.76,86.74) .. controls (441.32,87.08) and (444.55,86.65) .. (446.39,87.99) ;
+%Shape: Free Drawing [id:dp04056122633315895] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (446.58,88.12) .. controls (448.02,90.21) and (452.93,88.86) .. (456.13,89.09) ;
+%Shape: Free Drawing [id:dp7560452977320581] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (456.72,89.33) .. controls (459.35,89.47) and (461.97,89.61) .. (464.59,89.75) ;
+%Shape: Free Drawing [id:dp4982590802382407] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (465.29,90.06) .. controls (465.29,91.68) and (469.74,90.34) .. (471.97,90.34) ;
+%Shape: Free Drawing [id:dp1567137162727653] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (300.58,85.5) .. controls (303.88,85.3) and (307.36,85.01) .. (310.5,85.77) ;
+%Shape: Free Drawing [id:dp0894226159117456] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (399.44,88.12) .. controls (403.02,88.48) and (406.47,89.33) .. (409.94,90.06) ;
+%Shape: Free Drawing [id:dp48570402141289437] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (410.32,89.78) .. controls (412.78,89.55) and (415.55,89.59) .. (417.57,88.54) ;
+%Shape: Free Drawing [id:dp285858825313406] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (417.38,88.4) .. controls (420.25,88.1) and (423.08,87.56) .. (425.97,87.43) ;
+
+%Curve Lines [id:da9040337566466732] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (418,252.07) .. controls (382.72,215.32) and (390.66,176.17) .. (408.87,138.85) ;
+\draw [shift={(410,136.57)}, rotate = 116.57] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da975702201587326] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (259,177.07) .. controls (285.19,168.82) and (301.97,149.76) .. (302.95,122.15) ;
+\draw [shift={(303,119.57)}, rotate = 90] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+%Shape: Free Drawing [id:dp21121940403629336] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=1.5] [line join = round][line cap = round] (141.63,237.83) .. controls (133.71,247.43) and (138.1,228.95) .. (131.02,234.5) .. controls (129.17,235.95) and (130.42,238.46) .. (128.66,240) .. controls (125.92,242.41) and (126.34,235.58) .. (123.49,235.5) .. controls (122.1,235.46) and (120.94,238.07) .. (119.43,239) .. controls (117.12,240.41) and (116.37,237.34) .. (115.3,237.5) .. controls (114.16,237.68) and (113.17,239.94) .. (112.07,240) .. controls (110.55,240.08) and (110.5,238.22) .. (109.27,237.83) .. controls (107.1,237.14) and (100.48,238.9) .. (97.54,238.17) ;
+%Shape: Free Drawing [id:dp4000966161220809] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=1.5] [line join = round][line cap = round] (173.94,237.83) .. controls (181.76,247.43) and (177.24,228.95) .. (184.19,234.5) .. controls (186.01,235.95) and (184.83,238.46) .. (186.56,240) .. controls (189.26,242.41) and (188.76,235.58) .. (191.53,235.5) .. controls (192.88,235.46) and (194.04,238.07) .. (195.52,239) .. controls (197.78,240.41) and (198.46,237.34) .. (199.51,237.5) .. controls (200.62,237.68) and (201.61,239.94) .. (202.69,240) .. controls (204.16,240.08) and (204.18,238.22) .. (205.37,237.83) .. controls (207.48,237.14) and (213.92,238.9) .. (216.77,238.17) ;
+%Shape: Free Drawing [id:dp49026646995688583] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (139.6,232.47) .. controls (139.13,231.87) and (138.67,231.27) .. (138.2,230.67) ;
+%Shape: Free Drawing [id:dp42859897078057396] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (174.4,232.67) .. controls (175.47,231.33) and (176.87,230.23) .. (178.4,229.47) ;
+%Shape: Free Drawing [id:dp7097116186565762] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (173.6,230.67) .. controls (174.57,229.7) and (175.33,228.41) .. (175.6,227.07) ;
+%Shape: Free Drawing [id:dp8108250698864656] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (141.8,231.07) .. controls (141.2,229.93) and (140.6,228.8) .. (140,227.67) ;
+%Shape: Free Drawing [id:dp9105726642086147] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (136.6,229.27) .. controls (136.6,227.91) and (135.72,227.27) .. (134.4,227.27) ;
+%Shape: Free Drawing [id:dp40890628356456615] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (138.4,224.27) .. controls (137.74,223.41) and (136.77,221.3) .. (136,222.07) ;
+%Shape: Free Drawing [id:dp27209154174726424] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (180,230.07) .. controls (181.25,228.9) and (182.41,227.5) .. (184,226.87) ;
+%Shape: Free Drawing [id:dp9872660548438218] 
+\draw  [color=bleuF  ,draw opacity=1 ][line width=0.75] [line join = round][line cap = round] (176.8,225.47) .. controls (179.13,223.73) and (181.47,222) .. (183.8,220.27) ;
+%Curve Lines [id:da5697454235571319] 
+\draw    (428.19,333.7) .. controls (438.01,343.15) and (447.64,343.15) .. (458.01,333.15) ;
+%Shape: Free Drawing [id:dp2000192856075027] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (428.73,333.15) .. controls (430.23,333.09) and (457.79,333.02) .. (457.1,332.79) ;
+%Shape: Free Drawing [id:dp6555459383170699] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (430.01,333.7) .. controls (437.84,343.03) and (451.03,345.83) .. (456.92,334.06) ;
+%Shape: Free Drawing [id:dp5777315276294384] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (435.28,336.06) .. controls (441.95,339.92) and (458.13,337.15) .. (438.55,337.15) ;
+%Shape: Free Drawing [id:dp7637417629660436] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (437.1,336.42) .. controls (438.23,336.37) and (453.55,336.24) .. (453.82,335.88) ;
+%Shape: Free Drawing [id:dp3709912309271548] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (452.92,335.7) .. controls (451.1,336.67) and (449.28,337.64) .. (447.46,338.61) ;
+%Shape: Free Drawing [id:dp847746244051083] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (443.1,336.06) .. controls (442.98,328.12) and (442.85,320.18) .. (442.73,312.24) ;
+%Shape: Triangle [id:dp48520830777325696] 
+\draw  [color=noirC  ,draw opacity=1 ][fill=noirC  ,fill opacity=1 ] (451.28,317.2) -- (443.46,321.97) -- (443.46,312.42) -- cycle ;
+%Curve Lines [id:da2502588859907662] 
+\draw    (142.85,237.03) .. controls (152.67,246.48) and (162.31,246.48) .. (172.67,236.48) ;
+%Shape: Free Drawing [id:dp6396608201355461] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (143.4,236.48) .. controls (144.89,236.43) and (172.46,236.35) .. (171.76,236.12) ;
+%Shape: Free Drawing [id:dp5335943442126272] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (144.67,237.03) .. controls (152.5,246.37) and (165.69,249.17) .. (171.58,237.39) ;
+%Shape: Free Drawing [id:dp9922960706926033] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (149.95,239.39) .. controls (156.62,243.26) and (172.79,240.48) .. (153.22,240.48) ;
+%Shape: Free Drawing [id:dp08424829069161999] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (151.76,239.76) .. controls (152.9,239.7) and (168.22,239.58) .. (168.49,239.21) ;
+%Shape: Free Drawing [id:dp8637839741273775] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (167.58,239.03) .. controls (165.76,240) and (163.95,240.97) .. (162.13,241.94) ;
+%Shape: Free Drawing [id:dp42376809417509564] 
+\draw  [color=noirC  ,draw opacity=1 ][line width=3] [line join = round][line cap = round] (157.76,239.39) .. controls (157.64,231.45) and (157.52,223.52) .. (157.4,215.58) ;
+%Shape: Triangle [id:dp008055758002911695] 
+\draw  [color=noirC  ,draw opacity=1 ][fill=noirC  ,fill opacity=1 ] (165.95,220.53) -- (158.13,225.3) -- (158.13,215.76) -- cycle ;
+%Straight Lines [id:da44541466076687497] 
+\draw [color=jauneC  ,draw opacity=1 ]   (443.07,335.67) -- (442.76,299) ;
+\draw [shift={(442.73,296)}, rotate = 89.52] [fill=jauneC  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da5606660633398345] 
+\draw [color=greenF  ,draw opacity=1 ]   (443.07,335.67) -- (444.18,358.2) ;
+\draw [shift={(444.33,361.2)}, rotate = 267.16] [fill=greenF  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (5.36,-2.57) -- (0,0) -- (5.36,2.57) -- cycle    ;
+%Straight Lines [id:da8690302659003838] 
+\draw [color=purpleF  ,draw opacity=1 ]   (443.07,335.67) -- (457.36,320.2) ;
+\draw [shift={(459.4,318)}, rotate = 132.75] [fill=purpleF  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Straight Lines [id:da16006425703319083] 
+\draw [color=redC  ,draw opacity=1 ]   (443.07,335.67) -- (436.18,335.9) ;
+\draw [shift={(433.18,336)}, rotate = 358.07] [fill=redC  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (3.57,-1.72) -- (0,0) -- (3.57,1.72) -- cycle    ;
+%Curve Lines [id:da23798619016682454] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (268,225.07) .. controls (317,228.5) and (333.35,240.09) .. (352.8,275.38) ;
+\draw [shift={(354,277.57)}, rotate = 241.61] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Ellipse [id:dp2909951464538385] 
+\draw  [color=noirC  ,draw opacity=0.37 ][dash pattern={on 4.5pt off 4.5pt}] (56.4,208) .. controls (56.4,174.86) and (104.98,148) .. (164.9,148) .. controls (224.82,148) and (273.4,174.86) .. (273.4,208) .. controls (273.4,241.14) and (224.82,268) .. (164.9,268) .. controls (104.98,268) and (56.4,241.14) .. (56.4,208) -- cycle ;
+%Shape: Ellipse [id:dp4828066329380768] 
+\draw  [color=noirC  ,draw opacity=0.37 ][dash pattern={on 4.5pt off 4.5pt}] (270.73,75) .. controls (270.73,41.68) and (322.55,14.67) .. (386.47,14.67) .. controls (450.38,14.67) and (502.2,41.68) .. (502.2,75) .. controls (502.2,108.32) and (450.38,135.33) .. (386.47,135.33) .. controls (322.55,135.33) and (270.73,108.32) .. (270.73,75) -- cycle ;
+%Shape: Ellipse [id:dp3670773546484374] 
+\draw  [color=noirC  ,draw opacity=0.37 ][dash pattern={on 4.5pt off 4.5pt}] (336.96,309.76) .. controls (336.96,276.62) and (384.34,249.76) .. (442.78,249.76) .. controls (501.22,249.76) and (548.6,276.62) .. (548.6,309.76) .. controls (548.6,342.89) and (501.22,369.76) .. (442.78,369.76) .. controls (384.34,369.76) and (336.96,342.89) .. (336.96,309.76) -- cycle ;
+%Curve Lines [id:da7618965669583558] 
+%\draw    (273,200.67) .. controls (322,202.63) and (300.7,166.55) .. (329.95,131.6) ;
+%\draw [shift={(331.8,129.47)}, rotate = 131.95] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da6148832955452912] 
+\draw    (460.6,122.67) .. controls (483.71,153.92) and (501.91,209.63) .. (464.74,248.12) ;
+\draw [shift={(463,249.87)}, rotate = 315.69] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da4560058000799978] 
+\draw    (268.27,84.8) .. controls (217.67,81.18) and (191.83,116.59) .. (193.4,152) ;
+\draw [shift={(271.4,85.07)}, rotate = 185.78] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da12519478363680803] 
+\draw    (336.96,309.76) .. controls (279.18,320.35) and (247.29,299.43) .. (222.89,264.18) ;
+\draw [shift={(221.4,262)}, rotate = 56.07] [fill=noirC  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+% Text Node
+\draw (299,46.93) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\large Ocean Waves simulation}};
+% Text Node
+\draw (92.98,169.72) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\large Solid to fluid action}};
+% Text Node
+\draw (372.31,275.45) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\large Fluid to solid action}};
+% Text Node
+%\draw (126.4,63.4) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 0)$ use the free}\\{\footnotesize surface as input}};
+\draw (201.4,82.4) node [anchor=north west][inner sep=0.75pt]   [align=left] {\footnotesize $\displaystyle ( 2)$};
+% Text Node
+%\draw (256.4,235) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 1)$ use the intersection}\\{\footnotesize with water as input}};
+\draw (265,315) node [anchor=north west][inner sep=0.75pt]   [align=left] {\footnotesize $\displaystyle ( 1)$};
+% Text Node
+%\draw (314,154.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 2)$ modify the free }\\{\footnotesize surface with his result}};
+%\draw (310,170.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 2)$}};
+% Text Node
+%\draw (487.2,147.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 3)$ use the free}\\{\footnotesize surface as input }};
+% Text Node
+\draw (487.2,175.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 0)$}};
+% Text Node
+%\draw (140.8,335) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 4)$ as it modify the free surface}\\{\footnotesize it will \ also be an input}};
+\draw (310,215) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 3)$ }};
+\draw (290,155) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 4)$ }};
+\draw (371,184) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize $\displaystyle ( 5)$ }};
+\end{tikzpicture}

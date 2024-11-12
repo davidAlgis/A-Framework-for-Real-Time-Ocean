@@ -1,0 +1,36 @@
+\begin{tikzpicture}
+	\begin{axis}[smooth, enlargelimits=0.1, xmin=0.1,xmax=1.8,area legend,
+			axis x line=bottom,
+			axis y line=left,
+			xlabel={Frequency ($Hz$)}, % Add x-axis label
+        	ylabel={Wave Spectra Density ($m^2/Hz$)}, % Add y-axis label
+        	]
+		\addplot[pattern=north east lines,domain=0:0.5,pattern color =redF] coordinates
+			{
+				(0.39,0)(0.5,0.5)(0.7,3)
+			}\closedcycle;
+		\addplot[draw=none,forget plot] coordinates {
+				(0.7, 3)
+				(0.7, 0)
+				(0, 0)  };
+
+		\addplot[pattern=north east lines, domain=0.5:1.1, pattern color=bleuF] coordinates
+			{
+				(0.7,3)(0.8,5)(1,2)(1.1,1)
+			}\closedcycle;
+		\addplot[draw=none,forget plot] coordinates {
+				(1.1, 0.7)
+				(1.1, 0)
+				(0.5, 0)  };
+
+		\addplot[pattern=north east lines,domain=1.1:1.7,pattern color =jauneC] coordinates
+			{
+				(1.1,1)(1.4,0.1)(1.7,0)
+			}\closedcycle;
+		\addplot[draw=none,forget plot] coordinates {
+				(2, 1)
+				(2, 0)
+				(1.1, 0)  };
+		\legend{Cascade $0$,Cascade $1$,Cascade $2$}
+	\end{axis}
+\end{tikzpicture}
