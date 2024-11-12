@@ -1,0 +1,15 @@
+temp/
+*.pdf
+*.log
+main.aux
+main.bbl
+main.lbl
+main.brf
+main.blg
+main.fdb_latexmk
+main.fls
+main.out
+main.synctex.gz
+main.upa
+main.upb
+*.sublime-workspace
