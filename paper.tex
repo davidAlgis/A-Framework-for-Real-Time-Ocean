@@ -150,7 +150,7 @@ These methods look promising because of their physical accuracy.
 Nevertheless, their performance is linked to the number of particles used for the simulation, which makes them impossible to apply in real time for large scale environments.
 
 Another approach related to the dynamics of a ship in water is the calculation of the so-called \emph{Response Amplitude Operator} (RAO), which is expressed using strip theory by Salvesen  \etal (1970) \cite{salvesenShipMotionsSea1970}. Fonseca and Guedes Soares (1998) \cite{fonsecaTimeDomainAnalysisLargeAmplitude1998} improved the method to support more nonlinear effects and large amplitude motions. Varela and Guedes Soares (2011) \cite{varelaInteractiveSimulationShip2011} have used a table of pre-calculated RAO, which are later interpolated to achieve an interactive frame rate.
-However, to our knowledge, this type of method is either too expensive for real-time simulation or not general enough because it requires some physical pre-computation based on CFD or experimental data.
+However, to our knowledge, this type of method is either too expensive for real-time simulation or not general enough because it requires some physical pre-computation based on computational fluid dynamics or experimental data.
 
 Finally, another attempt to achieve real-time performance is to approximate the forces induced by the fluid on the solid on a mesh.
 Basically this is a less accurate method, but it's more efficient and general as it avoids significant pre-calculation.
