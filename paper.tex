@@ -336,7 +336,7 @@ Computed using $10000$ random samples, the normalization integral (Equation \ref
 
 Note that a first normalization factor $Q_{DB}$ is applied to the Donelan-Banner spectrum (Equation \ref{equa:ddb}) before calculating the second normalization factor $\widetilde{Q_{DB\xi}}(r_{\omega})$. In fact, a normalization problem will occur if the full-spectrum normalization factor is simply approximated before its application, because for small values of $r_{\omega}$, $Q_{DB\xi}(\omega)$ will be very low and therefore numerically challenging to normalize.
 
-Finally, \framework uses a last parameter $\delta\in[0,1]$ that represents how much the waves orientation is constant ($\delta = 0$) or not ($\delta = 1$) (see Figure \ref{fig:dispersionEffect}).
+Finally, \framework uses a last parameter $\delta\in[0,1]$ that represents how much the waves orientation is constant ($\delta = 0$) or not ($\delta = 1$) (see Figure~\ref{fig:dispersionEffect}).
 Its meaning is as follows:
 \begin{itemize}
 	\item $\delta = 0$ indicates a \emph{neutral} directional spectrum, that has no consequence on $\tilde{h}_0$;
@@ -352,13 +352,13 @@ This gives the final expression of the custom Donelan-Banner spectrum used in \f
 
 	\subfloat[Using $\delta = 0$.]
 	{
-		\includegraphics[width=0.4\textwidth]{Figures/seaDispersion0SeaState5-contrast.png}
+		\includegraphics[width=0.45\textwidth]{Figures/seaDispersion0SeaState5-contrast.png}
 		\label{fig:dispersion0}
 	}
-	\hspace{1cm}
+	\hfill
 	\subfloat[Using $\delta = 1$.]
 	{
-		\includegraphics[width=0.4\textwidth]{Figures/seaDispersion1SeaState5-contrast.png}
+		\includegraphics[width=0.45\textwidth]{Figures/seaDispersion1SeaState5-contrast.png}
 		\label{fig:dispersion1}
 	}
 	\caption{Effect of the dispersion parameter on sea state $5$ on the Beaufort scale.}
@@ -391,7 +391,7 @@ Taking advantage of the symmetry $\frac{\partial D_z}{\partial x}(\mathbf x,t) =
 While the expression of the water height in Equation \ref{equa:heightWater} is convenient, it may result in an ocean surface that appears overly repetitive.
 A naive solution to handle this problem consists in using a huge resolution $N$, but it has a major impact on performance.
 \Framework uses the more efficient solution proposed by Dupuy and Bruneton (2012) \cite{dupuyRealtimeAnimationRendering2012}.
-It consists in dividing the spectrum into $c$ layers or \emph{cascades} of different length.
+It consists in dividing the spectrum into $c$ layers or \emph{cascades} of different lengths.
 Each of these layers represents a different wavelength in Equation~\ref{equa:heightWater}.
 The length of the $i$-th cascade is denoted by $L_i$.
 These lengths $L_i$ are parameters in the expression of the wave vector component described in Equation~\ref{equa:heightWater}.
