@@ -13,3 +13,10 @@ main.synctex.gz
 main.upa
 main.upb
 *.sublime-workspace
+paper.aux
+paper.bbl
+paper.blg
+paper.brf
+paper.fdb_latexmk
+paper.fls
+paper.synctex.gz
