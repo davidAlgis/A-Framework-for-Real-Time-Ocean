@@ -185,14 +185,14 @@ It also presents our first contribution: calculation of the fluid velocity at an
 
 Let us introduce some notations as follows:
 \begin{itemize}
-	\item The scalar $H\in\mathbb R^+$ denotes the depth of the water. \Framework assumes \textbf{deep water} and therefore supposes that $H$ tends towards $+\infty$\footnote{see appendix \ref{sec:annexe} for more details on this assumption.}.
+	\item The scalar $H\in\mathbb R^+$ denotes the depth of the water. \Framework assumes \textbf{deep water} and therefore supposes that $H$ tends towards $+\infty$\footnote{See appendix \ref{sec:annexe} for more details on this assumption.}.
 	\item The scalar $h(\mathbf x, t)\in\mathbb R$ is the height of the water surface at the horizontal position $\mathbf x=\left[x ~tz\right]^T$ and at time $t$.
 	\item The vector $\mathbf{v}(\mathbf x, y, t) =  \left[v_x(\mathbf x, y, t)\ v_y(\mathbf x, y, t)\ v_z(\mathbf x, y, t)\right]^T\in\mathbb R^3$ represents the velocity of the fluid at the horizontal position $\mathbf x$, depth $y$ and time $t$.
 	\item The scalar $\phi(\mathbf x,y,t)\in\mathbb R$ is the potential velocity of fluid at the horizontal position $\mathbf x$, depth $y$ and time $t$.
 	\item The scalar $g=9.80665~m.s^{-2}$ denotes the standard gravity, while $\mathbf g\in\mathbb R^3$ is the gravitational field.
 \end{itemize}
 
-Tessendorf method is based on the following approximations of the Navier-Stokes equations\footnote{see appendix \ref{sec:annexe-NS}.}:
+Tessendorf method is based on the following approximations of the Navier-Stokes equations\footnote{See appendix \ref{sec:annexe-NS}.}:
 \begin{equation}
 	\label{equa:systemTessendorf}
 	\left\lbrace
@@ -417,7 +417,7 @@ Moreover, the different cascades are cut off at arbitrary value to avoid overlap
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Velocity of water}
 \label{subsec:velWater}
-Starting from the system \ref{equa:systemTessendorf}, \framework proposes to compute the velocity of the water at any depth $y$, as follows\footnote{see appendix \ref{sec:annexe} for more details on the origin of this expression}:
+Starting from the system \ref{equa:systemTessendorf}, \framework proposes to compute the velocity of the water at any depth $y$, as follows\footnote{See appendix \ref{sec:annexe} for more details on the origin of this expression}:
 \begin{equation}\label{equa:velocity}
 	% \left[
 	%   \begin{array}{c} \displaystyle v_x(\mathbf x,y,t) \\ \displaystyle v_y(x,y,z,t) \\ \displaystyle v_z(x,y,z,t) \end{array}
@@ -1332,7 +1332,7 @@ They are discussed below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Incompressibility}
-As mention in Section~3.3.2 of Hulin \etal (2001) \cite{hulinHydrodynamiquePhysique2001}, a fluid can be considered incompressible if $u<<c_{sound}$ where $c_{sound}$ if the sound speed in ocean which is approximately equal\footnote{see \url{https://en.wikipedia.org/wiki/Sound_speed_profile} to $c_{sound} = 1530~m.s^{-1}$.}.
+As mention in Section~3.3.2 of Hulin \etal (2001) \cite{hulinHydrodynamiquePhysique2001}, a fluid can be considered incompressible if $u<<c_{sound}$ where $c_{sound}$ if the sound speed in ocean which is approximately equal\footnote{See \url{https://en.wikipedia.org/wiki/Sound_speed_profile} to $c_{sound} = 1530~m.s^{-1}$.}.
 Aside from phenomena such as hurricane, this inequality seems reasonable for oceans, and leads to consider that ocean is incompressible.
 More formally:
 \begin{equation}
@@ -1353,7 +1353,7 @@ Hence, the viscosity term $\nu$ of Navier-Stokes equations \ref{equa:ns0} can be
 If a fluid is irrotational at time $t_0$, it must remain irrotational unless there are changes in the boundary conditions.
 Clearly, flat sea are irrotational fluid, corresponding to $\nabla\times\mathbf{u} = \mathbf{0}$.
 Therefore, it can assume that for calm waves the fluid remains irrotational.
-Then, there exists a scalar field called \textbf{velocity potential} defined by $\phi = \mathbf{\nabla} \phi$ from \emph{Helmholtz decomposition}\footnote{see \url{https://en.wikipedia.org/wiki/Helmholtz_decomposition}.}.
+Then, there exists a scalar field called \textbf{velocity potential} defined by $\phi = \mathbf{\nabla} \phi$ from \emph{Helmholtz decomposition}\footnote{See \url{https://en.wikipedia.org/wiki/Helmholtz_decomposition}.}.
 
 These three assumptions lead to the Bernoulli equation (see Section~5.3.2 of Hulin \etal (2001), which is the following simplified version of the Cauchy momentum equation:
 \begin{equation}
