@@ -185,14 +185,14 @@ It also presents our first contribution: calculation of the fluid velocity at an
 
 Let us introduce some notations as follows:
 \begin{itemize}
-	\item The scalar $H\in\mathbb R^+$ denotes the depth of the water. \Framework assumes \textbf{deep water} and therefore supposes that $H$ tends towards $+\infty$\footnote{See appendix \ref{sec:annexe} for more details on this assumption.}.
+	\item The scalar $H\in\mathbb R^+$ denotes the depth of the water. \Framework assumes \textbf{deep water} and therefore supposes that $H$ tends towards $+\infty$\footnote{See Appendix \ref{sec:annexe} for more details on this assumption.}.
 	\item The scalar $h(\mathbf x, t)\in\mathbb R$ is the height of the water surface at the horizontal position $\mathbf x=\left[x~z\right]^T$ and at time $t$.
 	\item The vector $\mathbf{v}(\mathbf x, y, t) =  \left[v_x(\mathbf x, y, t)\ v_y(\mathbf x, y, t)\ v_z(\mathbf x, y, t)\right]^T\in\mathbb R^3$ represents the velocity of the fluid at the horizontal position $\mathbf x$, depth $y$ and time $t$.
 	\item The scalar $\phi(\mathbf x,y,t)\in\mathbb R$ is the potential velocity of fluid at the horizontal position $\mathbf x$, depth $y$ and time $t$.
 	\item The scalar $g=9.80665~m.s^{-2}$ denotes the standard gravity, while $\mathbf g\in\mathbb R^3$ is the gravitational field.
 \end{itemize}
 
-Tessendorf method is based on the following approximations of the Navier-Stokes equations\footnote{See appendix \ref{sec:annexe-NS}.}:
+Tessendorf method is based on the following approximations of the Navier-Stokes equations\footnote{See Appendix  \ref{sec:annexe-NS}.}:
 \begin{equation}
 	\label{equa:systemTessendorf}
 	\left\lbrace
@@ -218,8 +218,8 @@ where $\mathbf{k}=\left[k_x\ k_z\right]^T$ is the wave vector with $k_x=\frac{2\
 	\label{equa:heightWaterBis}
 	\tilde{h}(t, \mathbf{k}) = \tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t),
 \end{equation}
-where $k$ is the Euclidean norm of the wave vector $\mathbf{k}$, $\omega(k)=\sqrt{gk}$ is the \textbf{dispersion relation}\footnote{The dispersion relation is defined for deep water, see appendix \ref{sec:annexe} for more details on this assumption.} and $\tilde{h}_0^*$ the conjugate of $\tilde{h}_0$.
-Researchers in oceanography have made statistical measurements on the ocean to compute $\tilde{h}_0$, leading to many \textit{ocean spectra} \cite{tessendorfGilliganPrototypeFramework2017}.
+where $k$ is the Euclidean norm of the wave vector $\mathbf{k}$, $\omega(k)=\sqrt{gk}$ is the \textbf{dispersion relation}\footnote{The dispersion relation is defined for deep water, see Appendix~\ref{sec:annexe} for more details.} and $\tilde{h}_0^*$ the conjugate of $\tilde{h}_0$.
+Researchers in oceanography have made statistical measurements on the ocean to compute $\tilde{h}_0$, leading to many different \textit{ocean spectra} \cite{tessendorfGilliganPrototypeFramework2017}.
 In its original paper, Tessendorf (2004) \cite{tessendorfSimulatingOceanWater1999} used the \textit{Phillips Spectrum} with Gaussian fluctuation, leading to the following expression of $\tilde{h}_0(\mathbf{k})$:
 \begin{equation}
 	\tilde{h}_0(\mathbf{k}) = \xi_{\mathbf{k}}\sqrt{\frac{4\pi}{L_ik}S(\omega)D(\omega, \theta)\left|\frac{\partial\omega(k)}{\partial k}\right|}
@@ -417,7 +417,7 @@ Moreover, the different cascades are cut off at arbitrary value to avoid overlap
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Velocity of water}
 \label{subsec:velWater}
-Starting from the system \ref{equa:systemTessendorf}, \framework proposes to compute the velocity of the water at any depth $y$, as follows\footnote{See appendix \ref{sec:annexe} for more details on the origin of this expression}:
+Starting from the system \ref{equa:systemTessendorf}, \framework proposes to compute the velocity of the water at any depth $y$, as follows\footnote{See Appendix   \ref{sec:annexe} for more details on the origin of this expression}:
 \begin{equation}\label{equa:velocity}
 	% \left[
 	%   \begin{array}{c} \displaystyle v_x(\mathbf x,y,t) \\ \displaystyle v_y(x,y,z,t) \\ \displaystyle v_z(x,y,z,t) \end{array}
