@@ -470,7 +470,7 @@ Nevertheless, using the standard IFFT algorithm (such as the one of Cooley and T
 Unlike usual IFFT, the used range is $\left[-N/2, N/2\right]$ and so the wave vectors have negative components (\emph{e.g.} the height).
 To fit with the theory of Fourier transforms, in \framework each value at index $i,j$ of the 2D matrices is multiplied by $(-1)^{i+j}$.
 
-In \framework, the number of IFFT applications is divided by two using Theorem \ref{theorem:ifft} on Hermitian matrices\footnote{A matrix $X=(x_{n,m})$ is Hermitian if it is equal to its own conjugate transpose: $X = X^{\dagger}$ or $x_{n,m}=x^*_{m,n}$.} (see annex \ref{sec:annexe-2IFFT} for its demonstration).
+In \framework, the number of IFFT applications is divided by two using Theorem \ref{theorem:ifft} on Hermitian matrices\footnote{A matrix $X=(x_{n,m})$ is Hermitian if it is equal to its own conjugate transpose: $X = X^{\dagger}$ or $x_{n,m}=x^*_{m,n}$.} (see annex \ref{sec:annexe-2IFFT} for its proof).
 \begin{theorem}
 	\label{theorem:ifft}
 	Let: $X=(x_{n,m}), Y=(y_{n,m}) \in M_n(\mathbb{C})$ be two Hermitian matrices.
