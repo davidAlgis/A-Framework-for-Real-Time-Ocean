@@ -52,9 +52,10 @@ Other minor issues:
 	🔼 We used "computer graphics" which is more appropriate with our article and JCGT.
 
 - [x] I would recommend removing the subsection title 1.1 and converting Section 1.2 (related work)  to Section 2. ✅ 2025-01-10
-	🔼  Indeed, putting related work in a dedicated section is more coherent with litterature.
+	🔼 Indeed, putting related work in a dedicated section is more coherent with literature.
 
-- [ ] On page 5, "standard gravity" should be "gravitational acceleration."
+- [x] On page 5, "standard gravity" should be "gravitational acceleration." ✅ 2025-01-10
+    🔼 We changed "gravitational acceleration" instead of "standard gravity".
 
 - [ ] In Section 3.2.3 the description of \rho_a is repeated.
 
