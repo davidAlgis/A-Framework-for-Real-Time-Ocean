@@ -1,0 +1,261 @@
+                  Journal of Computer Graphics Techniques Review Form
+
+Reviewer Instructions: Complete this form and return it to
+editor-in-chief@jcgt.org as an e-mail or e-mail attachment in plain
+text form. Please do not convert it to PDF.
+
+Please phrase your comments to preserve your anonymity.
+
+We invite you to diverge from the format here if there is a better way
+to organize your feedback on this paper.
+
+A member of the editorial board will read this form and then either
+shepherd the paper through publication (possibly with another round of
+review), or reject the paper (with later resubmission allowed).
+
+
+
+A JCGT paper should provide a concrete technique with sufficient
+information to allow the reader to:
+
+* Understand how it differs from alternatives
+* Know the advantages AND limitations that will likely be encountered
+  in practice
+* Immediately integrate it into a production workflow
+
+While not every acceptable paper must have this form, a great example
+of a JCGT paper would be a technique that addresses a common graphics
+problem, has been used in production, can be well-summarized in a few
+pages with a complete implementation in a popular language and full
+performance or accuracy evaluation.
+
+As an example, SIGGRAPH paper on a new stable physics algorithm would
+have a philosophical introduction, extensive related work, a
+derivation section, and attractive result images for some common
+benchmark scenes. A JCGT physics paper might instead begin by
+sketching available physics libraries, have a minimal related work
+section on current research, give a derivation augmented with complete
+source code (maybe as supplemental files), and replace the results
+section with timing on various architectures, extensive discussion of
+stability and limitations, and a table of results on real-world test
+cases.
+
+
+_____________________________________________________________________________
+Paper Title: Arc Blanc: a real time ocean simulation framework
+Paper Authors: David Algis, Berenger Bramas, Emmanuelle Darles, Lilian Aveneau
+
+
+> *  What kind of paper is this?
+>       Novel Research/Algorithm/System
+>       Survey
+>       Experience/Advice/Case Study
+>       Production/Implementation Notes
+>       Tutorial
+>       Data Set
+
+Novel Research/Algorithm/System
+
+
+
+> *  Is this a paper that others should read?
+>
+>    If this paper answered a question that you have, made more clear
+>    how to implement something, changed the way that you think about
+>    a problem, enabled further work, or worked out the details of
+>    something that you've thought of before, then it probably is
+>    interesting to JCGT, regardless of the magnitude of the
+>    contribution. If it re-covers old ground or doesn't distinguish
+>    itself along at least one axis like clarity, reliability, or
+>    quality, then this may not be the right venue.
+
+Yes. The paper combines methods developed for ocean simulation and solid-fluid coupling over the past few decades into a complete system with a good discussion of the choices made and their limitations. I believe this is a helpful source for anyone who would like to implement such an ocean simulation system in a video game.
+
+
+
+> *  What is the concrete contribution ("technique") of this paper? 
+>
+>    This should be an algorithm, piece of code, workflow pattern,
+>    data set, proof, equation, circuit, system, or survey that the
+>    readers can directly apply to their own work.
+
+The main contribution of this paper is the system, explaining which techniques are helpful in practice, and providing sufficient details to describe them without getting too much into their derivations. The paper also includes novel components but I would consider them minor.
+
+
+
+> *  How does this technique improve on the existing literature for the
+>    topic?
+>
+>    For example, it may offer better performance, fewer limitations,
+>    make the implementation clearer, provide better evaluation, etc.
+>    An idea need not be novel, but it must offer improvement.
+>    Likewise, a technique need not be better in all dimensions--a
+>    slower method that saves space or is easier to implement may be
+>    of value. Sometimes there is significant related work that the
+>    author may be unaware of that alters the value of the
+>    contribution. If that is the case, please give a citation and
+>    explain the significance.
+
+The improvements on the existing literature are minor. Their practical implications are also not clearly presented, such as what happens if one were to use a simpler method for estimating the fluid velocity away from the surface? On the other hand, the paper describes how to combine methods developed for different components of an ocean simulation system into a single framework, which seems valuable.
+
+
+
+> *  Is this paper topical? 
+>
+>    If this is something that you want to try, tell your colleagues
+>    about, or wish you had known earlier, it is sufficiently topical.
+>    Do you want to see a paper on this topic or technique published?
+
+Yes.
+
+
+
+> *  Does the paper provide sufficient information for you to deploy
+>    the technique?
+>
+>    It should prevent you from going down false paths, avoid having
+>    the implementer reconstruct tedious details, generally speed
+>    integration, and indicate strategies for verifying correctness.
+>
+>    List any additional elements required to deploy it that are not
+>    provided. 
+
+The mathematical descriptions are sufficient, though there are some errors (see below). Algorithmic descriptions could be improved. I am not sure if the paper includes sufficient information for aiding an implementation-oriented reader. There are no source codes included and no pseudocodes in the paper.
+
+
+
+> *  How has the technique been proven or battle-tested? 
+>
+>    Some ways to demonstrate this include: use in production, formal
+>    mathematical proof, and extensive accuracy and performance tests
+>    on real-world data. "Production" need not be commercial, e.g.,
+>    widely-adopted open source applications and libraries, and
+>    teaching and research infrastructure used for several years
+>    contain techniques that are useful, well-understood by their
+>    authors, and reliable. (An idea may be worthy as research, but
+>    not mature enough to be considered a graphics technique.)
+>
+>    List additional information, tests, data, or experiments required
+>    to achieve this threshold.
+
+The paper provides some limited evaluation using only 2 scenes with a single hardware configuration. Therefore, I would not consider that the system described in the paper is battle-tested. That said, it includes a sufficient evaluation to indicate that the system works and delivers good performance on a hardware with reasonable specs.
+
+The novel components are not properly tested. The paper includes some numerical evaluation, but I would have also liked to see qualitative comparisons to see how they impact the results.
+
+
+
+> *  Evaluate the title and abstract.  How can they be improved to better 
+>    explain the take-home contribution of the paper?
+
+The title and the abstract are OK. I would emphasize the novel components a bit less, since their magnitude is limited and the paper lacks qualitative evaluation.
+
+
+
+> *  Rate the quality and level of detail of the exposition as a whole.
+>
+>    A JCGT paper need not have explicit "related work", "results",
+>    and "conclusions" sections. It should offer extensive
+>    verification. The text should be to the point, limit itself to a
+>    single topic, and be supported by lists, equations, tables, and
+>    figures as needed.
+>
+>    Note typos, confusing sections, figures, or ambiguous text. Also
+>    note exemplary text and diagrams. Suggest material that could be
+>    cut to tighten the focus on the core contribution of the paper.
+
+The paper is easy to read. It is a bit verbose and could be shortened, but I think it is acceptable.
+
+
+
+> *  List objective factual errors or overstatements in the technical
+>    content of the paper. Please suggest corrections where possible.
+
+The paper includes numerous errors/typos:
+
+- The normalization factor Q is missing in Equation 13.
+
+- Figure 3 caption mentions the dispersion parameter, but the figure is actually about another parameter \delta.
+
+- I am confused about the parameters of the listed cascades in Section 2.3. First of all, the ranges listed seem wrong: 12/16 is clearly greater than 12/256. I presume this is a typo. Also, shouldn't L be larger for smaller k?
+
+- Figure 9 caption says that F_a is "applied to the center of the submerged part." It should be the "unsubmerged part" instead.
+
+- It is unclear what Figure 11 c shows.
+
+- h* in Equations 48, 50, and 59 should be negative (following Equation 46). The same goes for unlabeled equations above Equation 53.
+
+- In the Equation above Equation 56, "sinh(kY)" should be "sinh(ky)."
+
+- The parameters y, t, and k in Equations 59, 60, 61, and 62 are written in an inconsistent order. They should all use the same order.
+
+- This sentence in Appendix A is unclear and needs more explanation: "Note that while the third equation of system 1 is not used here, it can help to deduce the dispersion relation."
+
+- In Equation 71 v_y should be v_z.
+
+- In Equation 73, there appears to be an extra term: h(x,t)/dt
+
+
+Other minor issues:
+
+- The abstract ends with the term "fluid to solid algorithm." I would replace it with "fluid to solid coupling algorithm."
+
+- The introduction begins with mentioning "scientific computing," but the paper is not about scientific computing at all. I would replace it with "computer graphics."
+
+- I would recommend removing the subsection title 1.1 and converting Section 1.2 (related work)  to Section 2.
+
+- On page 5, "standard gravity" should be "gravitational acceleration."
+
+- In Section 3.2.3 the description of \rho_a is repeated.
+
+- In Section 4.4.2, "M has is bow" should be "M has a bow"
+
+- On page 27, "fluid to solid coupling FDM" should be "solid to fluid coupling FDM."
+
+
+
+> *  Is the bibliography adequate (not too little or too much)?  
+>
+>    JCGT papers should only cite directly relevant work that is
+>    discussed in the text, and should not cite early papers on topics
+>    that are so commonly known as to appear in textbooks. Often three
+>    citations are sufficient. Primary, archival, and peer-reviewed
+>    sources are strongly preferred because they stand the test of
+>    time. Please suggest specific references that might be
+>    eliminated, for example, ones that nod to previous work but which
+>    you don't realistically see a reader seeking out in response to
+>    this paper.
+
+The bibliography is OK, though I am a bit confused as to why Yuksel's PhD thesis is referenced, instead of the related paper:
+
+@article{Yuksel2007,
+   author       = {Cem Yuksel and Donald H. House and John Keyser},
+   title        = {Wave Particles},
+   journal      = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2007)},
+   year         = {2007},
+   volume       = {26},
+   number       = {3},
+   articleno    = {99},
+   location     = {San Diego, California},
+   url          = {http://doi.acm.org/10.1145/1276377.1276501},
+   doi          = {10.1145/1276377.1276501},
+   acmid        = {1276501},
+   publisher    = {ACM Press},
+   address      = {New York, NY, USA},
+}
+
+
+> *  Is the paper ready for shepherding by an editor to incorporate
+>    changes requested in this review?
+>
+>    Could it be made ready for publication with one or more rounds 
+>    of improvement guided by an associate editor, but without any 
+>    additional external reviews?
+
+Yes.
+
+
+
+> *  Additional comments are welcome here.
+
+I enjoyed reading this paper. I would have liked it a lot more if it included more detailed descriptions of the algorithms and/or source code.
+
