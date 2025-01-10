@@ -135,8 +135,9 @@ Maybe ".., preventing any simplifications that could reduce the required calcula
 - [x] Para 2, p 14 "First, while the velocity decays exponentially, it relies on a logarithmic similar to..." should probably be "..., it relies on a logarithmic function similar to..." ✅ 2025-01-10
 	🔼 We added the missing word.
 
-- [ ] Same paragraph, "this function decreases slowly (actually with ln(250 + 1) = 5.5),"
+- [x] Same paragraph, "this function decreases slowly (actually with ln(250 + 1) = 5.5)," ✅ 2025-01-10
 What is the significance of "250 + 1" here?!
+	🔼 The "250 + 1" was to keep the same "form" as the function, but we removed it to avoid confusion 
 
 - [ ] Figure 6, vertical scale should probably be logarithmic to make these graphs more informative. As it is now, three of four graphs are scrunched on top of each other.
 
