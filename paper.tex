@@ -491,7 +491,7 @@ This treatment allows reducing IFFT computation times by a factor close to 2.
 Contrary to the displacement and its derivative which are height maps and 2D functions, the velocity must be known in 3D space.
 Hence, its calculation is more difficult and requires more computation time.
 Computing the velocity for all the points of a 3D grid, or even only the points where it must be evaluated for fluid to solid coupling (Section~\ref{subsubsec:fluidToSolidCoupling}) is not possible in real-time, as it involves a large to huge number of IFFT.
-Unfortunately, the dependency of the attenuation (Equation \ref{equa:attenuationDeep}) on both the wave vectors and $y$ makes the depth dependency of the velocity fundamentally tied to the wave vector, preventing from any simplifications to reduce the needed calculations.
+Unfortunately, the dependency of the attenuation (Equation \ref{equa:attenuationDeep}) on both the wave vectors and $y$ makes the depth dependency of the velocity fundamentally tied to the wave vector, preventing any simplifications that could reduce the required calculations.
 
 To reduce the complexity of this problem, \framework opts for an interpolation scheme, involving a reasonable number of IFFTs that is proportional to the size of the discretization.
 % More precisely, in \framework the velocity is obtained using around 10 IFFTs only.

@@ -130,8 +130,9 @@ for the first equation, and similar for the other 4 derivatives. Makes it easier
 2.6
 ---
 
-- [ ] Paragraph 1, p 13, awkward phrasing "...tied to the wave vector, preventing from any simplifications to reduce the needed calculations."
+- [x] Paragraph 1, p 13, awkward phrasing "...tied to the wave vector, preventing from any simplifications to reduce the needed calculations." ✅ 2025-01-10
 Maybe ".., preventing any simplifications that could reduce the required calculations."
+	🔼 We rephrased this sentence with your suggestions.
 
 - [ ] Para 2, p 14 "First, while the velocity decays exponentially, it relies on a logarithmic similar to..."
 should probably be "..., it relies on a logarithmic function similar to..."
