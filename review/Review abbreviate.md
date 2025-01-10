@@ -132,8 +132,8 @@ for the first equation, and similar for the other 4 derivatives. Makes it easier
 Maybe ".., preventing any simplifications that could reduce the required calculations."
 	🔼 We rephrased this sentence with your suggestions.
 
-- [ ] Para 2, p 14 "First, while the velocity decays exponentially, it relies on a logarithmic similar to..."
-should probably be "..., it relies on a logarithmic function similar to..."
+- [x] Para 2, p 14 "First, while the velocity decays exponentially, it relies on a logarithmic similar to..." should probably be "..., it relies on a logarithmic function similar to..." ✅ 2025-01-10
+	🔼 We added the missing word.
 
 - [ ] Same paragraph, "this function decreases slowly (actually with ln(250 + 1) = 5.5),"
 What is the significance of "250 + 1" here?!
