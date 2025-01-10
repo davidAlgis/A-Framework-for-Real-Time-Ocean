@@ -60,10 +60,11 @@ Other minor issues:
 - [x] In Section 3.2.3 the description of \rho_a is repeated. ✅ 2025-01-10
 	🔼 We have removed the doublon.
 	
-- [ ] In Section 4.4.2, "M has is bow" should be "M has a bow"
-
-- [ ] On page 27, "fluid to solid coupling FDM" should be "solid to fluid coupling FDM."
-
+- [x] In Section 4.4.2, "M has is bow" should be "M has a bow" ✅ 2025-01-10
+	🔼 We fixed the typo.
+	
+- [x] On page 27, "fluid to solid coupling FDM" should be "solid to fluid coupling FDM." ✅ 2025-01-10
+	🔼 We fixed the typo.
 # Review 2
 
 ## General Remarks

@@ -917,7 +917,7 @@ Since the number of vertices $v$ of $Z$ is at least twice as the size of $M$, th
 \label{subsubsec:heightMask}
 Knowing all the vertices in the mask, their height must be given as input of the FDM.
 \Framework uses a simple model that tries to reproduce parts of the idea of Cords and Staadt (2009) \cite{cordsRealTimeOpenWater2009}.
-By construction of the grid $Z$, $M$ has is bow oriented on the positive side of the $z$ axis, and its starboard on the positive side of the $x$ axis.
+By construction of the grid $Z$, $M$ has a bow oriented on the positive side of the $z$ axis, and its starboard on the positive side of the $x$ axis.
 Hence, $h$ is made such that from the vertex at position $\mathbf x$, the front of the mask is above the free surface and the back below, in a way that is proportional to the speed of $M$.
 Moreover, the boat forms a $V$ shape, with its center a bit below the extremity of the side.
 
@@ -1072,7 +1072,7 @@ It extends the first experiment as follows:
 	\item $6$ zodiacs with a mesh made of $568$ triangles.
 \end{itemize} 
 This makes a total of $4135$ triangles. 
-Each of these ten solids uses its own grid for the fluid to solid coupling FDM. 
+Each of these ten solids uses its own grid for the solid to fluid coupling FDM. 
 Two captures of the second experiment can be seen in the bottom row of \figurename~\ref{fig:experiments}.
 The sea state is 1 for \figurename~\ref{fig:experiment2-1} where again small interaction waves can be seen for the motorboat (the others are not propelled). 
 On \figurename~\ref{fig:experiment2-2} the sea state is set to 4, leading to relatively big waves.
