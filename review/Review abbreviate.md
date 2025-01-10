@@ -51,7 +51,8 @@ Other minor issues:
 - [x] The introduction begins with mentioning "scientific computing," but the paper is not about scientific computing at all. I would replace it with "computer graphics." ✅ 2025-01-10
 	🔼 We used "computer graphics" which is more appropriate with our article and JCGT.
 
-- [ ] I would recommend removing the subsection title 1.1 and converting Section 1.2 (related work)  to Section 2.
+- [x] I would recommend removing the subsection title 1.1 and converting Section 1.2 (related work)  to Section 2. ✅ 2025-01-10
+	🔼  Indeed, putting related work in a dedicated section is more coherent with litterature.
 
 - [ ] On page 5, "standard gravity" should be "gravitational acceleration."
 

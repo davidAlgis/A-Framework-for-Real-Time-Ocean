@@ -121,12 +121,12 @@ Section~\ref{sec:results_and_discussions} discusses some results obtained with \
 At last, Section~\ref{sec:conclusions} gives general conclusions.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Related works}
+\section{Related works}
 \label{sec:relatedwork}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 This section presents the main works related to the simulation of ocean, including the free surface, the fluid to solid and solid to fluid coupling.
 
-\subsubsection{Ocean free surface simulation}
+\subsection{Ocean free surface simulation}
 \label{subsubsec:oceanFreeSurfaceSim}
 J. Tessendorf (2004) \cite{tessendorfSimulatingOceanWater1999} presented what could be considered a seminal work in real-time ocean simulation. His work relies on the Fast Fourier Transform (FFT) and statistical wave spectra to accurately find the analytical solution to an approximation of the Navier-Stokes equations on a 2D height field. This method is commonly known as the “Tessendorf method”.
 
@@ -140,7 +140,7 @@ Finally, Tessendorf (2017) \cite{tessendorfGilliganPrototypeFramework2017} summa
 
 \Framework aggregates all these methods in order to simulate the ocean free surface.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Fluid to solid coupling}
+\subsection{Fluid to solid coupling}
 \label{subsubsec:fluidToSolidCoupling}
 There are several ways to describe the motion of a solid in a given fluid.
 Many particle-based methods have been developed in recent years, as presented by Koshier \etal (2022) \cite{koschierSurveySPHMethods2022}.
@@ -162,7 +162,7 @@ Kerner (2016) \cite{kernerWaterInteractionModel2016} wrote a full article on boa
 \Framework relies on these forces approximation, aggregating these four last papers.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Solid to fluid coupling}
+\subsection{Solid to fluid coupling}
 \label{subsubsec:solidToFluidCoupling}
 The simulation of the surface of water in contact with a solid body has been an active research topic for the last twenty years.
 Gomez (2000) \cite{gomezInteractiveSimulationWater2000} solved the wave equation using the finite-difference method (FDM) to simulate waves on the free surface.
