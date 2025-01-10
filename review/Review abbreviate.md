@@ -29,7 +29,7 @@ The paper includes numerous errors/typos:
 
 - [x] This sentence in Appendix A is unclear and needs more explanation: "Note that while the third equation of system 1 is not used here, it can help to deduce the dispersion relation." ✅ 2025-01-10
 
-- [ ] In Equation 71 v_y should be v_z.
+- [x] In Equation 71 v_y should be v_z. ✅ 2025-01-10
 
 - [ ] In Equation 73, there appears to be an extra term: h(x,t)/dt
 
