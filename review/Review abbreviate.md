@@ -17,7 +17,7 @@ The paper includes numerous errors/typos:
 
 - [ ] I am confused about the parameters of the listed cascades in Section 2.3. First of all, the ranges listed seem wrong: 12/16 is clearly greater than 12/256. I presume this is a typo. Also, shouldn't L be larger for smaller k?
 
-- [ ] Figure 9 caption says that F_a is "applied to the center of the submerged part." It should be the "unsubmerged part" instead.
+- [x] Figure 9 caption says that F_a is "applied to the center of the submerged part." It should be the "unsubmerged part" instead. ✅ 2025-01-10
 
 - [ ] It is unclear what Figure 11 c shows.
 
