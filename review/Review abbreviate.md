@@ -14,24 +14,33 @@ The paper includes numerous errors/typos:
 - [ ] The normalization factor Q is missing in Equation 13.
 
 - [x] Figure 3 caption mentions the dispersion parameter, but the figure is actually about another parameter \delta. ✅ 2025-01-10
+	🔼 Thanks, we have corrected and clarify the caption of figure 3
 
 - [ ] I am confused about the parameters of the listed cascades in Section 2.3. First of all, the ranges listed seem wrong: 12/16 is clearly greater than 12/256. I presume this is a typo. Also, shouldn't L be larger for smaller k?
 
 - [x] Figure 9 caption says that F_a is "applied to the center of the submerged part." It should be the "unsubmerged part" instead. ✅ 2025-01-10
+	🔼 We have corrected this typo.
 
 - [x] It is unclear what Figure 11 c shows. ✅ 2025-01-10
+	🔼 We have clarified the caption of each caption to make them more clear 
 
 - [x] h* in Equations 48, 50, and 59 should be negative (following Equation 46). The same goes for unlabeled equations above Equation 53. ✅ 2025-01-10
+	🔼 We have corrected this sign error. 
 
 - [x] In the Equation above Equation 56, "sinh(kY)" should be "sinh(ky)." ✅ 2025-01-10
+	🔼 We have corrected this case mistake
 
 - [x] The parameters y, t, and k in Equations 59, 60, 61, and 62 are written in an inconsistent order. They should all use the same order. ✅ 2025-01-10
+	🔼 We have corrected the order of all parameters in the whole article to make it more consistent.
 
 - [x] This sentence in Appendix A is unclear and needs more explanation: "Note that while the third equation of system 1 is not used here, it can help to deduce the dispersion relation." ✅ 2025-01-10
+	🔼 We have removed this sentence and replace it by the whole calculation of dispersion relation to make it more clear. 
 
 - [x] In Equation 71 v_y should be v_z. ✅ 2025-01-10
+	🔼 We have corrected this typo.
 
 - [x] In Equation 73, there appears to be an extra term: h(x,t)/dt ✅ 2025-01-10
+	🔼 We have removed the excess term.
 
 
 Other minor issues:
