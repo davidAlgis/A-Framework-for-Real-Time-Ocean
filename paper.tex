@@ -1253,7 +1253,42 @@ Then, considering that $\underset{H \rightarrow \infty}{\lim}\tanh(kH)=1$, the f
 	\approx                 & \exp(ky).
 \end{align}
 
-This expression is valid for height $y\leq0$, but not usable above for $y>0$.
+
+Note that while the third equation of system \ref{equa:systemTessendorf} is not used here, it can help to deduce the \emph{dispersion relation}.
+
+Equation~\ref{equa:attenuationDeep1} and the definition of potential velocity $\nabla\phi=\mathbf{v}$ lead to the velocity $\mathbf{v}$. First, function $\tilde{\phi}$ is rewritten as follows:
+\begin{equation}
+	\tilde{\phi}(y,t,\mathbf{k})=\frac{ig}{\omega(k)} E(\mathbf{k},y) \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right).
+\end{equation}
+Then the gradient of $\phi$ is as follows:
+\begin{equation}
+	\nabla \phi = \begin{pmatrix}
+		v_x \\
+		v_y \\
+		v_z
+	\end{pmatrix} =\tilde{\mathbf{v}}(y,\mathbf{k},t)\exp\left(i\mathbf{k}\cdot\mathbf{x}\right)
+\end{equation}
+where $\tilde{\mathbf{v}}(\mathbf{k},t,y)$ is the vector equal to:
+\begin{equation}
+	\tilde{\mathbf{v}}\left(\mathbf{k},t,y\right)=%
+	E\left(\mathbf{k},y\right)\left(\tilde{h}_0\left(\mathbf{k}\right)\exp\left({i\omega(k)t}\right)-\tilde{h}_0^*\left(-\mathbf{k}\right)\exp\left({-i\omega(k)t}\right)\right)
+	\left[
+		\begin{array}{c}
+			\displaystyle\frac{-k_xg}{\omega(k)} \\
+			\displaystyle i\omega(k)             \\
+			\displaystyle\frac{-k_zg}{\omega(k)}
+		\end{array}
+		\right],
+\end{equation}
+
+
+Finally, reintroducing a sum on a set of waves vectors $\mathbf{k}$ leads to:
+\begin{equation}
+	\nabla \phi =
+	\sum_{\mathbf{k}}\tilde{\mathbf{v}}(\mathbf{k},t, y)\exp\left(i\mathbf{k}\cdot\mathbf{x}\right).
+\end{equation}
+
+Note that the expression of $E\left(\mathbf{k},y\right)$ (see Equation \ref{equa:attenuationDeep1}) is valid for height $y\leq0$, but not usable above for $y>0$.
 Several possibilities exist to overcome this problem:
 \begin{enumerate}
 	\item The most naive one assumes $E(\mathbf k,y>0)=1$.
@@ -1280,34 +1315,6 @@ For this reason, \framework uses Equation~\ref{equa:attenuationExtrapolation}, w
 	\end{cases}
 \end{equation}
 
-Note that while the third equation of system \ref{equa:systemTessendorf} is not used here, it can help to deduce the \emph{dispersion relation}.
-
-Equation~\ref{equa:attenuationDeep1} and the definition of potential velocity $\nabla\phi=\mathbf{v}$ lead to the velocity $\mathbf{v}$. First, function $\tilde{\phi}$ is rewritten as follows:
-\begin{equation}
-	\tilde{\phi}(y,t,\mathbf{k})=\frac{ig}{\omega(k)} E(\mathbf{k},y) \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right).
-\end{equation}
-Then the gradient of $\phi$ is as follows:
-\begin{equation}
-	\nabla \phi = \begin{pmatrix}
-		v_x \\
-		v_y \\
-		v_z
-	\end{pmatrix} =\tilde{\mathbf{v}}(y,\mathbf{k},t)\exp\left(i\mathbf{k}\cdot\mathbf{x}\right)
-\end{equation}
-where $\tilde{\mathbf{v}}(\mathbf{k},t,y)$ is the vector equal to:
-\begin{equation}
-	\tilde{\mathbf{v}}(y,\mathbf{k},t) = \exp(ky)\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)
-	\begin{pmatrix}
-		\frac{-k_xg}{\omega(k)} \\
-		i\omega(k)              \\
-		\frac{-k_zg}{\omega(k)}
-	\end{pmatrix}.
-\end{equation}
-Finally, reintroducing a sum on a set of waves vectors $\mathbf{k}$ leads to:
-\begin{equation}
-	\nabla \phi =
-	\sum_{\mathbf{k}}\tilde{\mathbf{v}}(\mathbf{k},t, y)\exp\left(i\mathbf{k}\cdot\mathbf{x}\right)
-\end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
