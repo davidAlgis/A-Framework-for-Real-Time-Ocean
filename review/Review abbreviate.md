@@ -19,7 +19,7 @@ The paper includes numerous errors/typos:
 
 - [x] Figure 9 caption says that F_a is "applied to the center of the submerged part." It should be the "unsubmerged part" instead. ✅ 2025-01-10
 
-- [ ] It is unclear what Figure 11 c shows.
+- [x] It is unclear what Figure 11 c shows. ✅ 2025-01-10
 
 - [ ] h* in Equations 48, 50, and 59 should be negative (following Equation 46). The same goes for unlabeled equations above Equation 53.
 

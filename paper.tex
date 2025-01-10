@@ -957,37 +957,38 @@ This allows to simplify the term $b$ as $b=\left(h_bz_{max}-h_fz_{min}\right)/b_
 The functions $f(x)$ and $g(z)$ are then used to obtain the height of the mask as follows,
 but using the user factor $b_w$ to allow more user control:
 \begin{equation}
+	\label{equa:mask_full}
 	h(\mathbf x)=b_w\left(f(x)+g(z)\right).
 \end{equation}
 
 Note that $h$ is only well-defined if the bow of $M$ is oriented on the positive $z$ axis.
 Therefore, a 2D rotation is first applied to the vertices $\mathbf x$ before applying $h$.
 
-Figure \ref{fig:mask} shows some views of the application of this interactive waves process for a simple rectangular boat.
+Figure \ref{fig:mask} shows some views of the application of this interactive waves process.
 
 
 
 \begin{figure}[htbp]
 	\centering
 
-	\subfloat[A theoretical view of the water height function $h(\mathbf x,t)$ that will be applied to a simple rectangle.]
+	\subfloat[A theoretical view of the height of the mask, with input a simple rectangle.]
 	{
 		\includegraphics[width=0.25\textwidth]{Figures/Mask3D_theoric_view.png}
 		\label{subfig:maskTheoreticalView}
 	}
 	\hspace{1cm}
-	\subfloat[The mask of a simple boat encoded in a single channel texture.]
+	\subfloat[The height of the mask of a simple boat encoded in a single channel texture.]
 	{
 		\includegraphics[width=0.25\textwidth]{Figures/MaskHeightMap.png}
 		\label{subfig:maskHeightMap}
 	}
 	\hspace{1cm}
-	\subfloat[The mask of a simple boat in a 3D scene with a very low sea state.]
+	\subfloat[The height of the mask of a simple boat in a 3D scene with a very low sea state. Boat rendering and wave propagation has been disabled to only display the initial step of the height of the mask.]
 	{
 		\includegraphics[width=0.25\textwidth]{Figures/Mask3D-contrast.png}
 		\label{subfig:mask3D}
 	}
-	\caption{Three different views of the mask.}
+	\caption{Three different views of the height of the mask defined by Equation \ref{equa:mask_full}.}
 	\label{fig:mask}
 \end{figure}
 
