@@ -25,7 +25,7 @@ The paper includes numerous errors/typos:
 
 - [x] In the Equation above Equation 56, "sinh(kY)" should be "sinh(ky)." ✅ 2025-01-10
 
-- [ ] The parameters y, t, and k in Equations 59, 60, 61, and 62 are written in an inconsistent order. They should all use the same order.
+- [x] The parameters y, t, and k in Equations 59, 60, 61, and 62 are written in an inconsistent order. They should all use the same order. ✅ 2025-01-10
 
 - [ ] This sentence in Appendix A is unclear and needs more explanation: "Note that while the third equation of system 1 is not used here, it can help to deduce the dispersion relation."
 
