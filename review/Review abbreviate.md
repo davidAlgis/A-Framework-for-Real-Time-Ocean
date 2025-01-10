@@ -27,7 +27,7 @@ The paper includes numerous errors/typos:
 
 - [x] The parameters y, t, and k in Equations 59, 60, 61, and 62 are written in an inconsistent order. They should all use the same order. ✅ 2025-01-10
 
-- [ ] This sentence in Appendix A is unclear and needs more explanation: "Note that while the third equation of system 1 is not used here, it can help to deduce the dispersion relation."
+- [x] This sentence in Appendix A is unclear and needs more explanation: "Note that while the third equation of system 1 is not used here, it can help to deduce the dispersion relation." ✅ 2025-01-10
 
 - [ ] In Equation 71 v_y should be v_z.
 

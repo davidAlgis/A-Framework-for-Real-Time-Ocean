@@ -1253,8 +1253,22 @@ Then, considering that $\underset{H \rightarrow \infty}{\lim}\tanh(kH)=1$, the f
 	\approx                 & \exp(ky).
 \end{align}
 
+The third equation of the system \ref{equa:systemTessendorf} gives the following equality:
+\begin{equation}
+\label{equa:derivHeqDerivPhi}
+\frac{\partial h}{\partial t}(\mathbf{k},t)=\frac{\partial\phi}{\partial y}(\mathbf{k}, 0, t)
+\end{equation}
+Once again, we only considered one wave vector $\mathbf{k}$ as Equations are all linear, in consequence Equation \ref{equa:derivHeqDerivPhi} becomes:
 
-Note that while the third equation of system \ref{equa:systemTessendorf} is not used here, it can help to deduce the \emph{dispersion relation}.
+\begin{align}
+\frac{\partial \tilde{h}}{\partial t}(\mathbf{k},t) - \frac{\tilde{\partial}\phi}{\partial y}(\mathbf{k}, 0, t) &=0 \nonumber\\
+i\omega(k)\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right) - \frac{igk}{\omega(k)} E(\mathbf{k},0)\nonumber\\
+ \times \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right) &= 0 \nonumber\\
+ \omega(k)- \frac{gk}{\omega(k)} &= 0 \nonumber\\
+ \omega(k) = \sqrt{gk} \label{equa:relationDispersionDeduce}
+\end{align}
+
+This last Equation \ref{equa:relationDispersionDeduce} gives the expression of the dispersion relation used in the Section \ref{sec:oceanWaves}. 
 
 Equation~\ref{equa:attenuationDeep1} and the definition of potential velocity $\nabla\phi=\mathbf{v}$ lead to the velocity $\mathbf{v}$. First, function $\tilde{\phi}$ is rewritten as follows:
 \begin{equation}
