@@ -13,7 +13,7 @@ The paper includes numerous errors/typos:
 
 - [ ] The normalization factor Q is missing in Equation 13.
 
-- [ ] Figure 3 caption mentions the dispersion parameter, but the figure is actually about another parameter \delta.
+- [x] Figure 3 caption mentions the dispersion parameter, but the figure is actually about another parameter \delta. ✅ 2025-01-10
 
 - [ ] I am confused about the parameters of the listed cascades in Section 2.3. First of all, the ranges listed seem wrong: 12/16 is clearly greater than 12/256. I presume this is a typo. Also, shouldn't L be larger for smaller k?
 
