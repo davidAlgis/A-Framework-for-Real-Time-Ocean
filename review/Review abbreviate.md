@@ -57,8 +57,9 @@ Other minor issues:
 - [x] On page 5, "standard gravity" should be "gravitational acceleration." ✅ 2025-01-10
     🔼 We changed "gravitational acceleration" instead of "standard gravity".
 
-- [ ] In Section 3.2.3 the description of \rho_a is repeated.
-
+- [x] In Section 3.2.3 the description of \rho_a is repeated. ✅ 2025-01-10
+	🔼 We have removed the doublon.
+	
 - [ ] In Section 4.4.2, "M has is bow" should be "M has a bow"
 
 - [ ] On page 27, "fluid to solid coupling FDM" should be "solid to fluid coupling FDM."
