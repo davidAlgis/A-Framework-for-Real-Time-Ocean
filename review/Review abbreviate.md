@@ -104,9 +104,9 @@ Sec 1
 
 1.1
 ---
-- [ ] 1st bullet point, (Tex error) here and elsewhere Tessendorf is quoted as 
+- [x] 1st bullet point, (Tex error) here and elsewhere Tessendorf is quoted as ✅ 2025-01-10
 "Tessendorf (2004) [Tessendorf 1999]" (i.e. reference link and text do not match)
-
+	🔼 We changed references to make them coherent between text and citation.
 Sec 2
 =====
 
