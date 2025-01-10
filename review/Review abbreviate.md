@@ -69,7 +69,7 @@ Other minor issues:
 
 ## General Remarks
 
-- [ ] The bibliography is OK, though I am a bit confused as to why Yuksel's PhD thesis is referenced, instead of the related paper:
+- [x] The bibliography is OK, though I am a bit confused as to why Yuksel's PhD thesis is referenced, instead of the related paper: ✅ 2025-01-10
 
 @article{Yuksel2007,
    author       = {Cem Yuksel and Donald H. House and John Keyser},
@@ -86,6 +86,7 @@ Other minor issues:
    publisher    = {ACM Press},
    address      = {New York, NY, USA},
 }
+	🔼 We used this references instead of the thesis when talking about the wave particles.
 
 - [ ] I enjoyed reading this paper. I would have liked it a lot more if it included more detailed descriptions of the algorithms and/or source code.
 
