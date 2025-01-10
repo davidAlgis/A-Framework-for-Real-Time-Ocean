@@ -31,7 +31,7 @@ The paper includes numerous errors/typos:
 
 - [x] In Equation 71 v_y should be v_z. ✅ 2025-01-10
 
-- [ ] In Equation 73, there appears to be an extra term: h(x,t)/dt
+- [x] In Equation 73, there appears to be an extra term: h(x,t)/dt ✅ 2025-01-10
 
 
 Other minor issues:
