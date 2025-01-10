@@ -21,7 +21,7 @@ The paper includes numerous errors/typos:
 
 - [x] It is unclear what Figure 11 c shows. ✅ 2025-01-10
 
-- [ ] h* in Equations 48, 50, and 59 should be negative (following Equation 46). The same goes for unlabeled equations above Equation 53.
+- [x] h* in Equations 48, 50, and 59 should be negative (following Equation 46). The same goes for unlabeled equations above Equation 53. ✅ 2025-01-10
 
 - [ ] In the Equation above Equation 56, "sinh(kY)" should be "sinh(ky)."
 

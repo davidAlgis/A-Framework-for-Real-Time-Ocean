@@ -1190,7 +1190,7 @@ It is assuming that potential velocity at any depth $y$ can be written as follow
 Notice that this expression is convenient as it can be computed with an inverse Fast Fourier Transform.
 The function $\tilde{\phi}(y, t,\mathbf{k})$ is defined as follows:
 \begin{equation}
-	\tilde{\phi}(y, t,\mathbf{k})=\frac{ig}{\omega(k)} E(\mathbf{k},y) \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)
+	\tilde{\phi}(y, t,\mathbf{k})=\frac{ig}{\omega(k)} E(\mathbf{k},y) \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)
 \end{equation}
 where \textit{attenuation function} $E(\mathbf{k},y)$ has to be determined from Equations \ref{equa:systemTessendorf}.
 A first condition comes from Equation \ref{equa:phiy0}:
@@ -1201,10 +1201,10 @@ Then, the second equation from system \ref{equa:systemTessendorf} can be imposed
 First, the left term is developed as follows:
 \begin{align}
 	\Delta \phi\nonumber= & \left(-k_x^2 E(\mathbf{k},y) -k_z^2E(\mathbf{k},y) + E''(\mathbf{k},y)\right)\nonumber                                                                                      \\
-	                      & \times \frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)
+	                      & \times \frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)
 	\exp\left( i \mathbf{k}\cdot \mathbf{x}\right)\nonumber                                                                                                                                             \\
 	=                     & \left(E''(\mathbf{k},y)-k^2E(\mathbf{k},y)\right) \nonumber                                                                                                                 \\
-	                      & \times \frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right) \exp\left(i \mathbf{k}\cdot \mathbf{x}\right)
+	                      & \times \frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right) \exp\left(i \mathbf{k}\cdot \mathbf{x}\right)
 \end{align}
 Hence, condition $\Delta \phi=0$ is equivalent to find a solution of the following second order ordinary differential linear equation:
 \begin{equation}
@@ -1218,9 +1218,9 @@ where $C_1,C_2\in\mathbb{R}$ are constant.
 The derivative regarding height $y$ of $\phi(\mathbf{x},-H,t)$ can be rewritten as follows:
 \begin{align*}
 	\frac{\partial\phi(\mathbf{x},y,t)}{\partial y}= &
-	\frac{\partial E(\mathbf{k},y)}{\partial y}\frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)\exp\left(i\mathbf{k}\cdot\mathbf x\right)               \\
+	\frac{\partial E(\mathbf{k},y)}{\partial y}\frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)\exp\left(i\mathbf{k}\cdot\mathbf x\right)               \\
 	=                                                & kC_1\sinh(ky+C_2)                                                                                                                                                      \\
-	                                                 & \times\frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)\exp\left(i\mathbf{k}\cdot\mathbf x\right)
+	                                                 & \times\frac{ig}{\omega(k)}\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)\exp\left(i\mathbf{k}\cdot\mathbf x\right)
 \end{align*}
 Hence, at depth $y=-H$ the fourth equation of system \ref{equa:systemTessendorf} leads to:
 \begin{align}
@@ -1284,7 +1284,7 @@ Note that while the third equation of system \ref{equa:systemTessendorf} is not 
 
 Equation~\ref{equa:attenuationDeep1} and the definition of potential velocity $\nabla\phi=\mathbf{v}$ lead to the velocity $\mathbf{v}$. First, function $\tilde{\phi}$ is rewritten as follows:
 \begin{equation}
-	\tilde{\phi}(y,t,\mathbf{k})=\frac{ig}{\omega(k)} E(\mathbf{k},y) \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right).
+	\tilde{\phi}(y,t,\mathbf{k})=\frac{ig}{\omega(k)} E(\mathbf{k},y) \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right).
 \end{equation}
 Then the gradient of $\phi$ is as follows:
 \begin{equation}
