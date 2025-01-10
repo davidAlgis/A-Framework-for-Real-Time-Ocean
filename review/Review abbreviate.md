@@ -45,7 +45,8 @@ The paper includes numerous errors/typos:
 
 Other minor issues:
 
-- [ ] The abstract ends with the term "fluid to solid algorithm." I would replace it with "fluid to solid coupling algorithm."
+- [x] The abstract ends with the term "fluid to solid algorithm." I would replace it with "fluid to solid coupling algorithm." ✅ 2025-01-10
+	🔼 Indeed we added coupling to make the term more coherent with litterature.
 
 - [ ] The introduction begins with mentioning "scientific computing," but the paper is not about scientific computing at all. I would replace it with "computer graphics."
 
