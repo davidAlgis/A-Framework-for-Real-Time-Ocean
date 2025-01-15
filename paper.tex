@@ -688,37 +688,24 @@ where $v_w$ is the submerged volume in $m^3$ (cf. Section~\ref{subsec:geomParam}
 The water density is obtained at any depth by linear interpolation using the measure of the International Towing Tank Conference (ITTC) \cite{ittcFreshWaterSeawater2011}.
 The buoyancy is applied to the center of immersion $c_i$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Water drag}
-\label{subsubsec:waterDrag}
-\Framework uses a drag force depending on the relative speed, as in many previous works \cite{yukselRealtimeWaterWaves2010,kellomakiRigidBodyInteraction2014,kernerWaterInteractionModel2016}.
-The water drag force is calculated for each triangle $T_i^s$ of the submerged body as follows:
+\subsubsection{Drag Force}
+\label{subsubsec:dragForce}
+\Framework calculates drag forces based on the relative velocity between the fluid medium (water or air) and the submerged or exposed portion of the body. This approach is inspired by previous works \cite{yukselRealtimeWaterWaves2010,kellomakiRigidBodyInteraction2014,kernerWaterInteractionModel2016}.
+
+The drag force for each triangle $T_i$ of the body is computed as:
 \begin{equation}
-	\mathbf{F_w}= -\frac{1}{2} C_d^w \rho_w A_i^{\perp} \left\Vert\mathbf{v_{i_{rel}}^w}\right\Vert\mathbf{v_{i_{rel}}^w},
+	\mathbf{F_d}= -\frac{1}{2} C_d \rho A_i^{\perp} \left\Vert\mathbf{v_{i_{rel}}}\right\Vert\mathbf{v_{i_{rel}}},
 \end{equation}
 where:
 \begin{itemize}
-	\item $\mathbf{v_{i_{rel}}^w}=\mathbf{v_i}-\mathbf{v_i^w}$ is the relative velocity in $m.s^{-1}$ of the triangle $T_i^s$, equals to the difference between its velocity $\mathbf{v_i}$ and the velocity $\mathbf{v_{i}^w}$ of the water at its center;
-	\item $A_i^{\perp}$ is the projected area in $m^2$ of the triangle $T_i^s$ with respect to the relative velocity unit direction (\ie the vector $\mathbf{v_{i_{rel}}^w}/\left\Vert\mathbf{v_{i_{rel}}^w}\right\Vert$);
-	\item $\rho_w$ is still the density of water in $kg.m^{-3}$;
-	\item $C_d^w\in\mathbb{R}^3$ is the drag coefficient of the body in the water, and is given by the user.
+	\item $\mathbf{v_{i_{rel}}}=\mathbf{v_i}-\mathbf{v_{i}^{m}}$ is the relative velocity in $m.s^{-1}$ of the triangle $T_i$, equal to the difference between its velocity $\mathbf{v_i}$ and the velocity $\mathbf{v_{i}^{m}}$ of the fluid medium (water or air) at its center;
+	\item $A_i^{\perp}$ is the projected area in $m^2$ of the triangle $T_i$ with respect to the relative velocity unit direction (\ie the vector $\mathbf{v_{i_{rel}}}/\left\Vert\mathbf{v_{i_{rel}}}\right\Vert$);
+	\item $\rho$ is the density of the fluid medium in $kg.m^{-3}$ ($\rho_w$ as defined in Section~\ref{subsubsec:buoyancy} for water and $1.204~kg.m^{-3}$  for air\footnote{According to the international standard atmosphere, the air density at sea level for $20$°C is $1.204~kg.m^{-3}$ cf. \url{https://www.digitaldutch.com/atmoscalc/table.htm}});
+	\item $C_d$ is the drag coefficient of the body in the fluid medium, specified by the user.
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Air drag}
-\label{subsubsec:airDrag}
-The force corresponding to the air drag is designed similarly to the water drag one, but using the not submerged part $\left\lbrace T_i^{\neg s}\right\rbrace$ of the body.
-For each triangle $T_i^{\neg s}$, it corresponds to the following expression:
-\begin{equation}
-	\mathbf{F_a}= -\frac{1}{2} C_d^a\rho_a A_i^{\perp}\left\Vert\mathbf{v_{i_{rel}}^a}\right\Vert \mathbf{v_{i_{rel}}^a}
-\end{equation}
-where:
-\begin{itemize}
-	\item $\mathbf{v_{i_{rel}}^a}=\mathbf{v_i}-\mathbf{v_{i}^a}$ is the relative velocity in $m.s^{-1}$ of the triangle $T_i^{\neg s}$, equals to the difference between its velocity $\mathbf{v_i}$ and the velocity $\mathbf{v_{i}^a}$ of the air at its center;
-	\item $A_i^{\perp}$ is the projected area in $m^2$ of the triangle $T_i^{\neg s}$ with respect to the relative velocity unit direction (\ie the vector $\mathbf{v_{i_{rel}}^a}/\left\Vert\mathbf{v_{i_{rel}}^a}\right\Vert$);
-	\item $\rho_a$ is the density of air\footnote{According to the international standard atmosphere, the air density at sea level for $20$°C is $1.204~kg.m^{-3}$ cf. \url{https://www.digitaldutch.com/atmoscalc/table.htm}} in $kg.m^{-3}$;
-	\item $C_d^a\in\mathbb{R}^3$ is the drag coefficient of the body in the air, and is given by the user.
-\end{itemize}
+For the submerged part $\left\lbrace T_i^s\right\rbrace$, the medium is water, while for the exposed part $\left\lbrace T_i^{\neg s}\right\rbrace$, the medium is air.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fluid-to-solid algorithm}
@@ -728,7 +715,7 @@ At each iteration, the fluid-to-solid algorithm proceeds as follows:
 	\item Computing the vertices' position of the body relative to the water height (Section \ref{subsec:geomParam});
 	\item Computing the sets of submerged and not submerged triangles, by splitting the triangles having vertices in above and below the water surface (Section \ref{subsec:geomParam});
 	\item Computing the buoyancy force for each body (Section \ref{subsubsec:buoyancy});
-	\item Computing the two drag forces for each triangle, and summing them for each body (Sections \ref{subsubsec:waterDrag} and \ref{subsubsec:airDrag});
+	\item Computing the two drag forces for each triangle, and summing them for each body (Section \ref{subsubsec:dragForce});
 	\item Applying the forces in the physical integration scheme.
 \end{enumerate}
 

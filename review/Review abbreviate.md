@@ -152,20 +152,14 @@ Sec 3
 
 3.2.1
 
-- [ ] p 17. "The Arc Blanc framework uses the prism approximation proposed by Bajo et al."
+- [ ] p 17. "The Arc Blanc framework uses the prism approximation proposed by Bajo et al." How? In Bajo et al. paper, the geometry (position & area vector, is stored in texels of the surface textures of the model.) The prisms used there are per texel, so for example the prism height is determined by (average) water height above the projected texel center. How is this done here?
 
-- [ ] How? In Bajo et al. paper, the geometry (position & area vector, is stored in texels of the surface textures of the model.) The prisms used there are per texel, so for example the prism height is determined by (average) water height above the projected texel center. How is this done here?
-
-Specifically,
-
-- [ ] "The principles of their method are as follows: from each submerged triangle $T^s_i$ of the body, a prism is build up to the water surface; hence, each prism volume can be calculated, and so the full submerged volume vw by adding all of them."
-
-- [ ] This is not exactly correct - their computation is at surface texel granularity level - it is not immediately obvious how this is to be done on triangle basis (e.g. uniform tessellation?)
+Specifically, "The principles of their method are as follows: from each submerged triangle $T^s_i$ of the body, a prism is build up to the water surface; hence, each prism volume can be calculated, and so the full submerged volume vw by adding all of them." This is not exactly correct - their computation is at surface texel granularity level - it is not immediately obvious how this is to be done on triangle basis (e.g. uniform tessellation?)
 
 3.2
 ---
 
-- [ ] Sections 3.2.2 and 3.2.3 details are redundant: the only true geometric difference between the two is that in one case we are considering velocity of water while in the other velocity of air (density and drag coefficient being that of the medium under consideration can be understood from context)
+- [x] Sections 3.2.2 and 3.2.3 details are redundant: the only true geometric difference between the two is that in one case we are considering velocity of water while in the other velocity of air (density and drag coefficient being that of the medium under consideration can be understood from context) ✅ 2025-01-15
 
 - [ ] Also, p19 Paragraph 2 has a typo: the 3rd and 4th bullets are identical
 
