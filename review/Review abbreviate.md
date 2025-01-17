@@ -141,8 +141,8 @@ What is the significance of "250 + 1" here?!
 
 - [ ] Figure 6, vertical scale should probably be logarithmic to make these graphs more informative. As it is now, three of four graphs are scrunched on top of each other.
 
-- [ ] Not sure why the bracket "{" in eq. (28). Also it does not look like eq (28) is quoted in the rest of the paper, so $\alpha$ and $\beta$ could just be given inline.
-
+- [x] Not sure why the bracket "{" in eq. (28). Also it does not look like eq (28) is quoted in the rest of the paper, so $\alpha$ and $\beta$ could just be given inline. ✅ 2025-01-17
+	🔼 We inline the coefficients choice.
 
 Sec 3
 =====
@@ -268,7 +268,8 @@ Are moments of inertia of the solid object taken in account?
 What about the moment of inertia of water body surrounding the object?
 Without those explained, this part of the abstract looks like a bit of overstatement:
 
-- [ ] One note: deciseconds? Please, use seconds or milliseconds.
+- [x] One note: deciseconds? Please, use seconds or milliseconds. ✅ 2025-01-17
+	🔼 We used seconds, which are more standard.
 
 - [ ] The paper lists a ton of references that are not touched in the paper in the sense that the paper does not derive anything from those.
 For instance, 

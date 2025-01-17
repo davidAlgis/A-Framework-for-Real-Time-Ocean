@@ -594,14 +594,8 @@ Hence, this optimization function $J$ is defined as follows:
 \end{equation}
 where $d$ is the interpolation degree, $P(d)$ measures the performance of the velocity interpolation, $A(d)$ measures the accuracy of the velocity interpolation, and $\alpha$ and $\beta$ are the weight arbitrary assigned to the performances and the accuracy functions.
 
-To make $P(d)$ and $A(d)$ having the same order of magnitude, the units are the \textbf{decisecond} for performance and the \textbf{meter per seconds} for accuracy (see figure \ref{fig:interpolationCriteria}).
-Moreover, the performance being the more important for real-time process, the following arbitrary choice are made for the coefficients of $J$:
-\begin{equation}
-	\begin{cases}
-		\alpha = 1 \\
-		\beta = 2
-	\end{cases}
-\end{equation}
+To make $P(d)$ and $A(d)$ having the same order of magnitude, the units are the \textbf{seconds} for performance and the \textbf{meter per seconds} for accuracy (see figure \ref{fig:interpolationCriteria}).
+Moreover, the performance being the more important for real-time process, the following arbitrary choice are made for the coefficients of $J$: $\alpha = 10$ and $\beta = 2$.
 
 Figure \ref{fig:multiObjectiveFunction} shows the function $J$ using these parameters. It appears that its minimum is obtained with $d=8$.
 It is the value used in \framework.
