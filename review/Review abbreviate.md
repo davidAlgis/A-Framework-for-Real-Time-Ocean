@@ -179,8 +179,8 @@ Sec 4.
 4.1
 ---
 
-- [ ] Paragraph 1, suggesting change of notation, e.g. $\delta$ instead of $dx$ for the discretization step. This would make (35) (38) (40) (42) less confusing when first seen (e.g. it's not a differential), or $\Delta{x}, \Delta{y}, \Delta{t}$, but that might be a bit too detailed, e.g. since the grid is regular.
-
+- [x] Paragraph 1, suggesting change of notation, e.g. $\delta$ instead of $dx$ for the discretization step. This would make (35) (38) (40) (42) less confusing when first seen (e.g. it's not a differential), or $\Delta{x}, \Delta{y}, \Delta{t}$, but that might be a bit too detailed, e.g. since the grid is regular. ✅ 2025-01-20
+	🔼 As suggested, we renamed $dx$ in $\delta$ to make equation less confuse. 
 
 - [ ] Eq (36)  probably it is easier to read something like
 
