@@ -209,11 +209,12 @@ Deduced how? \sqrt(0.49) seems close to \sqrt(0.5) which you would get from Eq (
 -----
 
 - [x] Paragraph 1, typo: "contained into one intersection polygon" should be "contained in one of the intersection polygons" ✅ 2025-01-20
-	🔼 We have fixed this typo
+	🔼 We have fixed this typo.
 
 - [ ] The reference to (what I assume is) CLRS listed in the References section is incorrectly written. Also CLRS is too general so probably not needed here. Stabbing ray approach described might have robustness issues - are those significant enough to cause some form of instability in the simulation?
 
-- [ ] Last sentence of the last paragraph of 4.4.1, typo: "technic"
+- [x] Last sentence of the last paragraph of 4.4.1, typo: "technic" ✅ 2025-01-20
+	🔼 We have fixed this typo.
 
 - [ ] Also, not explicitly mentioned, but I am guessing that the intersection polygons from sec 3.1 are projected onto xz plane in order to do z-ray stabbing in sec 4.4.1. Could some such projected intersection polygons then be generate (e.g. self intersecting when projected onto zx plane, or inverted - e.g. for turbulent water height and finely tessellated body M)
 
