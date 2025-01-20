@@ -223,9 +223,8 @@ Deduced how? \sqrt(0.49) seems close to \sqrt(0.5) which you would get from Eq (
 4.4.2
 -----
 
-- [ ] Sentence 2, paragraph 1, typo: "By construction of the grid Z, M has is bow oriented on the positive side of the z axis and its starboard on the positive side of the x axis."
-
-- [ ] Should be "..has *its* bow.."?
+- [x] Sentence 2, paragraph 1, typo: "By construction of the grid Z, M has is bow oriented on the positive side of the z axis and its starboard on the positive side of the x axis." Should be "..has *its* bow.."? ✅ 2025-01-20
+	🔼 We have fixed this typo.
 
 - [ ] Also, for landlubbers among us, please clarify "starboard" as "right-hand side when facing the bow" :)
 
