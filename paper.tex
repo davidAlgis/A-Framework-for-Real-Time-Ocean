@@ -771,19 +771,24 @@ where
 \begin{equation}
 	a=\frac{c^2dt^2}{\delta^2}.
 \end{equation}
-The Dirichlet boundary condition gives $h_{i,j}^n=0$ for $i$ or $j$ being on the boundary of $Z$.
-Since a new wave is generated at each time step, a damping effect is added to make them disappear gradually.
-Hence, the right part of Equation (\ref{eq:fdm_scheme}) is multiplied by the \textbf{damping factor} $d(t)=d^n$.
-This damping factor is linearly related to the velocity of the mesh $v_M(t)$ to ensure numerical stability as follows:
+
+The Dirichlet boundary condition gives $h_{i,j}^n=0$ for $i$ or $j$ being on the boundary of $Z$. Since a new wave is generated at each time step, a damping effect is added to make them disappear gradually. Hence, the right part of Equation (\ref{eq:fdm_scheme}) is multiplied by the \textbf{damping factor} $d(t) = d^n$. 
+
+This damping factor is linearly related to the velocity of the mesh $\mathbf{v_M}(t)$ to ensure numerical stability and is defined as:
+\begin{equation*}
+u = \text{clamp}\left(\frac{\|\mathbf{v_M}(t)\|}{v_{max}}, 0, 1\right),
+\end{equation*}
 \begin{equation}
-	d(t) =
-	\begin{cases}
-		\left(1-\frac{||\mathbf{v_M}(t)||}{v_{max}}\right)d_0 + \frac{||\mathbf{v_M}(t)||}{v_{max}}d_{max} & \text{for~~}||\mathbf{v_M}(t)||\leq v_{max}, \\
-		d_{max}                                                                          & \text{else}
-	\end{cases}
+d(t) = \text{lerp}(d_0, d_{max}, u),
 \end{equation}
-where $d_{max}$ is the maximum damping value obtained when the body's velocity is above a given threshold $v_{max}$,
-and $d_0$ is the damping for a null velocity.
+where:
+\begin{itemize}
+	\item $\text{clamp}(x, 0, 1)$ limits the value of $x$ to the range $[0, 1]$;
+	\item $\text{lerp}(a, b, t) = (1-t)a + tb$ is the linear interpolation function;
+	\item $v_{max}$ is the velocity threshold, above which the damping factor equals its maximum value $d_{max}$;
+	\item $d_0$ is the damping value for a null velocity.
+\end{itemize}
+
 For a plausible appearance, \framework uses the following values by default:
 \begin{equation}
 	\begin{cases}

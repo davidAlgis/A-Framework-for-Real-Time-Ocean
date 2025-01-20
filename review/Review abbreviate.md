@@ -182,11 +182,8 @@ Sec 4.
 - [x] Paragraph 1, suggesting change of notation, e.g. $\delta$ instead of $dx$ for the discretization step. This would make (35) (38) (40) (42) less confusing when first seen (e.g. it's not a differential), or $\Delta{x}, \Delta{y}, \Delta{t}$, but that might be a bit too detailed, e.g. since the grid is regular. ✅ 2025-01-20
 	🔼 As suggested, we renamed $dx$ in $\delta$ to make equation less confuse. 
 
-- [ ] Eq (36)  probably it is easier to read something like
-
-$u = clamp_hi(|v|/v_max, 1)$ and $d(t) = lerp(d0, d_max, u)$
-
-than the given piecewise definition.
+- [x] Eq (36)  probably it is easier to read something like $u = clamp_hi(|v|/v_max, 1)$ and $d(t) = lerp(d0, d_max, u)$ than the given piecewise definition. ✅ 2025-01-20
+	🔼 Indeed this formulation is more clear. We replace our piecewise definition with this one.
 
 - [ ] Numeric values like the ones in eq 37, which affect stability, might be meaningless if some implementation details of the framework are not been specified (e.g. floats, doubles etc)?
 
