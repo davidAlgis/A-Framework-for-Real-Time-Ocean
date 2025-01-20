@@ -208,7 +208,8 @@ Deduced how? \sqrt(0.49) seems close to \sqrt(0.5) which you would get from Eq (
 4.4.1
 -----
 
-- [ ] Paragraph 1, typo: "contained into one intersection polygon" should be "contained in one of the intersection polygons"
+- [x] Paragraph 1, typo: "contained into one intersection polygon" should be "contained in one of the intersection polygons" ✅ 2025-01-20
+	🔼 We have fixed this typo
 
 - [ ] The reference to (what I assume is) CLRS listed in the References section is incorrectly written. Also CLRS is too general so probably not needed here. Stabbing ray approach described might have robustness issues - are those significant enough to cause some form of instability in the simulation?
 
