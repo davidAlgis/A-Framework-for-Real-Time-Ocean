@@ -160,8 +160,10 @@ Specifically, "The principles of their method are as follows: from each submerge
 ---
 
 - [x] Sections 3.2.2 and 3.2.3 details are redundant: the only true geometric difference between the two is that in one case we are considering velocity of water while in the other velocity of air (density and drag coefficient being that of the medium under consideration can be understood from context) ✅ 2025-01-15
+	🔼 We have merge the two sections to remove redundancy.
 
-- [ ] Also, p19 Paragraph 2 has a typo: the 3rd and 4th bullets are identical
+- [x] Also, p19 Paragraph 2 has a typo: the 3rd and 4th bullets are identical ✅ 2025-01-20
+	🔼 We have removed the doublon.
 
 3.3
 ---
