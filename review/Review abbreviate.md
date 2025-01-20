@@ -190,7 +190,8 @@ Sec 4.
 4.2
 ---
 
-- [ ] A simple diagram showing the relationship between (i,j), (k,l), and (o,p) would make (39) easier to read (e.g. could extend Fig 10 to show this).
+- [x] A simple diagram showing the relationship between (i,j), (k,l), and (o,p) would make (39) easier to read (e.g. could extend Fig 10 to show this). ✅ 2025-01-20
+	🔼 We have added a figure to illustrate the relationship between indices.
 
 4.3 
 ---

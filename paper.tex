@@ -814,7 +814,18 @@ Nevertheless, these time-consuming shifts can be avoided by using the following 
 		p = & j - \left\lfloor\frac{\mathbf{p}_z(t+dt)-\mathbf{p}_z(t-dt)}{\delta}\right\rfloor
 	\end{cases}
 \end{equation}
-where $\mathbf p(t)=\left[p_x(t)\ p_z(t)\right]^T$ is the position of the mesh $M$ at time $t$, $k$ and $l$ (respectively $o$ and $p$) are the shifted indices defined by the translation of $M$ at times $t+dt$ from times $t$ (respectively from times $t-dt$).
+
+
+% Pattern Info
+\begin{figure}[!h]
+	\centering
+	\input{Tikz/mdfIndices.tikz}
+	\caption{An example of the relationship between the indices $(i,j)$, $(k,l)$, and $(o,p)$ in the finite-difference method grid translation, showing how the grid indices are affected by the motion of the body $M$ at different time steps $t$, $t-dt$, and $t+dt$}
+	\label{fig:mdfIndices}
+\end{figure}
+
+
+where $\mathbf p(t)=\left[p_x(t)\ p_z(t)\right]^T$ is the position of the mesh $M$ at time $t$, $k$ and $l$ (respectively $o$ and $p$) are the shifted indices (see Figure \ref{fig:mdfIndices}) defined by the translation of $M$ at times $t+dt$ from times $t$ (respectively from times $t-dt$).
 Then, the integration scheme can be rewritten as follows:
 \begin{equation}
 	\label{eq:fdm_scheme_corrected}
