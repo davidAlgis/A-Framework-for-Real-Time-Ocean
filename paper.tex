@@ -903,7 +903,7 @@ These two steps are detailed in the following two sections.
 \subsubsection{Calculate the mask}
 The FDM needs the height of the vertices below the body.
 This is computed from the mask, composed of the vertices of $Z$ contained in one of the intersection polygons at least.
-This is done using the \textbf{Point in Polygon} strategy described in Haines (1994) \cite{hainesPointPolygonStrategies1994} and later in Cormen (2001) \cite{CormenIntroductionAlgorithms2001}.
+This is done using the \textbf{Point in Polygon} strategy described in Haines (1994) \cite{hainesPointPolygonStrategies1994}.
 
 The principle of this algorithm is as follows:
 for each vertex $v$ of the grid $Z$, a ray starting at $v$ and with direction $z$ is generated, and its number of intersection with all the intersection polygons is computed.

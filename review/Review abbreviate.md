@@ -211,7 +211,10 @@ Sec 4.
 - [x] Paragraph 1, typo: "contained into one intersection polygon" should be "contained in one of the intersection polygons" ✅ 2025-01-20
 	🔼 We have fixed this typo.
 
-- [ ] The reference to (what I assume is) CLRS listed in the References section is incorrectly written. Also CLRS is too general so probably not needed here. Stabbing ray approach described might have robustness issues - are those significant enough to cause some form of instability in the simulation?
+- [x] The reference to (what I assume is) CLRS listed in the References section is incorrectly written. Also CLRS is too general so probably not needed here. ✅ 2025-01-28
+	🔼 We removed this ref which makes doublon with the more precise reference of E. Haines (1994) .
+
+- [ ] Stabbing ray approach described might have robustness issues - are those significant enough to cause some form of instability in the simulation?
 
 - [x] Last sentence of the last paragraph of 4.4.1, typo: "technic" ✅ 2025-01-20
 	🔼 We have fixed this typo.
