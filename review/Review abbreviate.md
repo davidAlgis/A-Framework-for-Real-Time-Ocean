@@ -202,7 +202,8 @@ Sec 4.
 4.4
 ---
 
-- [ ] Last paragraph on p 23, typo: "corresponding to the vertices of Z contained into one intersected polygons." should be "...in one of the intersection polygons"
+- [x] Last paragraph on p 23, typo: "corresponding to the vertices of Z contained into one intersected polygons." should be "...in one of the intersection polygons" ✅ 2025-01-28
+	🔼 We have fixed this typo.
 
 4.4.1
 -----
