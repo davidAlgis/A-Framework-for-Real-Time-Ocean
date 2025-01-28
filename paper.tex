@@ -853,6 +853,7 @@ To solve this problem, the size $m$ of the boundary of $Z$ is increased such tha
 \label{subsec:stability}
 The stability of the scheme defined by Equation (\ref{eq:fdm_scheme_corrected}) is related to the CFL condition (for Courant–Friedrichs–Lewy), here given as follows:
 \begin{equation}
+\label{equa:cfl}
 	\frac{c^2dt^2}{\delta^2}\leq 0.5
 \end{equation}
 The parameter $dt$ is considered fixed throughout the simulation.
@@ -871,10 +872,12 @@ Then $\delta$ is defined as follows:
 	\end{cases}
 \end{equation}
 Finally $\delta$ is clamped between $\delta_{min}$ and $\delta_{max}$.
-The value of $c$ is deduced from $\delta$ and $dt$ to validate the CFL as follows:
+The value of $c$ is deduced from $\delta$ and $dt$ to ensure that the inequality in Equation \ref{equa:cfl} is always satisfied:
 \begin{equation}
-	c = \sqrt{0.49} \frac{\delta}{dt}
+	c = \sqrt{0.49} \frac{\delta}{dt}.
 \end{equation}
+This choice of $c$ ensures numerical stability.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Wave generation}

@@ -196,9 +196,8 @@ Sec 4.
 4.3 
 ---
 
-- [ ] "The value of c is deduced from dx and dt to validate the CFL as follows"
-
-Deduced how? \sqrt(0.49) seems close to \sqrt(0.5) which you would get from Eq (40)?
+- [x] "The value of c is deduced from dx and dt to validate the CFL as follows"Deduced how? \sqrt(0.49) seems close to \sqrt(0.5) which you would get from Eq (40)? ✅ 2025-01-28
+	🔼 We have clarified this sentence to explain that this choice has been made to make sure the equation 40 is true.
 
 4.4
 ---
