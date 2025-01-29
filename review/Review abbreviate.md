@@ -187,7 +187,8 @@ Sec 4.
 - [x] Eq (36)  probably it is easier to read something like $u = clamp_hi(|v|/v_max, 1)$ and $d(t) = lerp(d0, d_max, u)$ than the given piecewise definition. ✅ 2025-01-20
 	🔼 Indeed this formulation is more clear. We replace our piecewise definition with this one.
 
-- [ ] Numeric values like the ones in eq 37, which affect stability, might be meaningless if some implementation details of the framework are not been specified (e.g. floats, doubles etc)?
+- [x] Numeric values like the ones in eq 37, which affect stability, might be meaningless if some implementation details of the framework are not been specified (e.g. floats, doubles etc)? ✅ 2025-01-29
+	🔼 We have specified that we are using single precision float number.
 
 4.2
 ---
