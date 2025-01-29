@@ -369,21 +369,26 @@ This gives the final expression of the custom Donelan-Banner spectrum used in \f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Water displacement and derivative}
 
-\Framework uses the horizontal displacement $\mathbf{D}(\mathbf x,t) = \left[D_x\ D_z\right]^T$ of seawater to simulate more realistic choppy waves.
+\Framework uses the horizontal displacement $\mathbf{D}(\mathbf x,t) = \left[D_x(\mathbf x,t)\ D_z(\mathbf x,t)\right]^T$ of seawater to simulate more realistic choppy waves.
 As proposed in Sections 4.5 and 4.6 of Tessendorf (2001) \cite{tessendorfSimulating2001}, it is calculated as follows:
 \begin{equation}\label{equa:hori-displacement}
-	\mathbf{D}(\mathbf x,t) = \sum_{\mathbf{k}} \frac{i\mathbf{k}}{k} \tilde{h}(\mathbf{k}, t)\exp\left(i\mathbf{k}\cdot\mathbf x\right).
+	\mathbf{D}(\mathbf x,t) = \sum_{\mathbf{k}} \mathbf{\tilde{D}}(\mathbf k,t)\exp\left(i\mathbf{k}\cdot\mathbf x\right)
+\end{equation}
+
+where
+\begin{equation}\label{equa:hori-displacement-k}
+	\mathbf{\tilde{D}}(\mathbf k,t) = \left[\tilde{D}_x(\mathbf k,t)\ \tilde{D}_z(\mathbf k,t)\right]^T = \frac{i\mathbf{k}}{k} \tilde{h}(\mathbf{k}, t).
 \end{equation}
 
 Furthermore, to obtain additional details on the sea surface (\emph{e.g.} foam positions, normal vectors...) the derivative of the horizontal and vertical displacements must be computed, respectively of $\mathbf{D}(\mathbf x,t)$ and $h(\mathbf x,t)$.
 Taking advantage of the symmetry $\frac{\partial D_z}{\partial x}(\mathbf x,t) = \frac{\partial D_x}{\partial z}(\mathbf x,t)$, this relies on five derivatives only:
 
 \begin{align*}
-	\frac{\partial D_x}{\partial x}(\mathbf x,t) & = \sum_{\mathbf{k}} -\frac{k_x^2}{k} \tilde{h}(\mathbf{k}, t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),  \\
-	\frac{\partial D_z}{\partial x}(\mathbf x,t) & = \sum_{\mathbf{k}} -\frac{k_xk_z}{k} \tilde{h}(\mathbf{k}, t)\exp\left( i \mathbf{k}\cdot \mathbf x\right), \\
-	\frac{\partial D_z}{\partial z}(\mathbf x,t) & = \sum_{\mathbf{k}} -\frac{k_z^2}{k} \tilde{h}(\mathbf{k}, t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),  \\
-	\frac{\partial h}{\partial x}(\mathbf x,t)   & = \sum_{\mathbf{k}} ik_x \tilde{h}(\mathbf{k}, t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),              \\
-	\frac{\partial h}{\partial z}(\mathbf x,t)   & = \sum_{\mathbf{k}} ik_z \tilde{h}(\mathbf{k}, t)\exp\left( i \mathbf{k}\cdot \mathbf x\right).
+	\frac{\partial D_x}{\partial x}(\mathbf x,t) & = \sum_{\mathbf{k}} -ik_x \tilde{D}_x(\mathbf k,t)\exp\left(i\mathbf{k}\cdot\mathbf x\right),  \\
+	\frac{\partial D_z}{\partial x}(\mathbf x,t) & = \sum_{\mathbf{k}} -ik_x \tilde{D}_z(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right), \\
+	\frac{\partial D_z}{\partial z}(\mathbf x,t) & = \sum_{\mathbf{k}} -ik_z\tilde{D}_z(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),  \\
+	\frac{\partial h}{\partial x}(\mathbf x,t)   & = \sum_{\mathbf{k}} k \tilde{D}_x(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),              \\
+	\frac{\partial h}{\partial z}(\mathbf x,t)   & = \sum_{\mathbf{k}} k \tilde{D}_z(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right).
 \end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%

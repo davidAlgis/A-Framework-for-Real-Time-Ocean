@@ -117,9 +117,11 @@ The same goes for the details of the usual Donelan-Banner spectrum, specifically
 2.2
 ---
 
-- [ ] Isn't $k$ locally constant (wrt x,z)? Then could just write 
+- [x] Isn't $k$ locally constant (wrt x,z)? Then could just write ✅ 2025-01-29
 $$\frac{\partial D_x}{\partial x} = i k_x D_x$$
 for the first equation, and similar for the other 4 derivatives. Makes it easier to read and is explicit about computation needed.
+	🔼 $k$ is indeed locally constant relative to $x$ and $z$, however, the equation $\frac{\partial D_x}{\partial x} = i k_x D_x$ isn't true, because $k_x$ cannot be factorize from the sum, as it's the index on which the sum is apply. Nonetheless, this suggestion is true when considering individually each terms of the sum. Therefore, we have rewrite this paragraph to show these equality in a more "Fourier-fashion", which is more close of the implementation.
+	  
 
 2.5
 ---
