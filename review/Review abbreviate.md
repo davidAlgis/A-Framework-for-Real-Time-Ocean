@@ -152,10 +152,10 @@ Sec 3
 
 3.2.1
 
-- [ ] p 17. "The Arc Blanc framework uses the prism approximation proposed by Bajo et al." How? In Bajo et al. paper, the geometry (position & area vector, is stored in texels of the surface textures of the model.) The prisms used there are per texel, so for example the prism height is determined by (average) water height above the projected texel center. How is this done here?
+- [x] p 17. "The Arc Blanc framework uses the prism approximation proposed by Bajo et al." How? In Bajo et al. paper, the geometry (position & area vector, is stored in texels of the surface textures of the model.) The prisms used there are per texel, so for example the prism height is determined by (average) water height above the projected texel center. How is this done here? ✅ 2025-01-29
 
 Specifically, "The principles of their method are as follows: from each submerged triangle $T^s_i$ of the body, a prism is build up to the water surface; hence, each prism volume can be calculated, and so the full submerged volume vw by adding all of them." This is not exactly correct - their computation is at surface texel granularity level - it is not immediately obvious how this is to be done on triangle basis (e.g. uniform tessellation?)
-
+	🔼 Thank you for your insightful comment. We revised the paragraph to clarify and justify that we use an approximation similar to Bajo et al., but at the triangle level rather than the texel granularity. We add some "formal" details about the calculation.
 3.2
 ---
 
@@ -168,7 +168,9 @@ Specifically, "The principles of their method are as follows: from each submerge
 3.3
 ---
 
-- [ ] As above, item 3, it is not clear how to do the volume computation. The paper claims it is triangle based, while the quoted source (Bajo et al) uses surface texel based computation. Does the author imply that some sort of uniform triangulation scheme is to be used? If so, then there is also the matter of closing and triangulating the polygons given by the (approximate) cutting of triangles against the waterline described in paragraph 2 of 3.1 on p 17 by referring to Kerner's paper.
+- [x] As above, item 3, it is not clear how to do the volume computation. The paper claims it is triangle based, while the quoted source (Bajo et al) uses surface texel based computation. Does the author imply that some sort of uniform triangulation scheme is to be used? If so, then there is also the matter of closing and triangulating the polygons given by the (approximate) cutting of triangles against the waterline described in paragraph 2 of 3.1 on p 17 by referring to Kerner's paper. 
+	🔼 As mentioned above, we have made the paragraph on the volume computation more clear. Moreover, we clarified the hypothesis that we have made on the meshes. 
+
 
 - [ ] Figure 9, p 20 mentioning c_i, COG, center of submerged part etc, but these are not labeled in the diagram, which produces unnecessary cognitive load when reading the diagram. Also, can spread the vectors a bit to declutter (dont need to have them bunched up so realistically), likewise v_a and v_w are not collinear in general. Larger arrow tips would help.
 
