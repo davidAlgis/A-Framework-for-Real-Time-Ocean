@@ -16,7 +16,8 @@ The paper includes numerous errors/typos:
 - [x] Figure 3 caption mentions the dispersion parameter, but the figure is actually about another parameter \delta. ✅ 2025-01-10
 	🔼 Thanks, we have corrected and clarify the caption of figure 3
 
-- [ ] I am confused about the parameters of the listed cascades in Section 2.3. First of all, the ranges listed seem wrong: 12/16 is clearly greater than 12/256. I presume this is a typo. Also, shouldn't L be larger for smaller k?
+- [x] I am confused about the parameters of the listed cascades in Section 2.3. First of all, the ranges listed seem wrong: 12/16 is clearly greater than 12/256. I presume this is a typo. Also, shouldn't L be larger for smaller k? ✅ 2025-01-30
+	🔼 Indeed, we mixed ourself between the length of the cascades and their cutoff. We have fixed this.
 
 - [x] Figure 9 caption says that F_a is "applied to the center of the submerged part." It should be the "unsubmerged part" instead. ✅ 2025-01-10
 	🔼 We have corrected this typo.
