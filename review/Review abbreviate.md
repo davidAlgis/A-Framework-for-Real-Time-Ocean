@@ -126,7 +126,8 @@ for the first equation, and similar for the other 4 derivatives. Makes it easier
 
 2.5
 ---
-- [ ] Second paragraph p 12. It would be helpful to have some details on memory organization for the NxN tiles, computation efficiency on the GPU, etc - especially since quoting performance numbers in Sec 5, Figure 14.
+- [x] Second paragraph p 12. It would be helpful to have some details on memory organization for the NxN tiles, computation efficiency on the GPU, etc - especially since quoting performance numbers in Sec 5, Figure 14. ✅ 2025-01-31
+	Thank you for the valuable suggestion; however, we believe the current level of detail sufficiently balances technical depth and readability
 
 2.6
 ---
