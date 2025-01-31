@@ -1,0 +1,15 @@
+%!TEX root = ../paper.tex
+\begin{algorithm}
+\caption{Iterative Retrieval of Water Height}
+\label{alg:compute_water_height}
+\begin{algorithmic}[1]
+\Require A position $\mathbf x$ to evaluate the water height and the horizontal and vertical displacements: $\mathbf{D}(\mathbf x,t)$, $h(\mathbf x,t)$
+\State Initialize displacement $\mathbf{W} = (0,0,0)$
+\For{$k = 1$ to $N_{\text{iter}}$} \Comment{Iterative correction to account for displacement}
+    \State Compute shifted position: $\mathbf{W} = \mathbf{x} - \mathbf{W}$
+    \State Compute horizontal displacement at $\mathbf{W}$ 
+    \Comment{The sum of bilinear interpolation of the displacement on each cascades}
+\EndFor
+\State \Return The vertical component of $W$
+\end{algorithmic}
+\end{algorithm}

@@ -373,7 +373,7 @@ This gives the final expression of the custom Donelan-Banner spectrum used in \f
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Water displacement and derivative}
-
+\label{subsec:water_displacement_and_derivative}
 \Framework uses the horizontal displacement $\mathbf{D}(\mathbf x,t) = \left[D_x(\mathbf x,t)\ D_z(\mathbf x,t)\right]^T$ of seawater to simulate more realistic choppy waves.
 As proposed in Sections 4.5 and 4.6 of Tessendorf (2001) \cite{tessendorfSimulating2001}, it is calculated as follows:
 \begin{equation}\label{equa:hori-displacement}
@@ -475,6 +475,13 @@ Second, as \framework simulates a tile of water of size $N\times N$ using $c$ ca
 Third, many terms are independent on the time $t$: $\tilde{h}_0(\mathbf{k})$, $\tilde{h}_0^*(-\mathbf{k})$ and the wave data ($\mathbf{k}$ and $\omega(k)$).
 \Framework computes them for each cascade wave vector at each spectrum change only, but not at each iteration.
 Then it does a combination with time-dependent terms at each iteration, giving an expression for the coefficients in frequency space for the eight IFFT.
+
+
+To compute the water height at a specific point, it is not sufficient to directly evaluate Equation \ref{equa:heightWater} after performing the IFFT. This is because the water surface is described parametrically, with fluid positions depending on both horizontal and vertical displacements, as detailed in Section \ref{subsec:water_displacement_and_derivative}. Accurately determining the water surface position at a given horizontal location requires an iterative process (see Algorithm \ref{alg:compute_water_height}): the estimated position is adjusted by subtracting the displacement vector, and the water height is recalculated until convergence. However, in practice, waiting for full convergence may be computationally expensive. Instead, the loop is limited to $N_{iter}=4$ iterations, a value chosen to balance accuracy and performance (see Appendix \ref{sec:evaluation_of_the_number_of_iterations_for_convergence} for details on this choice).
+
+
+\input{Algorithms/water_height.tex}
+
 
 Last but not least, one might think that applying IFFT should be enough to get the expected result.
 Nevertheless, using the standard IFFT algorithm (such as the one of Cooley and Tukey (1965) \cite{cooleyAlgorithmMachineCalculation1965}) leads to some incorrect geometry changes.
@@ -1554,6 +1561,22 @@ This section proposes a proof of Theorem \ref{theorem:ifft}.
 
 
 \end{proof}
+
+
+\section{Evaluation of the Number of Iterations for Convergence}
+\label{sec:evaluation_of_the_number_of_iterations_for_convergence}
+The optimal number of iterations ($N_{\text{iter}}$) required for the iterative retrieval of the water height was determined through a series of tests. Wind speeds were varied from $0.1 \, \text{m/s}$ to $35.0 \, \text{m/s}$ in increments of $0.5 \, \text{m/s}$, and the convergence of water height was evaluated at $1000$ random positions over a $10^4 \, \text{m} \times 10^4 \, \text{m}$ domain.
+
+The program iteratively computed the water height until the changes in height were smaller than a $1$ cm.
+
+The results, as shown in Figure~\ref{fig:convergence_steps}, demonstrate that the required number of iterations increases with wind speed, stabilizing at approximately $N_{\text{iter}} = 4$ for higher wind speeds. This finding suggests that using $N_{\text{iter}} = 4$ ensures reliable convergence for all tested conditions while balancing computational efficiency. 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Figures/results_cm.png}
+    \caption{Mean number of steps required for convergence as a function of wind speed. Error bars represent the variance of iterations across $1000$ test points.}
+    \label{fig:convergence_steps}
+\end{figure}
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 \afterdoc
