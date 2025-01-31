@@ -111,10 +111,10 @@ Sec 1
 Sec 2
 =====
 
-- [ ] Sec 2.1 - 2.5 are very heavy on hydrodynamics.
+- [x] Sec 2.1 - 2.5 are very heavy on hydrodynamics. ✅ 2025-01-31
 For example, starting with eq (5) on p6 all bullet points below on JONSWAP spectrum are straight from page 33 of Horvath (there it is eq 28). There is probably no need to copy this here verbatim, rather than giving a cursory explanation of what the terms of (5) are, a derivation into a more computationally ready form would be better.
 The same goes for the details of the usual Donelan-Banner spectrum, specifically eqns (7) - (12), could just refer to Sections 6.0.9 - 6.1 of Horvath. The focus instead could be on approximation in eq (17), which is original, and the conclusion eq (18).
-
+	🔼 Thank you for the insightful comment. We agree that the derivations are detailed; however, we believe these sections help simplify the reader's understanding of the underlying hydrodynamic principles and provide clarity for implementation. Moreover, it makes the paper a bit more self-contained.
 2.2
 ---
 
