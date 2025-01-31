@@ -1,0 +1,39 @@
+%!TEX root = ../paper.tex
+\begin{algorithm}
+\caption{Computation of Geometrical Parameters}
+\label{alg:geom_params}
+\begin{algorithmic}[1]
+\Require List of triangles $T_i$ with vertex positions $\mathbf{v}_i$ and normal $\mathbf{n}_i$
+\Ensure Geometrical parameters computed for each triangle
+
+\For{each triangle $T_i = (\mathbf{v}_0, \mathbf{v}_1, \mathbf{v}_2)$ with normal $\mathbf{n}_i$}
+    \State Retrieve water height $d_0$, $d_1$, and $d_2$ at vertices $\mathbf{v}_0$, $\mathbf{v}_1$, and $\mathbf{v}_2$
+    \State Compute area: $A_i = \frac{1}{2} \|(\mathbf{v}_1 - \mathbf{v}_0) \times (\mathbf{v}_2 - \mathbf{v}_0)\|$
+    \State Compute centroid: $\mathbf{p}_i = \frac{1}{3} (\mathbf{v}_0 + \mathbf{v}_1 + \mathbf{v}_2)$
+    \State Compute centroid depth: $d_i = \frac{1}{3} (d_0 + d_1 + d_2)$
+    
+    \If{$d_0 \geq 0$ and $d_1 \geq 0$ and $d_2 \geq 0$}  \Comment{Fully above water}
+        \State Set submerged area $A_i^s = 0$
+        \State Set volume contribution $v_{w_i} = 0$
+        
+    \ElsIf{$d_0 < 0$ and $d_1 < 0$ and $d_2 < 0$} \Comment{Fully submerged}
+        \State Set submerged area $A_i^s = A_i$
+        \State Compute submerged volume: $v_{w_i} = A_i d_i n_i^y$
+        
+    \ElsIf{one vertex is above the water surface (e.g., $d_0 \geq 0$)} \Comment{Partially submerged}
+        \State Compute intersection points $\mathbf{p}_1, \mathbf{p}_2$ using linear interpolation:
+        \State $\mathbf{p}_j = \mathbf{v}_j + \alpha (\mathbf{v}_k - \mathbf{v}_j)$ where $\alpha = \frac{d_j}{d_j - d_k}$
+        \State Compute submerged area $A_i^s$ from new submerged sub-triangle(s)
+        \State Compute submerged volume: $v_{w_i} = A_i^s d_i n_i^y$
+        
+    \ElsIf{two vertices are above the water surface (e.g., $d_0 \geq 0$, $d_1 \geq 0$)} \Comment{Mostly submerged}
+        \State Compute intersection points $\mathbf{p}_1, \mathbf{p}_2$ using linear interpolation
+        \State Compute submerged area $A_i^s$ from the remaining submerged sub-triangle
+        \State Compute submerged volume: $v_{w_i} = A_i^s d_i n_i^y$
+    \EndIf
+
+    \State Store processed data ($A_i^s, v_{w_i}, \mathbf{p}_i$) for force computations
+\EndFor
+
+\end{algorithmic}
+\end{algorithm}

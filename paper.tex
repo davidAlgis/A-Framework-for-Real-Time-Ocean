@@ -23,6 +23,11 @@
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{patterns}
 
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\algrenewcommand{\algorithmiccomment}[1]{\hfill \textcolor{greenF}{// #1}}
+
+
 \usepackage{multirow}
 
 \setciteauthor{David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau}
@@ -664,12 +669,17 @@ Then the body surface is decomposed into a set $\left\lbrace T_i^s\right\rbrace$
 The buoyancy calculation presented in Section \ref{subsubsec:buoyancy} requires the full submerged volume $v_w$ of the mesh.
 \Framework uses the prism approximation similarly to the approximation proposed by Bajo \etal (2020) \cite{bajoRealisticBuoyancyModel2020a}. 
 While Bajo \etal compute the submerged volume at the texel level, the same principle can be applied using triangles instead of texels using as they did the divergence theorem. 
-Specifically, $v_w$ is approximated as the sum of the prisms with bases corresponding to the triangle areas $A_i$ and heights defined by the distance between the triangle centers $p_i$ and the water surface $h(x,z,t)$. 
+Specifically, $v_w$ is approximated as the sum of the prisms with bases corresponding to the triangle areas $A_i$ and heights defined by the distance $d_i$ between the triangle centers $p_i$ and the water surface $h(p_i,t)$. 
 Each term in the sum is weighted by the vertical component of the triangle normal $n_i^y$:
 \begin{equation}
-v_w = \sum_{T_i^s} (h(x,z,t) - p_i) A_i n_i^y.
+v_w = \sum_{T_i^s} A_i d_i n_i^y.
 \end{equation}
 Note that this formula is correct only under the assumption that the mesh is closed.
+
+The pseudo code for the calculations performed in this section can be read in the Algorithm \ref{alg:geom_params}.
+
+
+\input{Algorithms/geometrical_parameters.tex}
 
 
 At last, from all the submerged faces $T_i^s$ \framework computes the center of immersion $c_i$ used for the buoyancy calculation as presented in Section~\ref{subsec:forces}.
