@@ -1562,21 +1562,29 @@ This section proposes a proof of Theorem \ref{theorem:ifft}.
 
 \end{proof}
 
-
 \section{Evaluation of the Number of Iterations for Convergence}
 \label{sec:evaluation_of_the_number_of_iterations_for_convergence}
-The optimal number of iterations ($N_{\text{iter}}$) required for the iterative retrieval of the water height was determined through a series of tests. Wind speeds were varied from $0.1 \, \text{m/s}$ to $35.0 \, \text{m/s}$ in increments of $0.5 \, \text{m/s}$, and the convergence of water height was evaluated at $1000$ random positions over a $10^4 \, \text{m} \times 10^4 \, \text{m}$ domain.
 
-The program iteratively computed the water height until the changes in height were smaller than a $1$ cm.
+The optimal number of iterations ($N_{\text{iter}}$) required for the iterative retrieval of water height was determined through two experiments, focusing on accuracy and computational efficiency.
 
-The results, as shown in Figure~\ref{fig:convergence_steps}, demonstrate that the required number of iterations increases with wind speed, stabilizing at approximately $N_{\text{iter}} = 4$ for higher wind speeds. This finding suggests that using $N_{\text{iter}} = 4$ ensures reliable convergence for all tested conditions while balancing computational efficiency. 
+The first experiment aimed to evaluate the number of iterations required for the water height computation to converge within a given precision. This test has been conducted on different wind speeds as it makes the height of water significantly. Wind speeds ranged from $0.1$ m/s to $35$ m/s in $0.5$ m/s increments, with convergence tested at $10^3$ random positions uniformly distributed over a $10^4\times 10^4$ m domain. The iterative process was repeated until the difference between consecutive height estimates was smaller than $0.01$ m. The results, shown in Figure~\ref{fig:convergence_steps}, indicate that the required number of iterations increases with wind speed but stabilizes at approximately $N_{\text{iter}} = 4$ for higher wind speeds. 
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.9\textwidth]{Figures/results_cm.png}
-    \caption{Mean number of steps required for convergence as a function of wind speed. Error bars represent the variance of iterations across $1000$ test points.}
-    \label{fig:convergence_steps}
+The second experiment aimed to measure the computational cost associated with varying numbers of iterations. The execution time was assessed using a CUDA-based implementation, where the iterative retrieval of water height was performed for different values of $N_{\text{iter}}$. Each test was executed $10^3$ times on a GPU, and execution times were recorded across $10^5$ randomly sampled positions. The measurements included the minimum, maximum, mean, and variance of execution times for each iteration count. The results, presented in Figure~\ref{fig:execution_time}, show that while execution time increases with the number of iterations, the rate of increase diminishes after four iterations. This confirms that $N_{\text{iter}} = 4$ provides an optimal balance between computational efficiency and accuracy, ensuring reliable convergence across tested conditions.
+
+\begin{figure}[h!] 
+	\centering 
+	\includegraphics[width=0.9\textwidth]{Figures/results_cm.png} 
+	\caption{Mean number of steps required for convergence as a function of wind speed. Error bars represent the variance of iterations across $1000$ test points.} 
+	\label{fig:convergence_steps} 
 \end{figure}
+
+\begin{figure}[h!] 
+	\centering 
+	\includegraphics[width=0.9\textwidth]{Figures/resultsExecutionTime.png} 
+	\caption{Average execution time per iteration count over $1000$ tests, measured across $10^5$ sample positions. Error bars indicate variance in execution time.} 
+	\label{fig:execution_time} 
+\end{figure}
+
 %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%
 \afterdoc
