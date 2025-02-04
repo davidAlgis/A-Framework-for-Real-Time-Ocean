@@ -294,8 +294,13 @@ Sec 5
 1. The movement of the hulls and how the corresponding translations/rotations of hulls affect the solid->water interaction is not clearly described.
 It appears that only the translation part is taken in account.
 	🔼We have added some precision about how to handle the rotation of the body for mask calculation.
+
+
+- [x] 2. Finite difference method used to simulate interactive waves is extremely primitive and is able to simulate vertical displacement of interactive waves only. ✅ 2025-02-04
 Tessendorf's eWave based on FFT+iFFT per simulation step is a bit more expensive but produces full 3D displacements of the interactive waves.
-3. Injecting displacements into water caused by movement of solid objects, called wave generation in the paper, based on functions representing side and front/back effect, looks absolutely artificial. 
+	🔼 We appreciate your insightful comment. While we agree that the finite difference method is more primitive and limited to simulating vertical displacements, its simplicity allows for straightforward implementation and efficient parallelization across multiple bodies in the sea. Implementing eWave would indeed be a valuable enhancement to Arc Blanc, and we might consider it for future work.
+	
+- [ ] Injecting displacements into water caused by movement of solid objects, called wave generation in the paper, based on functions representing side and front/back effect, looks absolutely artificial. 
 Instead, a per-gridpoint signed difference in volumes produced by intersections of hull volume and still water volume at current vs previous simulation step 
 could be used to generate water displacements based on incompressibility pf water.
 4. Mask movement and orientation used in paper, so that front of the mask is above water surface and back is below water surface, looks artificial and extremely simplified.
