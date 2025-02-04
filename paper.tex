@@ -940,6 +940,8 @@ The principle of this algorithm is as follows:
 for each vertex $v$ of the grid $Z$, a ray starting at $v$ and with direction $z$ is generated, and its number of intersection with all the intersection polygons is computed.
 $v$ is in the polygon if this number of intersections is odd; otherwise it is not.
 
+To ensure consistency regardless of the body's orientation, a rotation alignment is applied to the intersected polygons before processing.
+
 To reduce the computation times, this strategy is applied to the vertices $v$ included into the bounding box of the intersections polygons.
 Since the number of vertices $v$ of $Z$ is at least twice as the size of $M$, this simple method reduces efficiently the number of ray to polygon calculations.
 
