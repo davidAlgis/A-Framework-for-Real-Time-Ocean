@@ -950,7 +950,30 @@ Knowing all the vertices in the mask, their height must be given as input of the
 \Framework uses a simple model that tries to reproduce parts of the idea of Cords and Staadt (2009) \cite{cordsRealTimeOpenWater2009}.
 By construction of the grid $Z$, $M$ has its bow oriented on the positive side of the $z$ axis, and its starboard (right-hand side when facing the bow) on the positive side of the $x$ axis.
 Hence, $h$ is made such that from the vertex at position $\mathbf x$, the front of the mask is above the free surface and the back below, in a way that is proportional to the speed of $M$.
-Moreover, the boat forms a $V$ shape, with its center a bit below the extremity of the side.
+Moreover, the boat forms a $V$ shape laterally, with its center a bit below the extremity of the side. Figure \ref{fig:mask_maskTheoreticalView} presents the desired shape from three different perspectives.
+
+
+\begin{figure}[htbp]
+	\centering
+
+	\subfloat[Three quarter view]
+	{
+		\includegraphics[width=0.25\textwidth]{Figures/mask_diagonal_view.png}
+	}
+	\hspace{1cm}
+	\subfloat[Back view]
+	{
+		\includegraphics[width=0.25\textwidth]{Figures/mask_back_view.png}
+	}
+	\hspace{1cm}
+	\subfloat[Side view]
+	{
+		\includegraphics[width=0.25\textwidth]{Figures/mask_side_view.png}
+	}
+	\caption{Three different theoretical point of view of the mask for a simple rectangle.}
+	\label{fig:mask_maskTheoreticalView}
+\end{figure}
+
 
 To simplify, $h(\mathbf x)$ is defined as the sum of two orthogonal functions $f(x)$ and $g(z)$,
 where $f(x)$ represent the side effect, and $g(z)$ the front/back effect.
@@ -1000,13 +1023,6 @@ Figure \ref{fig:mask} shows some views of the application of this interactive wa
 
 \begin{figure}[htbp]
 	\centering
-
-	\subfloat[A theoretical view of the height of the mask, with input a simple rectangle.]
-	{
-		\includegraphics[width=0.25\textwidth]{Figures/Mask3D_theoric_view.png}
-		\label{subfig:maskTheoreticalView}
-	}
-	\hspace{1cm}
 	\subfloat[The height of the mask of a simple boat encoded in a single channel texture.]
 	{
 		\includegraphics[width=0.25\textwidth]{Figures/MaskHeightMap.png}
@@ -1018,7 +1034,7 @@ Figure \ref{fig:mask} shows some views of the application of this interactive wa
 		\includegraphics[width=0.25\textwidth]{Figures/Mask3D-contrast.png}
 		\label{subfig:mask3D}
 	}
-	\caption{Three different views of the height of the mask defined by Equation \ref{equa:mask_full}.}
+	\caption{Two different views of the height of the mask defined by Equation \ref{equa:mask_full} for a simple boat.}
 	\label{fig:mask}
 \end{figure}
 

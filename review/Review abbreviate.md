@@ -272,13 +272,13 @@ TODO dois-je ajouter des choses dans l'article ?
 - [x] Also, for landlubbers among us, please clarify "starboard" as "right-hand side when facing the bow" :) ✅ 2025-01-20
 	🔼 We added the precision to make the term more clear.
 
-- [ ] End of the same paragraph:
+- [x] End of the same paragraph: ✅ 2025-02-04
 "Hence, h is made such that from the vertex at position x, the front of the mask is above the free surface and the back below, in a way that is proportional to the speed of M. Moreover, the boat forms a V shape, with its center a bit below the extremity of the side."
 I can not visualize this. For example, 
 - what is meant here by "front of the mask is above the free surface and the back below"?
 - "..the boat forms a V shape.." - does V here mean that the boat is in the shape of the letter "V", or does V denote the shape (object) in question? For example, the sentence before eq (43) says "The function f models the side effect using a shape in V", which suggest the latter, but the next sentence says "The V-shape is obtained from the absolute value of the abscissa" (note the hyphen) which suggest the former.
 Can we please have a diagram that shows and explains this geometry configuration clearly - in addition to Fig 11?
-
+	🔼 We have added some explanation and three figures to make clarify the desired shape.
 Sec 5
 =====
 
