@@ -330,7 +330,7 @@ For instance,
 	🔼 As one the goal of the paper is to describe a complete unified framework for ocean simulation in real time, we think that presenting alternative approach could only benefits to the reader. And it makes the article more self consistent on the subject of ocean simulation.
 
 
-- [ ] In chapter 2.6 the "interpolation degree" term is unclear and a bit misleading, 
+- [x] In chapter 2.6 the "interpolation degree" term is unclear and a bit misleading, ✅ 2025-02-04
 and since the interpolation is based on water body displacements calculated at "slices" with fixed depth, 
 I'd suggest term "interpolation slice" and "number of interpolation slices", for instance on Figure 7.
-## 
+	🔼 Thank you for your suggestion. While we understand that the term "interpolation degree" may be misleading, we prefer to retain it as it aligns with common terminology used in interpolation methods, such as polynomial interpolation.
