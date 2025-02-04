@@ -735,24 +735,28 @@ For the submerged part $\left\lbrace T_i^s\right\rbrace$, the medium is water, w
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fluid-to-solid algorithm}
 \label{subsec:algoForces}
-At each iteration, the fluid-to-solid algorithm proceeds as follows:
-\begin{enumerate}
-	\item Computing the vertices' position of the body relative to the water height (Section \ref{subsec:geomParam});
-	\item Computing the sets of submerged and not submerged triangles, by splitting the triangles having vertices in above and below the water surface (Section \ref{subsec:geomParam});
-	\item Computing the buoyancy force for each body (Section \ref{subsubsec:buoyancy});
-	\item Computing the two drag forces for each triangle, and summing them for each body (Section \ref{subsubsec:dragForce});
-	\item Applying the forces in the physical integration scheme.
-\end{enumerate}
 
-A summary of the forces that are applied on solid can be found on Figure \ref{fig:forcesComputation}.
+The fluid-to-solid algorithm integrates the forces computed on the GPU with a physics integration scheme executed on the CPU. To bridge this GPU-CPU workflow efficiently, a parallel reduction is applied on the GPU. This reduction aggregates the forces and geometrical parameters computed for individual triangles into global values, minimizing the data transferred to the CPU and reducing latency. 
+
+Water and air drag forces are computed individually for each submerged or non submerged triangle and then summed using parallel reduction. Water drag forces are applied at the center of immersion, while air drag forces are applied at the center of the non submerged part. At the same time, geometric parameters such as immersion center are also aggregated for use in the integration process.
+
+Buoyancy, however, is a special case. Since it depends solely on the total submerged volume, it is computed once for the entire object using an analytical formula. The resulting buoyancy force is applied directly to the center of immersion without requiring per-triangle summation.
+
+This approach optimizes computational efficiency by reducing unnecessary calculations and data transfers, ensuring a real-time response within the physics solver.
+
+The fluid-to-solid method is presented on Algorithm \ref{alg:fluid_to_solid}.
+
+\input{Algorithms/fluid_to_solid.tex}
+
+A summary of the forces applied to the solid is shown in Figure \ref{fig:forcesComputation}.
 
 \begin{figure}[!h]
 	\centering
 	\input{Tikz/forcesComputation.tikz}
 	\caption{Summary of forces calculation. Using the same notation as Section~\ref{subsec:forces} it follows:
-		the sum of the buoyancy forces \textcolor{jauneC}{$F_b$} in \textcolor{jauneC}{yellow}, applied to the center of immersion;
+		the buoyancy force \textcolor{jauneC}{$F_b$} in \textcolor{jauneC}{yellow}, applied to the center of immersion;
 		the sum of water drag force \textcolor{purpleF}{$F_w$} in \textcolor{purpleF}{purple}, applied to the center of immersion too;
-		the sum of the air drag forces \textcolor{redF}{$F_a$} in \textcolor{redF}{red}, applied to the center of the unsubmerged part;
+		the sum of the air drag forces \textcolor{redF}{$F_a$} in \textcolor{redF}{red}, applied to the center of the non submerged part;
 		and finally the gravity force \textcolor{greenF}{$F_g$} in \textcolor{greenF}{green}, applied to the center of gravity.
 		Different velocities are displayed above the ship:
 		the wind velocity \textcolor{redF}{$v_a$} in \textcolor{redF}{red};

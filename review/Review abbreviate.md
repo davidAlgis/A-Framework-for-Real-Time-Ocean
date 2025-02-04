@@ -310,12 +310,14 @@ A propulsion force acting on hull and causing it to move, in conjunction with pr
 will naturally cause hull to raise its bow based on physically correct simulation instead of oversimplified approximation used in the paper.
 	🔼Thank you for your valuable proposition. It might be a nice refinement for Arc Blanc framework.
 
-- [ ] Overall the paper allows to implement presented technique without much trouble for people that have experience with the topic of the paper, 
+
+- [x] Overall the paper allows to implement presented technique without much trouble for people that have experience with the topic of the paper, ✅ 2025-02-04
 although better explanation of how the forces acting on solid object in water are summed up and used to evolve solid object dynamics would improve it a lot.
 Is the sum of the forces applied to center of gravity of the object? Or there are rotational moments?
 Are moments of inertia of the solid object taken in account? 
 What about the moment of inertia of water body surrounding the object?
 Without those explained, this part of the abstract looks like a bit of overstatement:
+	🔼We have added details about the way the sum is made and forces applied to a physics solver. 
 
 - [x] One note: deciseconds? Please, use seconds or milliseconds. ✅ 2025-01-17
 	🔼 We used seconds, which are more standard.
