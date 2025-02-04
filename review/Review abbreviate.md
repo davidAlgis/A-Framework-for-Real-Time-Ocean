@@ -2,8 +2,9 @@
 
 ## Concrete Remarks
 
-- [ ] The normalization factor Q is missing in Equation 13.
-
+- [x] The normalization factor Q is missing in Equation 13. ✅ 2025-02-04
+	🔼 The normalization factor is missing on purposed, indeed the normalization factor needs to only to be applied on the full spectrum in equation 15. Moreover, we applied it on equation 8, because as mention under equation 17 "normalization problem will occur if the full-spectrum normalization factor is simply approximated before its application, because for small values of $r_{\omega}$, $Q_{DB\xi}(\omega)$ will be very low and therefore numerically challenging to normalize.".
+	
 - [x] Figure 3 caption mentions the dispersion parameter, but the figure is actually about another parameter \delta. ✅ 2025-01-10
 	🔼 Thanks, we have corrected and clarify the caption of figure 3
 
