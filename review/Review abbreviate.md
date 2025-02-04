@@ -1,14 +1,5 @@
 # Review 1
 
-## General Remarks
-
-- [ ] The improvements on the existing literature are minor. Their practical implications are also not clearly presented, such as what happens if one were to use a simpler method for estimating the fluid velocity away from the surface? On the other hand, the paper describes how to combine methods developed for different components of an ocean simulation system into a single framework, which seems valuable.
-- [ ] The mathematical descriptions are sufficient, though there are some errors (see below). Algorithmic descriptions could be improved. I am not sure if the paper includes sufficient information for aiding an implementation-oriented reader. There are no source codes included and no pseudocodes in the paper.
-- [ ] The paper provides some limited evaluation using only 2 scenes with a single hardware configuration. Therefore, I would not consider that the system described in the paper is battle-tested. That said, it includes a sufficient evaluation to indicate that the system works and delivers good performance on a hardware with reasonable specs. The novel components are not properly tested. The paper includes some numerical evaluation, but I would have also liked to see qualitative comparisons to see how they impact the results.
-- [ ] The title and the abstract are OK. I would emphasize the novel components a bit less, since their magnitude is limited and the paper lacks qualitative evaluation.
-
-The paper includes numerous errors/typos:
-
 ## Concrete Remarks
 
 - [ ] The normalization factor Q is missing in Equation 13.
