@@ -89,8 +89,8 @@ Other minor issues:
 }
 	🔼 We used this references instead of the thesis when talking about the wave particles.
 
-- [ ] I enjoyed reading this paper. I would have liked it a lot more if it included more detailed descriptions of the algorithms and/or source code.
-
+- [x] I enjoyed reading this paper. I would have liked it a lot more if it included more detailed descriptions of the algorithms and/or source code. ✅ 2025-02-04
+	🔼 We tried to add more algorithm to simplify the implementation for readers.
 
 - [ ]  it could do better:
 a) The paper should be a bit less heavy on hydrodynamic theory details: several equation sequences involving JONSWAP and Donelan-Banner spectra are taken verbatim from quoted references (e.g. Horvath) and are not really used much beyond the page they are on. It does not feel like the minute details of the spectrum derivation and empirical coefficients involved contributes much to understanding of the general theory (at least not from the jcgt perspective, but I might be wrong?)
