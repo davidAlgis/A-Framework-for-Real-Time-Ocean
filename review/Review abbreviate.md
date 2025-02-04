@@ -305,9 +305,10 @@ Instead, a per-gridpoint signed difference in volumes produced by intersections 
 could be used to generate water displacements based on incompressibility pf water.
 	🔼Thank you for the thoughtful suggestion. Using per-gridpoint signed differences based on the incompressibility of water is indeed a more realistic approach and could significantly enhance the accuracy of wave generation. However, we chose our current approximation to prioritize simplicity and straightforward implementation, which aligns better with the real-time constraints and accessibility goals of Arc Blanc. We will certainly consider your suggestion for future enhancements.
 
-4. Mask movement and orientation used in paper, so that front of the mask is above water surface and back is below water surface, looks artificial and extremely simplified.
+- [x] 4. Mask movement and orientation used in paper, so that front of the mask is above water surface and back is below water surface, looks artificial and extremely simplified. ✅ 2025-02-04
 A propulsion force acting on hull and causing it to move, in conjunction with proper water->solid interaction from the 1st part of the paper, with its forces and moments, 
 will naturally cause hull to raise its bow based on physically correct simulation instead of oversimplified approximation used in the paper.
+	🔼Thank you for your valuable proposition. It might be a nice refinement for Arc Blanc framework.
 
 - [ ] Overall the paper allows to implement presented technique without much trouble for people that have experience with the topic of the paper, 
 although better explanation of how the forces acting on solid object in water are summed up and used to evolve solid object dynamics would improve it a lot.
@@ -319,11 +320,13 @@ Without those explained, this part of the abstract looks like a bit of overstate
 - [x] One note: deciseconds? Please, use seconds or milliseconds. ✅ 2025-01-17
 	🔼 We used seconds, which are more standard.
 
-- [ ] The paper lists a ton of references that are not touched in the paper in the sense that the paper does not derive anything from those.
+- [x] The paper lists a ton of references that are not touched in the paper in the sense that the paper does not derive anything from those. ✅ 2025-02-04
 For instance, 
 1. SPH papers are not related.
 2. Wave particles are not related
 3. Water wave packets are not related
+	🔼 As one the goal of the paper is to describe a complete unified framework for ocean simulation in real time, we think that presenting alternative approach could only benefits to the reader. And it makes the article more self consistent on the subject of ocean simulation.
+
 
 - [ ] In chapter 2.6 the "interpolation degree" term is unclear and a bit misleading, 
 and since the interpolation is based on water body displacements calculated at "slices" with fixed depth, 
