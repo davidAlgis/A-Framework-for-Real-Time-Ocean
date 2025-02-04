@@ -284,8 +284,8 @@ Sec 5
 
 - [ ] Figure 14. XP2 geometry, section 3.1. 4.6 msec for 4153 triangles vertex classification and splitting seems a bit excessive. Same goes for forces computation. This, for example, is why it would be nice to see more implementation details.
 
-- [ ] Also, an idea: maybe assuming that the intersection shape is more or less the same between two consecutive frames, for low Beaufort state at least, (and for some k steps, where k is small), then recompute the buoyancy/volume based on the previous volume of the submerged shape, correcting for the height difference of the water between the two frames, then on k-th step doing the correct computation?
-
+- [x] Also, an idea: maybe assuming that the intersection shape is more or less the same between two consecutive frames, for low Beaufort state at least, (and for some k steps, where k is small), then recompute the buoyancy/volume based on the previous volume of the submerged shape, correcting for the height difference of the water between the two frames, then on k-th step doing the correct computation? ✅ 2025-02-04
+	🔼 Thanks for your suggestion, the project for which this article was made require precise hydrodynamics data at each frame. Nonetheless, your approximation could be interesting with simulation that has low Beaufort state. But it might complexify the implementation on GPU for more polyvalent system.  
 # Review 3 
 
 ## General Remarks
