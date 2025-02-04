@@ -83,10 +83,7 @@ Other minor issues:
 - [x] I enjoyed reading this paper. I would have liked it a lot more if it included more detailed descriptions of the algorithms and/or source code. ✅ 2025-02-04
 	🔼 We tried to add more algorithm to simplify the implementation for readers.
 
-- [ ]  it could do better:
-a) The paper should be a bit less heavy on hydrodynamic theory details: several equation sequences involving JONSWAP and Donelan-Banner spectra are taken verbatim from quoted references (e.g. Horvath) and are not really used much beyond the page they are on. It does not feel like the minute details of the spectrum derivation and empirical coefficients involved contributes much to understanding of the general theory (at least not from the jcgt perspective, but I might be wrong?)
-
-- [ ] b) give more detail on the actual implementation: memory layout on the GPU, implementation of the kernels etc. This is especially relevant since performance timing is given in Sec 5 of the paper, but the rest of the paper gives us little idea as to why these number are such as they are. For example, the bottleneck in Fig 14 seems to be geometry and force computation (intersection geometry computation). Why should this be so slow?
+- [ ] give more detail on the actual implementation: memory layout on the GPU, implementation of the kernels etc. This is especially relevant since performance timing is given in Sec 5 of the paper, but the rest of the paper gives us little idea as to why these number are such as they are. For example, the bottleneck in Fig 14 seems to be geometry and force computation (intersection geometry computation). Why should this be so slow?
 
 - [ ] No quite. As mentioned above, the paper should provide more implementation details, specifically with regard to the GPU computation and data layout, specifically to explain the timing numbers in Fig 14, and why some of them seem a bit heavy (e.g. like geometry processing). the paper also mentions that no serious CPU-side computation is used - it would be interesting to know why (e.g. could the geometry processing (intersection curve), which seems to be a bottleneck according to Fig 14, be offloaded to CPU?)
 
