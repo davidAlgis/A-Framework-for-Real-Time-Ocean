@@ -229,6 +229,36 @@ Sec 4.
 	🔼 We have fixed this typo.
 
 - [ ] Also, not explicitly mentioned, but I am guessing that the intersection polygons from sec 3.1 are projected onto xz plane in order to do z-ray stabbing in sec 4.4.1. Could some such projected intersection polygons then be generate (e.g. self intersecting when projected onto zx plane, or inverted - e.g. for turbulent water height and finely tessellated body M)
+	🔼 Thanks for your remarks that has given us plenty to think about. The question on the "stability" of the intersection between M and water height can be divide into two questions:
+	
+- First, does the intersection between M and the water height (the height map) always results in some loop (or empty/singleton set), but not in some open loop or more stranger subset of $\mathbb{R}^3$. This question is non trivial and can be sumarrize with this theorem:
+Theorem: Let $M$ be a compact 2-manifold without any border (our mesh) and $H=\set{(x,y,z)\in\mathbb{R}^3| h(x,z)-y=0}$, then $M\cap H$ can only be:
+- Empty
+- $x\in \mathbb{R}^3$
+- $\cup_i c_i$ where $c_i$ are homeomorphic set to the unit circle $S^1$
+
+The proof of this theorem is a bit long and out of scope for this paper, as it required some skills in differential topology, but here is a sketch of a demonstration:
+The idea of the proof is to characterize the dimension of the intersection and to prove that the intersection is always compact. As compact set of dimension one in $\mathbb{R}^3$ are homeomorphic to finite union of circle.
+
+First, note that the compactness of the intersection is quite trivial, as by definition $M$ is compact and $H$ is by definition closed, therefore their intersection must be compact. 
+
+Second, for the dimension it's a bit more complex. But we can profit of the [preimage theorem](https://en.wikipedia.org/wiki/Preimage_theorem) which under certain condition gives us a characterization of the dimension of a set. 
+Consequently, our objective is to pose the problem in a way we can apply the preimage theorem. 
+Let $f:M\rightarrow \mathbb{R}$, $f(x,z,y)\mapsto h(x,z)-y$
+Note that $S\cap H$ is equal to $f^{-1}(0)$, moreover by definition of the $h$ and its linearity, $f$ is a smooth map. 
+Now we need to prove that $0$ is a regular value of $f$, that is $\forall x\in f^{-1}(0)$, $df_x : T_x M\rightarrow T_0 \mathbb{R}\simeq \mathbb{R}$ is surjective. To throw out this case lets directly assume that $f^{-1}(0)\neq empty set$. Moreover, $df_x(v) = \nabla f \cdot v$
+Note that, if $df_x$ is not a zero map, then $df_x$ is surjective (indeed if it's not a zero map $im(df_x)=\mathbb{R}$, because it cannot be the other vector subspace $\set{0}$). Therefore, there can is two cases:
+1. $T_x M\subset T_x H$ and then $df_x$ is not the zero map, which corresponds to the intersection is given by a single point.
+2. $T_x M$ is not a subset of $T_x H$ and therefore $df_x$ is not the zero map and then surjective.
+We can apply the preimage theorem and we have:
+$codim(f^{-1}(0)) = dim(\mathbb{\mathbb{R}}) = 1$ 
+Moreover, as we are in finite dimension:
+$codim(f^{-1}(0)) = dim(M)-dim(f^{-1}(0))$
+which ends the demonstration by giving us:
+$dim(S\cap H) = 1$
+- Second as you mention, does the project on the zx plane cause the intersection polygons to be self intersected. For this lets us simply remarks that if the polygon is simple on the continuous height map, then the projection that alter only the vertical component should gives us also a simple polygon. It won't be the case is instead of an height map we were using more complex parametric surfaces, where two point of the surfaces could be projected of the same point of the xz plane. The keypoint here is the bijection between the xz plane and the height map. 
+
+TODO dois-je ajouter des choses dans l'article ?
 
 - [ ] Also, doing ray stabbing on multiple components probably increases chances of bad classification of a point. Could do closed component count (provided the model M is a closed orientable surface to start with, so the intersection polygons have well-defined interior) to speed up the test.
 
