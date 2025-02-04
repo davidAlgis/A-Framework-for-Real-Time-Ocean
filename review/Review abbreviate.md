@@ -260,7 +260,8 @@ $dim(S\cap H) = 1$
 
 TODO dois-je ajouter des choses dans l'article ?
 
-- [ ] Also, doing ray stabbing on multiple components probably increases chances of bad classification of a point. Could do closed component count (provided the model M is a closed orientable surface to start with, so the intersection polygons have well-defined interior) to speed up the test.
+- [x] Also, doing ray stabbing on multiple components probably increases chances of bad classification of a point. Could do closed component count (provided the model M is a closed orientable surface to start with, so the intersection polygons have well-defined interior) to speed up the test. ✅ 2025-02-04
+	🔼 We didn't face any bad classification at this point, but we might in the future considering using closed component count indeed, thanks for the suggestion.
 
 4.4.2
 -----
