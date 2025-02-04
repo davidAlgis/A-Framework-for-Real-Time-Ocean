@@ -84,9 +84,10 @@ Other minor issues:
 	🔼 We tried to add more algorithm to simplify the implementation for readers.
 
 - [ ] give more detail on the actual implementation: memory layout on the GPU, implementation of the kernels etc. This is especially relevant since performance timing is given in Sec 5 of the paper, but the rest of the paper gives us little idea as to why these number are such as they are. For example, the bottleneck in Fig 14 seems to be geometry and force computation (intersection geometry computation). Why should this be so slow?
+	🔼 TODO.
 
-- [ ] No quite. As mentioned above, the paper should provide more implementation details, specifically with regard to the GPU computation and data layout, specifically to explain the timing numbers in Fig 14, and why some of them seem a bit heavy (e.g. like geometry processing). the paper also mentions that no serious CPU-side computation is used - it would be interesting to know why (e.g. could the geometry processing (intersection curve), which seems to be a bottleneck according to Fig 14, be offloaded to CPU?)
-
+- [x] No quite. As mentioned above, the paper should provide more implementation details, specifically with regard to the GPU computation and data layout, specifically to explain the timing numbers in Fig 14, and why some of them seem a bit heavy (e.g. like geometry processing). the paper also mentions that no serious CPU-side computation is used - it would be interesting to know why (e.g. could the geometry processing (intersection curve), which seems to be a bottleneck according to Fig 14, be offloaded to CPU?) ✅ 2025-02-04
+	🔼 The decision to keep all heavy computations on the GPU, including geometry processing, is motivated by minimizing data transfers between CPU and GPU, which can introduce significant latency. While offloading intersection curve computations to the CPU could theoretically balance the workload, it would require frequent memory exchanges, likely negating any performance gain. In addition, we added a comment in section 6 to enforce the fact that this choice of "no serious CPU-side computation" was made to ensure that CPU remains available for other standard tasks.
 ## Concrete Remarks
 
 Sec 1
@@ -271,7 +272,8 @@ Sec 5
 =====
 
 - [ ] Figure 14. XP2 geometry, section 3.1. 4.6 msec for 4153 triangles vertex classification and splitting seems a bit excessive. Same goes for forces computation. This, for example, is why it would be nice to see more implementation details.
-
+	🔼 TODO
+	
 - [x] Also, an idea: maybe assuming that the intersection shape is more or less the same between two consecutive frames, for low Beaufort state at least, (and for some k steps, where k is small), then recompute the buoyancy/volume based on the previous volume of the submerged shape, correcting for the height difference of the water between the two frames, then on k-th step doing the correct computation? ✅ 2025-02-04
 	🔼 Thanks for your suggestion, the project for which this article was made require precise hydrodynamics data at each frame. Nonetheless, your approximation could be interesting with simulation that has low Beaufort state. But it might complexify the implementation on GPU for more polyvalent system.  
 # Review 3 
