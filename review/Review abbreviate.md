@@ -300,9 +300,11 @@ It appears that only the translation part is taken in account.
 Tessendorf's eWave based on FFT+iFFT per simulation step is a bit more expensive but produces full 3D displacements of the interactive waves.
 	🔼 We appreciate your insightful comment. While we agree that the finite difference method is more primitive and limited to simulating vertical displacements, its simplicity allows for straightforward implementation and efficient parallelization across multiple bodies in the sea. Implementing eWave would indeed be a valuable enhancement to Arc Blanc, and we might consider it for future work.
 	
-- [ ] Injecting displacements into water caused by movement of solid objects, called wave generation in the paper, based on functions representing side and front/back effect, looks absolutely artificial. 
+- [x] Injecting displacements into water caused by movement of solid objects, called wave generation in the paper, based on functions representing side and front/back effect, looks absolutely artificial. ✅ 2025-02-04
 Instead, a per-gridpoint signed difference in volumes produced by intersections of hull volume and still water volume at current vs previous simulation step 
 could be used to generate water displacements based on incompressibility pf water.
+	🔼Thank you for the thoughtful suggestion. Using per-gridpoint signed differences based on the incompressibility of water is indeed a more realistic approach and could significantly enhance the accuracy of wave generation. However, we chose our current approximation to prioritize simplicity and straightforward implementation, which aligns better with the real-time constraints and accessibility goals of Arc Blanc. We will certainly consider your suggestion for future enhancements.
+
 4. Mask movement and orientation used in paper, so that front of the mask is above water surface and back is below water surface, looks artificial and extremely simplified.
 A propulsion force acting on hull and causing it to move, in conjunction with proper water->solid interaction from the 1st part of the paper, with its forces and moments, 
 will naturally cause hull to raise its bow based on physically correct simulation instead of oversimplified approximation used in the paper.
