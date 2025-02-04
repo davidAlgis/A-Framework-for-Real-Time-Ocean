@@ -736,15 +736,18 @@ For the submerged part $\left\lbrace T_i^s\right\rbrace$, the medium is water, w
 \subsection{Fluid-to-solid algorithm}
 \label{subsec:algoForces}
 
-The fluid-to-solid algorithm integrates the forces computed on the GPU with a physics integration scheme executed on the CPU. To bridge this GPU-CPU workflow efficiently, a parallel reduction is applied on the GPU. This reduction aggregates the forces and geometrical parameters computed for individual triangles into global values, minimizing the data transferred to the CPU and reducing latency. 
 
-Water and air drag forces are computed individually for each submerged or non submerged triangle and then summed using parallel reduction. Water drag forces are applied at the center of immersion, while air drag forces are applied at the center of the non submerged part. At the same time, geometric parameters such as immersion center are also aggregated for use in the integration process.
+To ensure a structured and efficient data workflow on the GPU, all computations for a given mesh are performed separately, avoiding data interleaving between different meshes. Each kernel invocation processes a single mesh, iterating over its triangles before moving to the next mesh.
 
-Buoyancy, however, is a special case. Since it depends solely on the total submerged volume, it is computed once for the entire object using an analytical formula. The resulting buoyancy force is applied directly to the center of immersion without requiring per-triangle summation.
+Firstly, for each triangle in the mesh, the geometric parameters are calculated and then used to compute the drag forces. These include necessary attributes such as the submerged volume, normal vectors, and the drag forces acting on submerged and non submerged parts.
 
-This approach optimizes computational efficiency by reducing unnecessary calculations and data transfers, ensuring a real-time response within the physics solver.
+Once per-triangle computations are completed, the forces and geometrical parameters must be integrated into the physics solver, which operates on the CPU. To minimize data transfers and reduce latency, a parallel reduction kernel is applied on the GPU for each mesh individually. This step aggregates all per-triangle forces and parameters into global values for the entire mesh.
 
-The fluid-to-solid method is presented on Algorithm \ref{alg:fluid_to_solid}.
+Buoyancy, however, is handled differently. Since it depends solely on the total submerged volume rather than individual triangles, it is computed separately using an analytical formula and applied directly at the submerged center without requiring per-triangle summation.
+
+With all global parameters computed, the final step transfers the data to the CPU, where the physics solver integrates the buoyancy and the water drag forces are applied on the submerged center, while air drag forces are applied at the center of the non submerged part.
+
+This pipeline is presented in Algorithm \ref{alg:fluid_to_solid}.
 
 \input{Algorithms/fluid_to_solid.tex}
 

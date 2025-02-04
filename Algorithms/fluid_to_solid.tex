@@ -3,13 +3,28 @@
 \caption{Fluid-to-Solid Interaction Algorithm}
 \label{alg:fluid_to_solid}
 \begin{algorithmic}[1]
-\For{all triangles $T_i$} \Comment{Iterate over all triangles}
-\State Compute geometrical parameters \Comment{Algorithm \ref{alg:geom_params}}
-\State Compute drag forces $\mathbf{F_d}$ for each triangles\Comment{Section \ref{subsubsec:dragForce}}
+\For{each mesh} \Comment{Iterate over all mesh}
+    \For{all triangles $T_i$} \Comment{Iterate over all triangles}
+        \State Compute geometrical parameters \Comment{Algorithm \ref{alg:geom_params}}
+    \EndFor
 \EndFor
-\State Apply parallel reduction to aggregate forces and geometrical parameters.
-\State Transfer reduced forces and parameters to the CPU
-\State Compute buoyancy force $\mathbf{F_b}$ from geometrical parameters \Comment{Section \ref{subsubsec:buoyancy}}
-\State Integrate total forces and moments in the physics engine
+
+\For{each mesh} \Comment{Iterate over all mesh}
+    \For{all triangles $T_i$} \Comment{Iterate over all triangles}
+        \State Compute drag forces $\mathbf{F_d}$ for each triangles\Comment{Section \ref{subsubsec:dragForce}}
+    \EndFor
+\EndFor
+
+\For{each mesh} \Comment{Iterate over all mesh}
+    \For{all triangles $T_i$} \Comment{Iterate over all triangles}
+        \State Apply parallel reduction to aggregate forces and geometrical parameters.
+        \EndFor
+\EndFor
+
+\For{each mesh} \Comment{Iterate over all mesh}
+    \State Transfer reduced forces and parameters to the CPU
+    \State Compute buoyancy force $\mathbf{F_b}$ from geometrical parameters \Comment{Section \ref{subsubsec:buoyancy}}
+    \State Integrate total forces and moments in the physics engine
+\EndFor
 \end{algorithmic}
 \end{algorithm}
