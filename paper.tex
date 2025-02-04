@@ -882,6 +882,11 @@ To solve this problem, the size $m$ of the boundary of $Z$ is increased such tha
 \end{figure}
 
 
+To ensure high performance, the FDM update step is executed entirely on the GPU,
+with a single kernel processing all points of the simulation zone in parallel.
+Each thread updates one grid point, significantly reducing computation time. The pseudo code associated to this method is shown in Algorithm \ref{alg:fdm_compute}.
+
+\input{Algorithms/fdm.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Stability}
@@ -1031,19 +1036,22 @@ Figure \ref{fig:mask} shows some views of the application of this interactive wa
 	\centering
 	\subfloat[The height of the mask of a simple boat encoded in a single channel texture.]
 	{
-		\includegraphics[width=0.25\textwidth]{Figures/MaskHeightMap.png}
+		\includegraphics[width=0.4\textwidth]{Figures/MaskHeightMap.png}
 		\label{subfig:maskHeightMap}
 	}
 	\hspace{1cm}
 	\subfloat[The height of the mask of a simple boat in a 3D scene with a very low sea state. Boat rendering and wave propagation has been disabled to only display the initial step of the height of the mask.]
 	{
-		\includegraphics[width=0.25\textwidth]{Figures/Mask3D-contrast.png}
+		\includegraphics[width=0.4\textwidth]{Figures/Mask3D-contrast.png}
 		\label{subfig:mask3D}
 	}
 	\caption{Two different views of the height of the mask defined by Equation \ref{equa:mask_full} for a simple boat.}
 	\label{fig:mask}
 \end{figure}
 
+The mask calculation is implemented on the GPU to leverage parallel processing efficiency. A dedicated kernel is launched for each zone only for the vertices of the FDM grid that fall within the bounding box of the intersection polygon, reducing computational overhead. Each thread independently performs the point-in-polygon test using a ray-intersection method and determines whether the corresponding vertex should be included in the mask. Once identified as inside an intersection polygon, the height function is applied per vertex, using the predefined wave generation model. The full process is detailed in Algorithm \ref{alg:mask_calc}.
+
+\input{Algorithms/mask.tex}
 
 %-------------------------------------------------------------------------
 \section{Results and discussions}

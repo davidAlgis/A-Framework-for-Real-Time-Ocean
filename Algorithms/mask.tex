@@ -1,0 +1,23 @@
+%!TEX root = ../paper.tex
+\begin{algorithm}
+\caption{Mask Calculation via Point-in-Polygon Test}
+\label{alg:mask_calc}
+\begin{algorithmic}[1]
+\Require The bounding box, the intersection polygon
+\For{each vertices of the FDM grid $i,j$ within the bounding box in a zone $Z$} 
+    \State  $counter \gets 0$ \Comment{Initialize the counter for intersections}
+    \For{each edges $(v_k,v_{k+1})$ of the intersection polygon}
+        \State $p_1 = (i,j)$ 
+        \State $p_2 = (i+\infty,j+\infty)$ 
+        \State $p_3 = v_k$
+        \State $p_4 = v_{k+1}$
+        \If{Segment-Intersect($p_1$, $p_2$, $p_3$, $p_4$) do}
+            \State $counter+=1$
+        \EndIf
+    \EndFor
+    \If{$counter \bmod 2 = 1$} \Comment{Point $(i,j)$ is inside an intersection polygon.}
+        \State $h_{i,j}^{n} = b_w\left(f(x)+g(z)\right)$ \Comment{See Equation \ref{equa:mask_full}}
+    \EndIf
+\EndFor     
+\end{algorithmic}
+\end{algorithm}
