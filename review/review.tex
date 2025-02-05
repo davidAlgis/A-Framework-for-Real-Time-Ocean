@@ -21,7 +21,7 @@
 
 \maketitle
 
-This document provides responses to the reviewers' comments. First of all, we would like to sincerely thank the reviewers for their thoughtful and constructive feedback. We feel that their input has enhanced the clarity and quality of this manuscript a lot, and we appreciate their efforts to improve our article.
+This document provides responses to the reviewers' comments. First, we would like to sincerely thank the reviewers for their thoughtful and constructive feedback. We feel that their input has enhanced the clarity and quality of this manuscript a lot, and we appreciate their efforts to improve our article.
 
 Below, we reproduce each reviewer's comments followed by our responses in green.
 
@@ -229,7 +229,7 @@ Below, we reproduce each reviewer's comments followed by our responses in green.
 
 	\item \textbf{Also, not explicitly mentioned, but I am guessing that the intersection polygons from sec 3.1 are projected onto xz plane in order to do z-ray stabbing in sec 4.4.1. Could some such projected intersection polygons then be generate (e.g. self intersecting when projected onto zx plane, or inverted - e.g. for turbulent water height and finely tessellated body M)}
 
-	      \answer{Thanks for your remarks that has given us plenty to think about. We have answered to this remarks in a dedicated Section \ref{sec:evaluation_of_the_number_of_iterations_for_convergence} at the end of this document.}
+	      \answer{Thanks for your remarks that has given us plenty to think about. We have answered to this remarks in a dedicated Appendix \ref{sec:sketch_of_proof} at the end of this document.}
 
 
 	\item \textbf{Also, doing ray stabbing on multiple components probably increases chances of bad classification of a point. Could do closed component count (provided the model M is a closed orientable surface to start with, so the intersection polygons have well-defined interior) to speed up the test.}
@@ -256,7 +256,7 @@ Below, we reproduce each reviewer's comments followed by our responses in green.
 
 	\item \textbf{Figure 14, XP2 geometry, section 3.1. 4.6 msec for 4153 triangles vertex classification and splitting seems a bit excessive. The same goes for forces computation. This, for example, is why it would be nice to see more implementation details.}
 
-	      \answer{TODO.}
+	      \answer{As mention before, we have added more details about the implementation to clarify this part.}
 
 	\item \textbf{Also, an idea: Maybe assuming that the intersection shape is more or less the same between two consecutive frames, for low Beaufort state at least (and for some $k$ steps, where $k$ is small), then recompute the buoyancy/volume based on the previous volume of the submerged shape, correcting for the height difference of the water between the two frames, then on the $k$-th step doing the correct computation?}
 
@@ -321,7 +321,7 @@ Below, we reproduce each reviewer's comments followed by our responses in green.
 \appendix
 
 \section{Sketch of Proof Mesh-Height Map Intersection}
-\label{sec:sketch_of_proof_mesh_height_map_intersection}
+\label{sec:sketch_of_proof}
 
 The question on the "stability" of the intersection between $M$ and the water height can be divided into two questions:
 
