@@ -1,0 +1,321 @@
+\documentclass{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+
+% Define the custom color
+\definecolor{answercolor}{rgb}{0.35,0.47,0.28}
+
+% Define the macro
+\newcommand{\answer}[1]{\textbf{\textcolor{answercolor}{Answer:}} \textcolor{answercolor}{#1}}
+
+\title{Response to Reviewers' Comments}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+This document provides responses to the reviewers' comments. First of all, we would like to sincerely thank the reviewers for their thoughtful and constructive feedback. We feel that their input has enhanced the clarity and quality of this manuscript a lot, and we appreciate their efforts to improve our article.
+
+Below, we reproduce each reviewer's comments followed by our responses in green.
+
+\section*{Review 1}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{The normalization factor Q is missing in Equation 13.}
+    
+    \answer{The normalization factor is missing on purpose. Indeed, the normalization factor needs to be applied only to the full spectrum in Equation 15. Moreover, we applied it in Equation 8 because, as mentioned under Equation 17, "normalization problems will occur if the full-spectrum normalization factor is simply approximated before its application. For small values of $r_{\omega}$, $Q_{DB\xi}(\omega)$ will be very low and therefore numerically challenging to normalize."}
+
+    \item \textbf{Figure 3 caption mentions the dispersion parameter, but the figure is actually about another parameter $\delta$.}
+    
+    \answer{Thanks, we have corrected and clarified the caption of Figure 3.}
+
+    \item \textbf{I am confused about the parameters of the listed cascades in Section 2.3. First of all, the ranges listed seem wrong: $12/16$ is clearly greater than $12/256$. I presume this is a typo. Also, shouldn't $L$ be larger for smaller $k$?}
+    
+    \answer{Indeed, we confused the length of the cascades with their cutoff. We have corrected this mistake.}
+
+    \item \textbf{Figure 9 caption says that $F_a$ is "applied to the center of the submerged part." It should be the "unsubmerged part" instead.}
+    
+    \answer{We have corrected this typo.}
+
+    \item \textbf{It is unclear what Figure 11(c) shows.}
+    
+    \answer{We have clarified the captions of all subfigures in Figure 11 to improve clarity.}
+
+    \item \textbf{$h^*$ in Equations 48, 50, and 59 should be negative (following Equation 46). The same goes for unlabeled equations above Equation 53.}
+    
+    \answer{We have corrected this sign error.}
+
+    \item \textbf{In the equation above Equation 56, "sinh(kY)" should be "sinh(ky)."}
+    
+    \answer{We have corrected this case mistake.}
+
+    \item \textbf{The parameters $y$, $t$, and $k$ in Equations 59, 60, 61, and 62 are written in an inconsistent order. They should all use the same order.}
+    
+    \answer{We have standardized the order of all parameters throughout the manuscript for consistency.}
+
+    \item \textbf{This sentence in Appendix A is unclear and needs more explanation: "Note that while the third equation of system 1 is not used here, it can help to deduce the dispersion relation."}
+    
+    \answer{We have removed this sentence and replaced it with a full derivation of the dispersion relation for better clarity.}
+
+    \item \textbf{In Equation 71, $v_y$ should be $v_z$.}
+    
+    \answer{We have corrected this typo.}
+
+    \item \textbf{In Equation 73, there appears to be an extra term: $h(x,t)/dt$.}
+    
+    \answer{We have removed the excess term.}
+
+    \item \textbf{The abstract ends with the term "fluid-to-solid algorithm." I would replace it with "fluid-to-solid coupling algorithm."}
+    
+    \answer{We have added "coupling" to make the term more coherent with the literature.}
+
+    \item \textbf{The introduction begins by mentioning "scientific computing," but the paper is not about scientific computing at all. I would replace it with "computer graphics."}
+    
+    \answer{We replaced "scientific computing" with "computer graphics," which is more appropriate for our article and JCGT.}
+
+    \item \textbf{I would recommend removing the subsection title 1.1 and converting Section 1.2 (related work) into Section 2.}
+    
+    \answer{Indeed, placing related work in a dedicated section is more coherent with the literature.}
+
+    \item \textbf{On page 5, "standard gravity" should be "gravitational acceleration."}
+    
+    \answer{We changed "standard gravity" to "gravitational acceleration."}
+
+    \item \textbf{In Section 3.2.3, the description of $\rho_a$ is repeated.}
+    
+    \answer{We have removed the duplicate description.}
+
+    \item \textbf{In Section 4.4.2, "M has is bow" should be "M has a bow."}
+    
+    \answer{We fixed the typo.}
+
+    \item \textbf{On page 27, "fluid-to-solid coupling FDM" should be "solid-to-fluid coupling FDM."}
+    
+    \answer{We fixed the typo.}
+\end{enumerate}
+
+\section*{Review 2}
+
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{The bibliography is OK, though I am a bit confused as to why Yuksel's PhD thesis is referenced instead of the related paper.}
+    
+    \answer{We used this reference instead of the thesis when discussing wave particles.}
+
+    \item \textbf{I enjoyed reading this paper. I would have liked it a lot more if it included more detailed descriptions of the algorithms and/or source code.}
+    
+    \answer{A large part of the correction concerns adding details about implementation like pseudocode to simplify the implementation for readers.}
+
+    \item \textbf{Give more details on the actual implementation: memory layout on the GPU, implementation of the kernels, etc. This is especially relevant since performance timing is given in Sec 5 of the paper, but the rest of the paper gives little insight into why these numbers are as they are. For example, the bottleneck in Fig 14 seems to be geometry and force computation (intersection geometry computation). Why should this be so slow?}
+    
+    \answer{TODO.}
+
+    \item \textbf{The paper should provide more implementation details, specifically regarding GPU computation and data layout, to explain the timing numbers in Fig 14 and why some of them seem heavy (e.g., geometry processing). The paper also mentions that no serious CPU-side computation is used. It would be interesting to know why (e.g., could the geometry processing (intersection curve), which seems to be a bottleneck according to Fig 14, be offloaded to the CPU?).}
+    
+    \answer{The decision to keep all heavy computations on the GPU, including geometry processing, is motivated by minimizing data transfers between CPU and GPU, which can introduce significant latency. While offloading intersection curve computations to the CPU could theoretically balance the workload, it would require frequent memory exchanges, likely negating any performance gain. In addition, we added a comment in Section 6 to reinforce the fact that this choice of "no serious CPU-side computation" was made to ensure that the CPU remains available for other standard tasks.}
+
+    \item \textbf{First bullet point, (TeX error) here and elsewhere Tessendorf is quoted as "Tessendorf (2004) [Tessendorf 1999]" (i.e., reference link and text do not match).}
+    
+    \answer{We changed references to make them coherent between text and citation.}
+
+    \item \textbf{Sections 2.1 - 2.5 are very heavy on hydrodynamics.} 
+    
+    \answer{Thank you for the insightful comment. We agree that the derivations are detailed; however, we believe these sections help simplify the reader's understanding of the underlying hydrodynamic principles and provide clarity for implementation. Moreover, it makes the paper a bit more self-contained.}
+
+    \item \textbf{Isn't $k$ locally constant (wrt $x,z$)? Then, could just write:}
+    \[
+    \frac{\partial D_x}{\partial x} = i k_x D_x
+    \]
+    \textbf{for the first equation, and similar for the other 4 derivatives. This makes it easier to read and is explicit about computation needed.}
+    
+    \answer{$k$ is indeed locally constant relative to $x$ and $z$; however, the equation $\frac{\partial D_x}{\partial x} = i k_x D_x$ isn't strictly true, because $k_x$ cannot be factored out from the sum, as it is the index over which the sum is applied. Nonetheless, this suggestion holds when considering each term of the sum individually. We have rewritten this paragraph to present these equalities in a more "Fourier-fashion," aligning better with the implementation.}
+
+    \item \textbf{Second paragraph p 12. It would be helpful to have some details on memory organization for the NxN tiles, computation efficiency on the GPU, etc - especially since quoting performance numbers in Sec 5, Figure 14.}
+    
+    \answer{Thank you for the valuable suggestion; however, we believe the current level of detail sufficiently balances technical depth and readability}
+
+    \item \textbf{Paragraph 1, p 13, awkward phrasing "...tied to the wave vector, preventing from any simplifications to reduce the needed calculations."}
+    
+    \answer{We rephrased this sentence with your suggestions.}
+
+    \item \textbf{Para 2, p 14 "First, while the velocity decays exponentially, it relies on a logarithmic similar to..." should probably be "..., it relies on a logarithmic function similar to..."}
+    
+    \answer{We added the missing word.}
+
+    \item \textbf{Same paragraph, "this function decreases slowly (actually with ln(250 + 1) = 5.5),". What is the significance of "250 + 1" here?!}
+    
+    \answer{The "250 + 1" was to keep the same "form" as the function, but we removed it to avoid confusion.}
+
+    \item \textbf{Figure 6, the vertical scale should probably be logarithmic to make these graphs more informative. As it is now, three of four graphs are scrunched on top of each other.}
+    
+    \answer{TODO.}
+
+    \item \textbf{Not sure why the bracket "\{" in eq. (28). Also it does not look like eq (28) is quoted in the rest of the paper, so $\alpha$ and $\beta$ could just be given inline.}
+    
+    \answer{We inline the coefficients choice.}
+
+    \item \textbf{"The Arc Blanc framework uses the prism approximation proposed by Bajo et al." How? In Bajo et al.’s paper, the geometry (position \& area vector) is stored in texels of the surface textures of the model. The prisms used there are per texel, so for example, the prism height is determined by (average) water height above the projected texel center. How is this done here?}
+    
+    \answer{Thank you for your insightful comment. We revised the paragraph to clarify and justify that we use an approximation similar to Bajo et al., but at the triangle level rather than the texel granularity. We added some formal details about the calculation.}
+
+    \item \textbf{Sections 3.2.2 and 3.2.3 details are redundant: the only true geometric difference between the two is that in one case we are considering velocity of water while in the other velocity of air (density and drag coefficient being that of the medium under consideration can be understood from context)}
+    
+    \answer{We have merge the two sections to remove redundancy.}
+
+    \item \textbf{Also, p.19 Paragraph 2 has a typo: the 3rd and 4th bullets are identical.}
+    
+    \answer{We have removed the doublon.}
+
+    \item \textbf{As above, item 3, it is not clear how to do the volume computation. The paper claims it is triangle based, while the quoted source (Bajo et al) uses surface texel based computation. Does the author imply that some sort of uniform triangulation scheme is to be used? If so, then there is also the matter of closing and triangulating the polygons given by the (approximate) cutting of triangles against the waterline described in paragraph 2 of 3.1 on p 17 by referring to Kerner's paper.}
+    
+    \answer{As mentioned above, we have made the paragraph on the volume computation more clear. Moreover, we clarified the hypothesis that we have made on the meshes.}
+
+
+    \item \textbf{Figure 9, p 20 mentioning }$\mathbf{c_i}$\textbf{, COG, center of submerged part etc, but these are not labeled in the diagram, which produces unnecessary cognitive load when reading the diagram. Also, can spread the vectors a bit to declutter (dont need to have them bunched up so realistically), likewise }$\mathbf{v_a}$\textbf{ and }$\mathbf{v_w}$\textbf{ are not collinear in general. Larger arrow tips would help.}
+    
+    \answer{We tried to clarify the caption while keeping information about where to apply the forces. Moreover we change the figure based on your comment to make it more clear.}
+
+    
+    \item \textbf{ Paragraph 1, suggesting change of notation, e.g. $\delta$ instead of $dx$ for the discretization step. This would make (35) (38) (40) (42) less confusing when first seen (e.g. it's not a differential), or $\Delta{x}, \Delta{y}, \Delta{t}$, but that might be a bit too detailed, e.g. since the grid is regular.}
+    
+    \answer{As suggested, we renamed $dx$ in $\delta$ to make equation less confuse.}
+
+    \item \textbf{Eq (36)  probably it is easier to read something like $u = clamp_hi(|v|/v_max, 1)$ and $d(t) = lerp(d0, d_max, u)$ than the given piecewise definition.}
+    
+    \answer{Indeed this formulation is more clear. We replace our piecewise definition with this one.}
+        
+    \item \textbf{Numeric values like the ones in eq 37, which affect stability, might be meaningless if some implementation details of the framework are not been specified (e.g. floats, doubles etc)?}
+    
+    \answer{We have specified that we are using single precision float number.}
+        
+    \item \textbf{A simple diagram showing the relationship between (i,j), (k,l), and (o,p) would make (39) easier to read (e.g. could extend Fig 10 to show this).}
+    
+    \answer{We have added a figure to illustrate the relationship between indices.}
+        
+    \item \textbf{"The value of c is deduced from dx and dt to validate the CFL as follows"Deduced how? }$\mathbf{\sqrt(0.49)}$\textbf{ seems close to }$\mathbf{\sqrt(0.5)}$\textbf{ which you would get from Eq (40)?}
+    
+    \answer{We have clarified this sentence to explain that this choice has been made to make sure the equation 40 is true.}
+
+        
+    \item \textbf{Last paragraph on p 23, typo: "corresponding to the vertices of Z contained into one intersected polygons." should be "...in one of the intersection polygons"}
+    
+    \answer{We have fixed this typo.}
+
+
+        
+    \item \textbf{Paragraph 1, typo: "contained into one intersection polygon" should be "contained in one of the intersection polygons"}
+    
+    \answer{We have fixed this typo.}
+        
+
+    \item \textbf{The reference to (what I assume is) CLRS listed in the References section is incorrectly written. Also CLRS is too general so probably not needed here.}
+    
+    \answer{We removed this ref which makes doublon with the more precise reference of E. Haines (1994).}
+
+    \item \textbf{Stabbing ray approach described might have robustness issues - are those significant enough to cause some form of instability in the simulation?}
+    
+    \answer{TODO what robustness issues and instability ?}
+
+    \item \textbf{Last sentence of the last paragraph of 4.4.1, typo: "technic"}
+    
+    \answer{We have fixed this typo.}
+
+    \item \textbf{Also, not explicitly mentioned, but I am guessing that the intersection polygons from sec 3.1 are projected onto xz plane in order to do z-ray stabbing in sec 4.4.1. Could some such projected intersection polygons then be generate (e.g. self intersecting when projected onto zx plane, or inverted - e.g. for turbulent water height and finely tessellated body M)}
+    
+    \answer{}
+
+
+    \item \textbf{Also, doing ray stabbing on multiple components probably increases chances of bad classification of a point. Could do closed component count (provided the model M is a closed orientable surface to start with, so the intersection polygons have well-defined interior) to speed up the test.}
+    
+    \answer{We didn't face any bad classification at this point, but we might in the future considering using closed component count indeed, thanks for the suggestion.}
+
+    \item \textbf{Sentence 2, paragraph 1, typo: "By construction of the grid Z, M has is bow oriented on the positive side of the z axis and its starboard on the positive side of the x axis." Should be "..has *its* bow.."?}
+    
+    \answer{We have fixed this typo.}
+
+
+    \item \textbf{Also, for landlubbers among us, please clarify "starboard" as "right-hand side when facing the bow" :)}
+    
+    \answer{We added the precision to make the term more clear.}
+
+
+    \item \textbf{End of the same paragraph:"Hence, h is made such that from the vertex at position x, the front of the mask is above the free surface and the back below, in a way that is proportional to the speed of M. Moreover, the boat forms a V shape, with its center a bit below the extremity of the side."
+I can not visualize this. For example, 
+- what is meant here by "front of the mask is above the free surface and the back below"?
+- "..the boat forms a V shape.." - does V here mean that the boat is in the shape of the letter "V", or does V denote the shape (object) in question? For example, the sentence before eq (43) says "The function f models the side effect using a shape in V", which suggest the latter, but the next sentence says "The V-shape is obtained from the absolute value of the abscissa" (note the hyphen) which suggest the former.
+Can we please have a diagram that shows and explains this geometry configuration clearly - in addition to Fig 11?}
+    
+    \answer{We have added some explanation and three figures to make clarify the desired shape.}
+
+    \item \textbf{Figure 14, XP2 geometry, section 3.1. 4.6 msec for 4153 triangles vertex classification and splitting seems a bit excessive. The same goes for forces computation. This, for example, is why it would be nice to see more implementation details.}
+    
+    \answer{TODO.}
+
+    \item \textbf{Also, an idea: Maybe assuming that the intersection shape is more or less the same between two consecutive frames, for low Beaufort state at least (and for some $k$ steps, where $k$ is small), then recompute the buoyancy/volume based on the previous volume of the submerged shape, correcting for the height difference of the water between the two frames, then on the $k$-th step doing the correct computation?}
+    
+    \answer{Thanks for your suggestion. The project for which this article was made requires precise hydrodynamics data at each frame. Nonetheless, your approximation could be interesting for simulations with a low Beaufort state. However, it might complicate the GPU implementation for more generalized systems.}
+
+%     \item \textbf{Although, the solid->water action simulation is primitive and lacks explanations and obvious improvements: 
+% 1. The movement of the hulls and how the corresponding translations/rotations of hulls affect the solid->water interaction is not clearly described.
+% It appears that only the translation part is taken in account.}
+    
+%     \answer{We have added some precision about how to handle the rotation of the body for mask calculation.
+% }
+\end{enumerate}
+
+\section*{Review 3}
+
+\subsection*{General Remarks}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Although, the solid-to-water action simulation is primitive and lacks explanations and obvious improvements:}
+    
+    \begin{enumerate}[label=\textbf{\arabic*.}]
+        \item \textbf{The movement of the hulls and how the corresponding translations/rotations of hulls affect the solid-to-water interaction is not clearly described. It appears that only the translation part is taken into account.}
+        
+        \answer{We have added more details about how the rotation of the body is handled in the mask calculation.}
+
+        \item \textbf{The finite difference method used to simulate interactive waves is extremely primitive and is able to simulate vertical displacement of interactive waves only. Tessendorf's eWave, based on FFT + IFFT per simulation step, is a bit more expensive but produces full 3D displacements of the interactive waves.}
+        
+        \answer{We appreciate your insightful comment. While we agree that the finite difference method is more primitive and limited to simulating vertical displacements, its simplicity allows for straightforward implementation and efficient parallelization across multiple bodies in the sea. Implementing eWave would indeed be a valuable enhancement to Arc Blanc, and we might consider it for future work.}
+
+        \item \textbf{Injecting displacements into water caused by movement of solid objects, called wave generation in the paper, based on functions representing side and front/back effects, looks absolutely artificial. Instead, a per-gridpoint signed difference in volumes produced by intersections of hull volume and still water volume at current vs previous simulation step could be used to generate water displacements based on incompressibility of water.}
+        
+        \answer{Thank you for the thoughtful suggestion. Using per-gridpoint signed differences based on the incompressibility of water is indeed a more realistic approach and could significantly enhance the accuracy of wave generation. However, we chose our current approximation to prioritize simplicity and straightforward implementation, which aligns better with the real-time constraints and accessibility goals of Arc Blanc. We will certainly consider your suggestion for future enhancements.}
+
+        \item \textbf{Mask movement and orientation used in the paper, so that the front of the mask is above the water surface and the back is below the water surface, looks artificial and extremely simplified. A propulsion force acting on the hull and causing it to move, in conjunction with proper water-to-solid interaction from the first part of the paper, with its forces and moments, will naturally cause the hull to raise its bow based on a physically correct simulation instead of the oversimplified approximation used in the paper.}
+        
+        \answer{Thank you for your valuable proposition. It might be a nice refinement for the Arc Blanc framework.}
+    \end{enumerate}
+
+    \item \textbf{Overall, the paper allows for implementation of the presented technique without much trouble for people who have experience with the topic of the paper, although a better explanation of how the forces acting on a solid object in water are summed up and used to evolve solid object dynamics would improve it a lot. Is the sum of the forces applied to the center of gravity of the object? Or are there rotational moments? Are moments of inertia of the solid object taken into account? What about the moment of inertia of the water body surrounding the object? Without those explained, this part of the abstract looks like a bit of an overstatement.}
+    
+    \answer{We have added details about how forces are summed and applied in a physics solver, explicitly addressing the role of rotational moments and inertia.}
+
+    \item \textbf{One note: deciseconds? Please, use seconds or milliseconds.}
+    
+    \answer{We used seconds, which are more standard.}
+
+    \item \textbf{The paper lists a ton of references that are not touched upon in the paper in the sense that the paper does not derive anything from those. For instance:}
+    
+    \begin{enumerate}[label=\textbf{\arabic*.}]
+        \item \textbf{SPH papers are not related.}
+        \item \textbf{Wave particles are not related.}
+        \item \textbf{Water wave packets are not related.}
+    \end{enumerate}
+    
+    \answer{As one of the goals of the paper is to describe a complete unified framework for ocean simulation in real-time, we think that presenting alternative approaches can only benefit the reader. Additionally, it makes the article more self-contained on the subject of ocean simulation.}
+
+    \item \textbf{In Chapter 2.6, the "interpolation degree" term is unclear and a bit misleading, and since the interpolation is based on water body displacements calculated at "slices" with fixed depth, I'd suggest using the terms "interpolation slice" and "number of interpolation slices," for instance in Figure 7.}
+    
+    \answer{Thank you for your suggestion. While we understand that the term "interpolation degree" may be misleading, we prefer to retain it as it aligns with common terminology used in interpolation methods, such as polynomial interpolation.}
+\end{enumerate}
+
+\end{document}
