@@ -150,19 +150,19 @@ Finally, Tessendorf (2017) \cite{tessendorfGilliganPrototypeFramework2017} summa
 There are several ways to describe the motion of a solid in a given fluid.
 Many particle-based methods have been developed in recent years, as presented by Koshier \etal (2022) \cite{koschierSurveySPHMethods2022}.
 Akinci \etal (2012) \cite{akinciVersatileRigidfluidCoupling2012} have proposed to calculate contact forces between fluid particles and boundary ones in combination with Predictive-Corrective Incompressible Smoothed Particles Hydrodynamics (PCISPH) \cite{solenthalerPredictivecorrectiveIncompressibleSPH2009}.
-Ihmsen \etal (2014) \cite{ihmsenImplicitIncompressibleSPH2014} have applied the same principle to Implicit Incompressible SPH (IISPH), and Bender and Koschier (2017)  \cite{benderDivergenceFreeSPHIncompressible2017} to Divergence Free SPH (DFSPH).
+Ihmsen \etal (2014) \cite{ihmsenImplicitIncompressibleSPH2014} have applied the same principle to Implicit Incompressible SPH (IISPH), and Bender and Koschier (2017) \cite{benderDivergenceFreeSPHIncompressible2017} to Divergence Free SPH (DFSPH).
 These works have been improved and stabilized by Gissler  \etal \cite{gisslerInterlinkedSPHPressure2019}.
 These methods look promising because of their physical accuracy.
 Nevertheless, their performance is linked to the number of particles used for the simulation, which makes them impossible to apply in real time for large scale environments.
 
-Another approach related to the dynamics of a ship in water is the calculation of the so-called \emph{Response Amplitude Operator} (RAO), which is expressed using strip theory by Salvesen  \etal (1970) \cite{salvesenShipMotionsSea1970}. Fonseca and Guedes Soares (1998) \cite{fonsecaTimeDomainAnalysisLargeAmplitude1998} improved the method to support more nonlinear effects and large amplitude motions. Varela and Guedes Soares (2011) \cite{varelaInteractiveSimulationShip2011} have used a table of pre-calculated RAO, which are later interpolated to achieve an interactive frame rate.
+Another approach related to the dynamics of a ship in water is the calculation of the so-called \emph{Response Amplitude Operator} (RAO), which is expressed using strip theory by Salvesen \etal (1970) \cite{salvesenShipMotionsSea1970}. Fonseca and Guedes Soares (1998) \cite{fonsecaTimeDomainAnalysisLargeAmplitude1998} improved the method to support more nonlinear effects and large amplitude motions. Varela and Guedes Soares (2011) \cite{varelaInteractiveSimulationShip2011} have used a table of pre-calculated RAO, which are later interpolated to achieve an interactive frame rate.
 However, to our knowledge, this type of method is either too expensive for real-time simulation or not general enough because it requires some physical pre-computation based on computational fluid dynamics or experimental data.
 
 Finally, another attempt to achieve real-time performance is to approximate the forces induced by the fluid on the solid on a mesh.
 Basically this is a less accurate method, but it's more efficient and general as it avoids significant pre-calculation.
 Yuksel (2010) \cite{yukselRealtimeWaterWaves2010} in his thesis proposed a set of three forces: buoyancy, drag and lift.
 Kellomaki (2014) \cite{kellomakiRigidBodyInteraction2014} focused only on buoyancy and drag forces.
-Casas-Yrurzum  \etal \cite{casas-yrurzumRealtimePhysicsSimulation2012a} simulates the motion of speedboats by decomposing the solid as a set of small cubes.
+Casas-Yrurzum \etal \cite{casas-yrurzumRealtimePhysicsSimulation2012a} simulates the motion of speedboats by decomposing the solid as a set of small cubes.
 Kerner (2016) \cite{kernerWaterInteractionModel2016} wrote a full article on boat physics for video games, adding more forces to simulate slamming and linear damping.
 \Framework relies on these forces approximation, aggregating these four last papers.
 
@@ -176,10 +176,10 @@ Tessendorf (2004) \cite{tessendorfInteractiveWaterSurface2004} proposed a convol
 He extended his method by using an exponential solver \cite{tessendorfEWaveUsingExponential2014}.
 Yuksel (2007) \cite{yuksel2007} used a Lagrangian paradigm to model the waves as particles, which he called wave-particles.
 Chentanez and Müller (2010) \cite{chentanezRealTimeSimulationLarge2010} created a hybrid solver combining Eulerian and Lagrangian approaches.
-Canabal  \etal (2016) \cite{canabalDispersionKernelsWater2016} improved the physical accuracy of the convolutional method by introducing a dispersion kernel.
+Canabal \etal (2016) \cite{canabalDispersionKernelsWater2016} improved the physical accuracy of the convolutional method by introducing a dispersion kernel.
 Jeschke and Woktan (2017) \cite{jeschkeWaterWavePackets2017} took the work of C. Yuskel a bit further by introducing the notion of a wave packet, which carries information about an entire wave train.
-One year later, Jeschke  \etal (2018) \cite{jeschkeWaterSurfaceWavelets2018} proposed to use a wavelet transformation that discretizes the wave amplitudes as a function of space, frequency and direction.
-Finally, Schreck  \etal (2019) \cite{schreckFundamentalSolutionsWater2019} based their work on the method of fundamental solutions to generate ambient waves on a large scale domain interacting with complex boundaries.
+One year later, Jeschke \etal (2018) \cite{jeschkeWaterSurfaceWavelets2018} proposed to use a wavelet transformation that discretizes the wave amplitudes as a function of space, frequency and direction.
+Finally, Schreck \etal (2019) \cite{schreckFundamentalSolutionsWater2019} based their work on the method of fundamental solutions to generate ambient waves on a large scale domain interacting with complex boundaries.
 
 For solid-fluid coupling, \framework based its calculations on the FDM described in Gomez (2000) \cite{gomezInteractiveSimulationWater2000} and its improvement by Cords and Staadt (2009) \cite{cordsRealTimeOpenWater2009}, because its ability to be real-time while providing quite realistic behavior.
 
@@ -219,7 +219,7 @@ Tessendorf (2001) \cite{tessendorfSimulating2001} proposed to solve Equation~\re
 	\label{equa:heightWater}
 	h(\mathbf x,t)=\sum_{\mathbf{k}} \tilde{h}(\mathbf{k}, t) \exp\left( i \mathbf{k}\cdot \mathbf x\right),
 \end{equation}
-where $\mathbf{k}=\left[k_x\ k_z\right]^T$ is the wave vector with $k_x=\frac{2\pi n}{L_{i}}$ and $k_z=\frac{2\pi m}{L_{i}}$, $L_i$ is the length of the i-th cascade as defined in Section~\ref{subsec:cascades}, $n$ and $m$ are integers in $\left[-\frac{N}{2},\frac{N}{2}\right]$, $N\in\mathbb N^+$ being a constant given by user, and $\tilde{h}$ is given by:
+where $\mathbf{k}=\left[k_x\ k_z\right]^T$ is the wave vector with $k_x=\frac{2\pi n}{L_{i}}$ and $k_z=\frac{2\pi m}{L_{i}}$, $L_i$ is the length of the $i$-th cascade as defined in Section~\ref{subsec:cascades}, $n$ and $m$ are integers in $\left[-\frac{N}{2},\frac{N}{2}\right]$, $N\in\mathbb N^+$ being a constant given by user, and $\tilde{h}$ is given by:
 \begin{equation}
 	\label{equa:heightWaterBis}
 	\tilde{h}(\mathbf{k}, t) = \tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)+\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t),
@@ -230,7 +230,7 @@ In its original paper, Tessendorf (2001) \cite{tessendorfSimulating2001} used th
 \begin{equation}
 	\tilde{h}_0(\mathbf{k}) = \xi_{\mathbf{k}}\sqrt{\frac{4\pi}{L_ik}S(\omega)D(\omega, \theta)\left|\frac{\partial\omega(k)}{\partial k}\right|}
 \end{equation}
-where $\xi_{\mathbf{k}}$ are samples from a Gaussian distribution with mean $0$ and standard deviation $1$, $S(\omega)$ and $D(\omega, \theta)$ are the frequency and directional spectra described respectively in paragraphes \ref{subsubsec:jonswap} and \ref{subsubsec:donelanbanner}.
+where $\xi_{\mathbf{k}}$ are samples from a Gaussian distribution with mean $0$ and standard deviation $1$, $S(\omega)$ and $D(\omega, \theta)$ are the frequency and directional spectra described respectively in paragraphs \ref{subsubsec:jonswap} and \ref{subsubsec:donelanbanner}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{JONSWAP frequency spectrum}
@@ -683,7 +683,7 @@ v_w = \sum_{T_i^s} A_i d_i n_i^y.
 \end{equation}
 Note that this formula is correct only under the assumption that the mesh is closed.
 
-The pseudo code for the calculations performed in this section can be read in the Algorithm \ref{alg:geom_params}.
+The pseudocode for the all geometrical calculations performed in this section can be read in the Algorithm \ref{alg:geom_params}.
 
 
 \input{Algorithms/geometrical_parameters.tex}
@@ -739,13 +739,13 @@ For the submerged part $\left\lbrace T_i^s\right\rbrace$, the medium is water, w
 
 To ensure a structured and efficient data workflow on the GPU, all computations for a given mesh are performed separately, avoiding data interleaving between different meshes. Each kernel invocation processes a single mesh, iterating over its triangles before moving to the next mesh.
 
-Firstly, for each triangle in the mesh, the geometric parameters are calculated and then used to compute the drag forces. These include necessary attributes such as the submerged volume, normal vectors, and the drag forces acting on submerged and non submerged parts.
+Firstly, for each triangle in the mesh, the geometric parameters are calculated and then used to compute the drag forces. These include necessary attributes such as the submerged volume, normal vectors, and the drag forces acting on submerged and non-submerged parts.
 
 Once per-triangle computations are completed, the forces and geometrical parameters must be integrated into the physics solver, which operates on the CPU. To minimize data transfers and reduce latency, a parallel reduction kernel is applied on the GPU for each mesh individually. This step aggregates all per-triangle forces and parameters into global values for the entire mesh.
 
 Buoyancy, however, is handled differently. Since it depends solely on the total submerged volume rather than individual triangles, it is computed separately using an analytical formula and applied directly at the submerged center without requiring per-triangle summation.
 
-With all global parameters computed, the final step transfers the data to the CPU, where the physics solver integrates the buoyancy and the water drag forces are applied on the submerged center, while air drag forces are applied at the center of the non submerged part.
+With all global parameters computed, the final step transfers the data to the CPU, where the physics solver integrates the buoyancy and the water drag forces are applied on the submerged center, while air drag forces are applied at the center of the non-submerged part.
 
 This pipeline is presented in Algorithm \ref{alg:fluid_to_solid}.
 
@@ -759,7 +759,7 @@ A summary of the forces applied to the solid is shown in Figure \ref{fig:forcesC
 	\caption{Summary of forces calculation. Using the same notation as Section~\ref{subsec:forces} it follows:
 		the buoyancy force \textcolor{jauneC}{$F_b$} in \textcolor{jauneC}{yellow}, applied to the center of immersion;
 		the sum of water drag force \textcolor{purpleF}{$F_w$} in \textcolor{purpleF}{purple}, applied to the center of immersion too;
-		the sum of the air drag forces \textcolor{redF}{$F_a$} in \textcolor{redF}{red}, applied to the center of the non submerged part;
+		the sum of the air drag forces \textcolor{redF}{$F_a$} in \textcolor{redF}{red}, applied to the center of the non-submerged part;
 		and finally the gravity force \textcolor{greenF}{$F_g$} in \textcolor{greenF}{green}, applied to the center of gravity.
 		Different velocities are displayed above the ship:
 		the wind velocity \textcolor{redF}{$v_a$} in \textcolor{redF}{red};
@@ -794,7 +794,7 @@ where $h(\mathbf x,t)$ is the height of the water surface at horizontal position
 \subsection{Finite-difference method}
 \label{subsec:finiteDifferenceMethod}
 Following Gomez (2000) \cite{gomezInteractiveSimulationWater2000},
-\framework  uses the FDM with an explicit scheme to numerically solve the equation (\ref{eq:2dwave}).
+\framework uses the FDM with an explicit scheme to numerically solve the equation (\ref{eq:2dwave}).
 It uses a square simulation zone $Z$ of dimension $L\times L$ around a given mesh $M$.
 This zone is regularly discretized with a $\delta$ step.
 Time is also regularly discretized with a time step $dt$.
@@ -885,9 +885,8 @@ To solve this problem, the size $m$ of the boundary of $Z$ is increased such tha
 \end{figure}
 
 
-To ensure high performance, the FDM update step is executed entirely on the GPU,
-with a single kernel processing all points of the simulation zone in parallel.
-Each thread updates one grid point, significantly reducing computation time. The pseudo code associated to this method is shown in Algorithm \ref{alg:fdm_compute}.
+To ensure high performance, the FDM update step is executed entirely on the GPU, with a single kernel processing all vertices of the FDM grid in parallel.
+Each thread updates one grid point, significantly reducing computation time. The pseudocode associated to this method is shown in Algorithm \ref{alg:fdm_compute}.
 
 \input{Algorithms/fdm.tex}
 
@@ -945,7 +944,7 @@ These two steps are detailed in the following two sections.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Calculate the mask}
 The FDM needs the height of the vertices below the body.
-This is computed from the mask, composed of the vertices of $Z$ contained in one of the intersection polygons at least.
+This is computed from the mask, composed of the vertices of $Z$ contained in one of the intersections polygons at least.
 This is done using the \textbf{Point in Polygon} strategy described in Haines (1994) \cite{hainesPointPolygonStrategies1994}.
 
 The principle of this algorithm is as follows:
@@ -1456,7 +1455,7 @@ Nevertheless, these non-linear equations are still too complex to be solved at l
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{Interface condition}
 It is necessary to define a boundary condition at the interface between the ocean fluid and the air fluid.
-To simplify, it is assume that the air can be represented as a region with constant pressure\footnote{As shown by the \href{https://en.wikipedia.org/wiki/Barometric_formula}{barometric formula} the atmospheric pressure has a very low evolution in function of altitude.}.
+To simplify, it is assumed that the air can be represented as a region with constant pressure\footnote{As shown by the \href{https://en.wikipedia.org/wiki/Barometric_formula}{barometric formula} the atmospheric pressure has a very low evolution in function of altitude.}.
 Since air density is a hundred of times lighter than water, its effects on the free surface are assumed to be negligible.
 As with an incompressible fluid, only the differences in pressure matter.
 Therefore, the air pressure is defined as an arbitrary constant, leading to:
