@@ -4,7 +4,6 @@
 \label{alg:geom_params}
 \begin{algorithmic}[1]
 \Require List of triangles $T_i$ with vertex positions $\mathbf{v}_i$ and normal $\mathbf{n}_i$
-\Ensure Geometrical parameters computed for each triangle
 
 \For{each triangle $T_i = (\mathbf{v}_0, \mathbf{v}_1, \mathbf{v}_2)$ with normal $\mathbf{n}_i$}
     \State Retrieve water height $d_0$, $d_1$, and $d_2$ at vertices $\mathbf{v}_0$, $\mathbf{v}_1$, and $\mathbf{v}_2$
@@ -31,8 +30,6 @@
         \State Compute submerged area $A_i^s$ from the remaining submerged sub-triangle
         \State Compute submerged volume: $v_{w_i} = A_i^s d_i n_i^y$
     \EndIf
-
-    \State Store processed data ($A_i^s, v_{w_i}, \mathbf{p}_i$) for force computations
 \EndFor
 
 \end{algorithmic}
