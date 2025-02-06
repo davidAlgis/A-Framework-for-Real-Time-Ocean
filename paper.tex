@@ -581,16 +581,14 @@ Clearly the latter gives much better accuracy, as expected.
 
 \begin{figure}[ht]
 	\centering
-	\subfloat{\includegraphics[width=0.5\textwidth]{Figures/interpolationAccuracyComparison.png}\label{subfig:interpolationAccuracyComparison}}
-	\hfill
-	\subfloat{\includegraphics[width=0.5\textwidth]{Figures/interpolationAccuracyComparisonZoom.png}\label{subfig:interpolationAccuracyComparisonZoom}}
-	\caption{The left figure represents the accuracy of different type of interpolation in function of the size of the discretization $N$. The right one does a zoom on small velocities between $0$ and $0.1$.
-		They use 10000 positions from a continuous uniform distribution in the parallelepiped $[-1000,1000]\times[-125,4.5]\times[-1000, 1000]$ and with a wind speed of 20 $m.s^{-1}$.
+	\includegraphics[width=0.8\textwidth]{Figures/interpolationAccuracyComparisonLogScale.png}\label{subfig:interpolationAccuracyComparisonLogScale}
+	\caption{This figure represents the accuracy of different type of interpolation in function of the size of the discretization $N$. The accuracy axis used a logarithmic scale to be more readable.
+		It uses 10000 positions from a continuous uniform distribution in the parallelepiped $[-1000,1000]\times[-125,4.5]\times[-1000, 1000]$ and with a wind speed of 20 $m.s^{-1}$.
 		The interpolated velocity $\tilde{\mathbf{v}}$ and the analytical velocity $\mathbf{v}$ are evaluated.
 		The accuracy is defined by the mean of all positions of $\big|||\tilde{\mathbf{v}}||-||\mathbf{v}||\big|$.
 		It can be noticed that considering a uniform discretization, then exponential interpolation has a better accuracy than linear one.
 		Logarithmic discretization is much better than uniform discretization, whatever the used interpolation.
-		At least, exponential interpolation gives slightly better result than linear interpolation, even for low $N$.}
+		At least, for low $N$, exponential interpolation gives slightly better result than linear interpolation.}
 	\label{fig:interpolationAccuracyComparison}
 \end{figure}
 
