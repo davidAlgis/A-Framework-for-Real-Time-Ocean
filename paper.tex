@@ -470,7 +470,7 @@ More precisely, the \textbf{frequency space} coefficients appearing before the t
 Then, the full sum is computed through an \textbf{inverse fast Fourier transform} (IFFT) applied on this coefficients' matrix.
 In \framework, this trick allows computing these eight expressions without any significant impact on performance, even for huge domains.
 
-Second, as \framework simulates a tile of water of size $N\times N$ using $c$ cascades, it stores the height, the displacement, and other relevant data in a 1D array of size $c$, where each entry contains a vector of 2D arrays of size $N\times N$. \Framework compute efficiently these values on the GPU, with dedicated kernel that are launched with a grid of threads structured as $N \times N \times c$. Specifically, $N \times N$ threads are assigned to the $x$ and $y$ dimensions to cover the spatial resolution of the water tile, while $c$ threads along the $z$ dimension correspond to the different cascades. This approach ensures that computations for all cascades are executed in parallel.
+Second, as \framework simulates a tile of water of size $N\times N$ using $c$ cascades, it stores the height, the displacement, and other relevant data in a 1D array of size $c$, where each entry contains a 2D array of size $N\times N$. \Framework computes efficiently these values on the GPU, with dedicated kernel that are launched with a grid of threads structured as $N \times N \times c$. Specifically, $N \times N$ threads are assigned to the $x$ and $y$ dimensions to cover the spatial resolution of the water tile, while $c$ threads along the $z$ dimension correspond to the different cascades. This approach ensures that computations for all cascades are executed in parallel.
 
 Third, many terms are independent on the time $t$: $\tilde{h}_0(\mathbf{k})$, $\tilde{h}_0^*(-\mathbf{k})$ and the wave data ($\mathbf{k}$ and $\omega(k)$).
 \Framework computes them for each cascade wave vector at each spectrum change only, but not at each iteration.
@@ -713,7 +713,7 @@ where $v_w$ is the submerged volume in $m^3$ (cf. Section~\ref{subsec:geomParam}
 The water density is obtained at any depth by linear interpolation using the measure of the International Towing Tank Conference (ITTC) \cite{ittcFreshWaterSeawater2011}.
 The buoyancy is applied to the center of immersion $c_i$.
 
-\subsubsection{Drag Force}
+\subsubsection{Drag Forces}
 \label{subsubsec:dragForce}
 \Framework calculates drag forces based on the relative velocity between the fluid medium (water or air) and the submerged or exposed portion of the body. This approach is inspired by previous works \cite{yukselRealtimeWaterWaves2010,kellomakiRigidBodyInteraction2014,kernerWaterInteractionModel2016}.
 
