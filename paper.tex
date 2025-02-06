@@ -76,9 +76,9 @@
 	By fully exploiting the multi-threading power of GPU and CPU, current state-of-the-art tools can achieve real-time ocean simulation, even if it is sometimes needed to reduce the physical realism for large scenes.
 	Although most of the building blocks for implementing an ocean simulator are described in the literature, a clear explanation of how they interconnect is lacking.
 	Hence, this paper proposes to bring all these components together, detailing all their interactions, in a comprehensive and fully described real-time framework that simulates the free ocean surface and the coupling between solids and fluid.
-	This article also presents several improvements to enhance the physical realism of our model. 
-	The two main ones are: 
-	calculating the real-time velocity of ocean fluids at any depth; 
+	This article also presents several improvements to enhance the physical realism of our model.
+	The two main ones are:
+	calculating the real-time velocity of ocean fluids at any depth;
 	computing the input of the fluid to solid coupling algorithm.
 \end{abstract}
 
@@ -389,10 +389,10 @@ Furthermore, to obtain additional details on the sea surface (\emph{e.g.} foam p
 Taking advantage of the symmetry $\frac{\partial D_z}{\partial x}(\mathbf x,t) = \frac{\partial D_x}{\partial z}(\mathbf x,t)$, this relies on five derivatives only:
 
 \begin{align*}
-	\frac{\partial D_x}{\partial x}(\mathbf x,t) & = \sum_{\mathbf{k}} -ik_x \tilde{D}_x(\mathbf k,t)\exp\left(i\mathbf{k}\cdot\mathbf x\right),  \\
+	\frac{\partial D_x}{\partial x}(\mathbf x,t) & = \sum_{\mathbf{k}} -ik_x \tilde{D}_x(\mathbf k,t)\exp\left(i\mathbf{k}\cdot\mathbf x\right),    \\
 	\frac{\partial D_z}{\partial x}(\mathbf x,t) & = \sum_{\mathbf{k}} -ik_x \tilde{D}_z(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right), \\
 	\frac{\partial D_z}{\partial z}(\mathbf x,t) & = \sum_{\mathbf{k}} -ik_z\tilde{D}_z(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),  \\
-	\frac{\partial h}{\partial x}(\mathbf x,t)   & = \sum_{\mathbf{k}} k \tilde{D}_x(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),              \\
+	\frac{\partial h}{\partial x}(\mathbf x,t)   & = \sum_{\mathbf{k}} k \tilde{D}_x(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right),     \\
 	\frac{\partial h}{\partial z}(\mathbf x,t)   & = \sum_{\mathbf{k}} k \tilde{D}_z(\mathbf k,t)\exp\left( i \mathbf{k}\cdot \mathbf x\right).
 \end{align*}
 
@@ -672,12 +672,12 @@ Then the body surface is decomposed into a set $\left\lbrace T_i^s\right\rbrace$
 \Framework computes the area of each submerged or not submerged triangle at this step too.
 
 The buoyancy calculation presented in Section \ref{subsubsec:buoyancy} requires the full submerged volume $v_w$ of the mesh.
-\Framework uses the prism approximation similarly to the approximation proposed by Bajo \etal (2020) \cite{bajoRealisticBuoyancyModel2020a}. 
-While Bajo \etal compute the submerged volume at the texel level, the same principle can be applied using triangles instead of texels using as they did the divergence theorem. 
-Specifically, $v_w$ is approximated as the sum of the prisms with bases corresponding to the triangle areas $A_i$ and heights defined by the distance $d_i$ between the triangle centers $p_i$ and the water surface $h(p_i,t)$. 
+\Framework uses the prism approximation similarly to the approximation proposed by Bajo \etal (2020) \cite{bajoRealisticBuoyancyModel2020a}.
+While Bajo \etal compute the submerged volume at the texel level, the same principle can be applied using triangles instead of texels using as they did the divergence theorem.
+Specifically, $v_w$ is approximated as the sum of the prisms with bases corresponding to the triangle areas $A_i$ and heights defined by the distance $d_i$ between the triangle centers $p_i$ and the water surface $h(p_i,t)$.
 Each term in the sum is weighted by the vertical component of the triangle normal $n_i^y$:
 \begin{equation}
-v_w = \sum_{T_i^s} A_i d_i n_i^y.
+	v_w = \sum_{T_i^s} A_i d_i n_i^y.
 \end{equation}
 Note that this formula is correct only under the assumption that the mesh is closed.
 
@@ -808,14 +808,14 @@ where
 	a=\frac{c^2dt^2}{\delta^2}.
 \end{equation}
 
-The Dirichlet boundary condition gives $h_{i,j}^n=0$ for $i$ or $j$ being on the boundary of $Z$. Since a new wave is generated at each time step, a damping effect is added to make them disappear gradually. Hence, the right part of Equation (\ref{eq:fdm_scheme}) is multiplied by the \textbf{damping factor} $d(t) = d^n$. 
+The Dirichlet boundary condition gives $h_{i,j}^n=0$ for $i$ or $j$ being on the boundary of $Z$. Since a new wave is generated at each time step, a damping effect is added to make them disappear gradually. Hence, the right part of Equation (\ref{eq:fdm_scheme}) is multiplied by the \textbf{damping factor} $d(t) = d^n$.
 
 This damping factor is linearly related to the velocity of the mesh $\mathbf{v_M}(t)$ to ensure numerical stability and is defined as:
 \begin{equation*}
-u = \text{clamp}\left(\frac{\|\mathbf{v_M}(t)\|}{v_{max}}, 0, 1\right),
+	u = \text{clamp}\left(\frac{\|\mathbf{v_M}(t)\|}{v_{max}}, 0, 1\right),
 \end{equation*}
 \begin{equation}
-d(t) = \text{lerp}(d_0, d_{max}, u),
+	d(t) = \text{lerp}(d_0, d_{max}, u),
 \end{equation}
 where:
 \begin{itemize}
@@ -893,7 +893,7 @@ Each thread updates one grid point, significantly reducing computation time. The
 \label{subsec:stability}
 The stability of the scheme defined by Equation (\ref{eq:fdm_scheme_corrected}) is related to the CFL condition (for Courant–Friedrichs–Lewy), here given as follows:
 \begin{equation}
-\label{equa:cfl}
+	\label{equa:cfl}
 	\frac{c^2dt^2}{\delta^2}\leq 0.5
 \end{equation}
 The parameter $dt$ is considered fixed throughout the simulation.
@@ -1076,7 +1076,7 @@ Indeed, Tessendorf's method generates the free surface.
 As depicted by arrow $(0)$, the free surface method impacts the force calculation of the fluid-to-solid method.
 The force calculation of the fluid-to-solid method impacts the mask calculation (arrow $(1)$), which is the input of the solid-to-fluid method.
 The solid-to-fluid method modifies the free surface around the solid and is an input of the ocean waves simulation (arrow $(2)$).
-All these interactions loops through the simulation over time. 
+All these interactions loops through the simulation over time.
 As a result, the three components of \framework have an impact on the two others (arrows $(3)$, $(4)$ and $(5)$) at the next time-step.
 For example, since the solid-to-fluid method impacts the free surface (arrow $(2)$), and the free surface impacts the force calculation used in the fluid-to-solid (arrow $(0)$), then indirectly the solid-to-fluid method has an indirect impact on the fluid-to-solid action (arrow $(3)$).
 %The free surface is used to evaluate the forces applied to the bodies, \ie to compute the position of each triangle relatively to the water.
@@ -1085,7 +1085,7 @@ For example, since the solid-to-fluid method impacts the free surface (arrow $(2
 Two experiments with different solids have been conducted to demonstrate the efficiency of \framework.
 These experiments ran on a \href{https://www.intel.fr/content/www/fr/fr/products/sku/199316/intel-core-i710700-processor-16m-cache-up-to-4-80-ghz/specifications.html}{Intel Core i7-10700} and a \href{https://www.nvidia.com/fr-fr/geforce/graphics-cards/compare/?section=compare-20}{Nvidia GeForce RTX 2070 Super} using single-precision floating-point numbers.
 The ocean was simulated with three cascades using a resolution of $256\times265$.
-Moreover, the resolution of FDM grids is set to $512\times 512$. 
+Moreover, the resolution of FDM grids is set to $512\times 512$.
 \begin{figure}[htbp]
 	\centering
 
@@ -1100,8 +1100,8 @@ Moreover, the resolution of FDM grids is set to $512\times 512$.
 		\includegraphics[width=0.4\textwidth]{Figures/experiment1-2-contrast.png}
 		\label{fig:experiment1-2}
 	}
-    \vspace{1cm}
- 	\subfloat[\emph{Ten-solids} using sea state $1$.]
+	\vspace{1cm}
+	\subfloat[\emph{Ten-solids} using sea state $1$.]
 	{
 		\includegraphics[width=0.4\textwidth]{Figures/experiment2-contrast.png}
 		\label{fig:experiment2-1}
@@ -1118,10 +1118,10 @@ Moreover, the resolution of FDM grids is set to $512\times 512$.
 
 The first experiment called \emph{one-solid} simulates a single solid corresponding to a motorboat.
 This motorboat is running in the scene.
-Its model is composed of $165$ triangles for the simulation. 
+Its model is composed of $165$ triangles for the simulation.
 Two captures of \emph{one-solid} can be seen in the top row of \figurename~\ref{fig:experiments}.
 The sea-state is 1 on the Beaufort scale on \figurename~\ref{fig:experiment1-1}, leading to a very calm sea.
-Hence, the interaction waves appear clearly behind the motorboat. 
+Hence, the interaction waves appear clearly behind the motorboat.
 On the contrary, the sea-state is 6 for \figurename~\ref{fig:experiment1-2}, leading to big waves and almost completely hiding interaction waves.
 
 The second experiment called \emph{ten-solids} simulates ten solids.
@@ -1130,51 +1130,50 @@ It extends the first experiment as follows:
 	\item $1$ sailing boat with a mesh made of $270$ triangles.
 	\item $2$ yachts with a mesh made of $146$ triangles.
 	\item $6$ zodiacs with a mesh made of $568$ triangles.
-\end{itemize} 
-This makes a total of $4135$ triangles. 
-Each of these ten solids uses its own grid for the solid to fluid coupling FDM. 
+\end{itemize}
+This makes a total of $4135$ triangles.
+Each of these ten solids uses its own grid for the solid to fluid coupling FDM.
 Two captures of the second experiment can be seen in the bottom row of \figurename~\ref{fig:experiments}.
-The sea state is 1 for \figurename~\ref{fig:experiment2-1} where again small interaction waves can be seen for the motorboat (the others are not propelled). 
+The sea state is 1 for \figurename~\ref{fig:experiment2-1} where again small interaction waves can be seen for the motorboat (the others are not propelled).
 On \figurename~\ref{fig:experiment2-2} the sea state is set to 4, leading to relatively big waves.
 Using 10 boats and so FDM grids does not impact too much the computation times, as seen below.
 
-\tablename~\ref{fig:performances} shows a summary of GPU computation times for each method and with these two experiments. 
+\tablename~\ref{fig:performances} shows a summary of GPU computation times for each method and with these two experiments.
 As detailed in previous sections, all heavy computations in \framework are offloaded to the GPU, while the CPU is minimally involved in physical calculations. This design choice ensures that the CPU remains available for other standard game or simulation tasks, optimizing overall system performance. Therefore, CPU computation times are not considered, as they are negligible compared to GPU ones. 
 First, it can be observed that real-time performance is largely achieved, even with \emph{ten-solids}. 
 Besides, as most of the computations are performed on the GPU, it can be observed that computation times do not grow linearly with the number of solids. 
 Indeed, \framework processes each solid and each FDM grid simulation in parallel.
-
 \begin{figure}[!h]
 	\centering
 	\begin{tabular}{|p{0.28\columnwidth}|p{0.24\columnwidth}|>{\centering\arraybackslash}p{0.14\columnwidth}|>{\centering\arraybackslash}p{0.14\columnwidth}|}
 		\hline
-        & & XP 1 & XP 2 \\
-        & & (\emph{one-solid}) & (\emph{ten-solids}) \\
+		                                  &                                              & XP 1               & XP 2                \\
+		                                  &                                              & (\emph{one-solid}) & (\emph{ten-solids}) \\
 		\hline
-		Tessendorf's method & Height (\S~\ref{subsec:waterHeight}) & 0.376 & 0.376\\
-        \cline{2-4}
-		(\S~\ref{sec:oceanWaves}) & Velocity (\S~\ref{subsec:velWater}) & 1.175 & 1.175\\
+		Tessendorf's method               & Height (\S~\ref{subsec:waterHeight})         & 0.376              & 0.376               \\
 		\cline{2-4}
-		  & Total & 1.551 & 1.551\\
+		(\S~\ref{sec:oceanWaves})         & Velocity (\S~\ref{subsec:velWater})          & 1.175              & 1.175               \\
+		\cline{2-4}
+		                                  & Total                                        & 1.551              & 1.551               \\
 		\hline
-		Fluid-to-solid coupling & Geometry (\S~\ref{subsec:geomParam}) & 1.125 & 4.588\\
+		Fluid-to-solid coupling           & Geometry (\S~\ref{subsec:geomParam})         & 1.125              & 4.588               \\
 		\cline{2-4}
-        (\S~\ref{sec:fluidToSolidAction}) & Forces (\S~\ref{subsec:forces}) & 0.406 & 3.677\\
+		(\S~\ref{sec:fluidToSolidAction}) & Forces (\S~\ref{subsec:forces})              & 0.406              & 3.677               \\
 		\cline{2-4}
-        & Total & 1.531 & 8.265\\
+		                                  & Total                                        & 1.531              & 8.265               \\
 		\hline
-		Solid-to-fluid coupling & FDM (\S~\ref{subsec:finiteDifferenceMethod}) & 0.100                    & 0.831                    \\
+		Solid-to-fluid coupling           & FDM (\S~\ref{subsec:finiteDifferenceMethod}) & 0.100              & 0.831               \\
 		\cline{2-4}
-        (\S~\ref{sec:solidToFluidAction}) & Mask (\S~\ref{subsec:mask}) & 0.238 & 1.656\\
+		(\S~\ref{sec:solidToFluidAction}) & Mask (\S~\ref{subsec:mask})                  & 0.238              & 1.656               \\
 		\cline{2-4}
-        & Total & 0.338 & 2.487\\
+		                                  & Total                                        & 0.338              & 2.487               \\
 		\hline
-		\rowcolor{bleuC}\textbf{Total} & & \textbf{3.414} & \textbf{12.297}\\
+		\rowcolor{bleuC}\textbf{Total}    &                                              & \textbf{3.414}     & \textbf{12.297}     \\
 		\hline
 	\end{tabular}
 	\caption{%
-        GPU computation times in milliseconds for the main parts of \framework. 
-        Only GPU execution times is shown, as CPU ones are negligible.}
+		GPU computation times in milliseconds for the main parts of \framework.
+		Only GPU execution times is shown, as CPU ones are negligible.}
 	\label{fig:performances}
 \end{figure}
 
@@ -1314,20 +1313,20 @@ Then, considering that $\underset{H \rightarrow \infty}{\lim}\tanh(kH)=1$, the f
 
 The third equation of the system \ref{equa:systemTessendorf} gives the following equality:
 \begin{equation}
-\label{equa:derivHeqDerivPhi}
-\frac{\partial h}{\partial t}(\mathbf{k},t)=\frac{\partial\phi}{\partial y}(\mathbf{k}, 0, t)
+	\label{equa:derivHeqDerivPhi}
+	\frac{\partial h}{\partial t}(\mathbf{k},t)=\frac{\partial\phi}{\partial y}(\mathbf{k}, 0, t)
 \end{equation}
 Once again, we only considered one wave vector $\mathbf{k}$ as Equations are all linear, in consequence Equation \ref{equa:derivHeqDerivPhi} becomes:
 
 \begin{align}
-\frac{\partial \tilde{h}}{\partial t}(\mathbf{k},t) - \frac{\tilde{\partial}\phi}{\partial y}(\mathbf{k}, 0, t) &=0 \nonumber\\
-i\omega(k)\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right) - \frac{igk}{\omega(k)} E(\mathbf{k},0)\nonumber\\
- \times \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right) &= 0 \nonumber\\
- \omega(k)- \frac{gk}{\omega(k)} &= 0 \nonumber\\
- \omega(k) = \sqrt{gk} \label{equa:relationDispersionDeduce}
+	\frac{\partial \tilde{h}}{\partial t}(\mathbf{k},t) - \frac{\tilde{\partial}\phi}{\partial y}(\mathbf{k}, 0, t) & =0 \nonumber                                \\
+	i\omega(k)\left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right) - \frac{igk}{\omega(k)} E(\mathbf{k},0)\nonumber \\
+	\times \left(\tilde{h}_0(\mathbf{k})\exp(i\omega(k)t)-\tilde{h}_0^*(-\mathbf{k})\exp(-i\omega(k)t)\right)       & = 0 \nonumber                               \\
+	\omega(k)- \frac{gk}{\omega(k)}                                                                                 & = 0 \nonumber                               \\
+	\omega(k) = \sqrt{gk} \label{equa:relationDispersionDeduce}
 \end{align}
 
-This last Equation \ref{equa:relationDispersionDeduce} gives the expression of the dispersion relation used in the Section \ref{sec:oceanWaves}. 
+This last Equation \ref{equa:relationDispersionDeduce} gives the expression of the dispersion relation used in the Section \ref{sec:oceanWaves}.
 
 Equation~\ref{equa:attenuationDeep1} and the definition of potential velocity $\nabla\phi=\mathbf{v}$ lead to the velocity $\mathbf{v}$. First, function $\tilde{\phi}$ is rewritten as follows:
 \begin{equation}
@@ -1597,22 +1596,22 @@ This section proposes a proof of Theorem \ref{theorem:ifft}.
 
 The optimal number of iterations ($N_{\text{iter}}$) required for the iterative retrieval of water height was determined through two experiments, focusing on accuracy and computational efficiency.
 
-The first experiment aimed to evaluate the number of iterations required for the water height computation to converge within a given precision. This test has been conducted on different wind speeds as it makes the height of water significantly. Wind speeds ranged from $0.1$ m/s to $35$ m/s in $0.5$ m/s increments, with convergence tested at $10^3$ random positions uniformly distributed over a $10^4\times 10^4$ m domain. The iterative process was repeated until the difference between consecutive height estimates was smaller than $0.01$ m. The results, shown in Figure~\ref{fig:convergence_steps}, indicate that the required number of iterations increases with wind speed but stabilizes at approximately $N_{\text{iter}} = 4$ for higher wind speeds. 
+The first experiment aimed to evaluate the number of iterations required for the water height computation to converge within a given precision. This test has been conducted on different wind speeds as it makes the height of water significantly. Wind speeds ranged from $0.1$ m/s to $35$ m/s in $0.5$ m/s increments, with convergence tested at $10^3$ random positions uniformly distributed over a $10^4\times 10^4$ m domain. The iterative process was repeated until the difference between consecutive height estimates was smaller than $0.01$ m. The results, shown in Figure~\ref{fig:convergence_steps}, indicate that the required number of iterations increases with wind speed but stabilizes at approximately $N_{\text{iter}} = 4$ for higher wind speeds.
 
 The second experiment aimed to measure the computational cost associated with varying numbers of iterations. The execution time was assessed using a CUDA-based implementation, where the iterative retrieval of water height was performed for different values of $N_{\text{iter}}$. Each test was executed $10^3$ times on a GPU, and execution times were recorded across $10^5$ randomly sampled positions. The measurements included the minimum, maximum, mean, and variance of execution times for each iteration count. The results, presented in Figure~\ref{fig:execution_time}, show that while execution time increases with the number of iterations, the rate of increase diminishes after four iterations. This confirms that $N_{\text{iter}} = 4$ provides an optimal balance between computational efficiency and accuracy, ensuring reliable convergence across tested conditions.
 
-\begin{figure}[h!] 
-	\centering 
-	\includegraphics[width=0.9\textwidth]{Figures/results_cm.png} 
-	\caption{Mean number of steps required for convergence as a function of wind speed. Error bars represent the variance of iterations across $1000$ test points.} 
-	\label{fig:convergence_steps} 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/results_cm.png}
+	\caption{Mean number of steps required for convergence as a function of wind speed. Error bars represent the variance of iterations across $1000$ test points.}
+	\label{fig:convergence_steps}
 \end{figure}
 
-\begin{figure}[h!] 
-	\centering 
-	\includegraphics[width=0.9\textwidth]{Figures/resultsExecutionTime.png} 
-	\caption{Average execution time per iteration count over $1000$ tests, measured across $10^5$ sample positions. Error bars indicate variance in execution time.} 
-	\label{fig:execution_time} 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figures/resultsExecutionTime.png}
+	\caption{Average execution time per iteration count over $1000$ tests, measured across $10^5$ sample positions. Error bars indicate variance in execution time.}
+	\label{fig:execution_time}
 \end{figure}
 
 %%%%%%%%%%%%%%%%
