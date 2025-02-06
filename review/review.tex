@@ -115,7 +115,7 @@ Below, we reproduce each reviewer's comments followed by our responses in green.
 
 	\item \textbf{Give more details on the actual implementation: memory layout on the GPU, implementation of the kernels, etc. This is especially relevant since performance timing is given in Sec 5 of the paper, but the rest of the paper gives little insight into why these numbers are as they are. For example, the bottleneck in Fig 14 seems to be geometry and force computation (intersection geometry computation). Why should this be so slow?}
 
-	      \answer{TODO.}
+	      \answer{We have added details in the article to clarify the implementation. Geometry computation is one of the most intensive steps, we think that it might comes from uncoalesced memory accesses and warp branch divergence which may contribute to the observed bottleneck.}
 
 	\item \textbf{The paper should provide more implementation details, specifically regarding GPU computation and data layout, to explain the timing numbers in Fig 14 and why some of them seem heavy (e.g., geometry processing). The paper also mentions that no serious CPU-side computation is used. It would be interesting to know why (e.g., could the geometry processing (intersection curve), which seems to be a bottleneck according to Fig 14, be offloaded to the CPU?).}
 

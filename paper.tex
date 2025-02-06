@@ -1139,9 +1139,9 @@ On \figurename~\ref{fig:experiment2-2} the sea state is set to 4, leading to rel
 Using 10 boats and so FDM grids does not impact too much the computation times, as seen below.
 
 \tablename~\ref{fig:performances} shows a summary of GPU computation times for each method and with these two experiments.
-As detailed in previous sections, all heavy computations in \framework are offloaded to the GPU, while the CPU is minimally involved in physical calculations. This design choice ensures that the CPU remains available for other standard game or simulation tasks, optimizing overall system performance. Therefore, CPU computation times are not considered, as they are negligible compared to GPU ones. 
-First, it can be observed that real-time performance is largely achieved, even with \emph{ten-solids}. 
-Besides, as most of the computations are performed on the GPU, it can be observed that computation times do not grow linearly with the number of solids. 
+As detailed in previous sections, all heavy computations in \framework are offloaded to the GPU, while the CPU is minimally involved in physical calculations. This design choice ensures that the CPU remains available for other standard game or simulation tasks, optimizing overall system performance. Therefore, CPU computation times are not considered, as they are negligible compared to GPU ones.
+First, it can be observed that real-time performance is largely achieved, even with \emph{ten-solids}. One of the most computationally intensive steps is geometry computation, which presents an opportunity for further optimization. A closer inspection suggests that refining memory access patterns and minimizing warp branch divergence in the GPU kernel could enhance performance and efficiency.
+Besides, as most of the computations are performed on the GPU, it can be observed that computation times do not grow linearly with the number of solids.
 Indeed, \framework processes each solid and each FDM grid simulation in parallel.
 \begin{figure}[!h]
 	\centering
