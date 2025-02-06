@@ -1,0 +1,3 @@
+[submodule "PlotGenerator"]
+	path = PlotGenerator
+	url = https://github.com/davidAlgis/plot-for-framework-for-real-time-ocean.git
