@@ -99,7 +99,7 @@ While there are many articles describing different parts of ocean simulation, th
 This article proposes a fully described real-time framework designed to simulate the free surface of the ocean and the interactions between solid objects and the surrounding fluid in real time (see Figure \ref{fig:overviewFramework}).
 This new framework incorporates three different methods from the literature:
 \begin{itemize}
-	\item The simulation of the free surface of the ocean, initially developed by Tessendorf (2001) \cite{tessendorfSimulating2001} and its improvements along the years \cite{horvathEmpiricalDirectionalWave2015,tessendorfGilliganPrototypeFramework2017}.
+	\item The simulation of the free surface of the ocean, initially developed by Tessendorf (2001) \cite{tessendorfSimulatingOceanWater2001} and its improvements along the years \cite{horvathEmpiricalDirectionalWave2015,tessendorfGilliganPrototypeFramework2017}.
 	\item The estimation of the forces applied by the fluid on a solid mesh, mixing together different techniques \cite{yukselRealtimeWaterWaves2010,kellomakiRigidBodyInteraction2014}.
 	\item The simulation of the alteration of a free surface by a solid, inspired by Cords and Staadt works (2009) \cite{cordsRealTimeOpenWater2009}.
 \end{itemize}
@@ -133,7 +133,7 @@ This section presents the main works related to the simulation of ocean, includi
 
 \subsection{Ocean free surface simulation}
 \label{subsubsec:oceanFreeSurfaceSim}
-J. Tessendorf (2001) \cite{tessendorfSimulating2001} presented what could be considered a seminal work in real-time ocean simulation. His work relies on the Fast Fourier Transform (FFT) and statistical wave spectra to accurately find the analytical solution to an approximation of the Navier-Stokes equations on a 2D height field. This method is commonly known as the “Tessendorf method”.
+J. Tessendorf (2001) \cite{tessendorfSimulatingOceanWater2001} presented what could be considered a seminal work in real-time ocean simulation. His work relies on the Fast Fourier Transform (FFT) and statistical wave spectra to accurately find the analytical solution to an approximation of the Navier-Stokes equations on a 2D height field. This method is commonly known as the “Tessendorf method”.
 
 The realism of this method was significantly improved by Horvath (2015) \cite{horvathEmpiricalDirectionalWave2015}, who proposed an empirically based directional spectrum.
 In addition, he proposed to add a parameter called “swell”, which allows the transition from empirical directional propagation to parallel waves.
@@ -214,7 +214,7 @@ Tessendorf method is based on the following approximations of the Navier-Stokes 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Water height}
 \label{subsec:waterHeight}
-Tessendorf (2001) \cite{tessendorfSimulating2001} proposed to solve Equation~\ref{equa:systemTessendorf} using a sum of waves of different amplitudes and wavelengths as follows:
+Tessendorf (2001) \cite{tessendorfSimulatingOceanWater2001} proposed to solve Equation~\ref{equa:systemTessendorf} using a sum of waves of different amplitudes and wavelengths as follows:
 \begin{equation}
 	\label{equa:heightWater}
 	h(\mathbf x,t)=\sum_{\mathbf{k}} \tilde{h}(\mathbf{k}, t) \exp\left( i \mathbf{k}\cdot \mathbf x\right),
@@ -226,7 +226,7 @@ where $\mathbf{k}=\left[k_x\ k_z\right]^T$ is the wave vector with $k_x=\frac{2\
 \end{equation}
 where $k$ is the Euclidean norm of the wave vector $\mathbf{k}$, $\omega(k)=\sqrt{gk}$ is the \textbf{dispersion relation}\footnote{The dispersion relation is defined for deep water, see Appendix~\ref{sec:annexe} for more details.} and $\tilde{h}_0^*$ the conjugate of $\tilde{h}_0$.
 Researchers in oceanography have made statistical measurements on the ocean to compute $\tilde{h}_0$, leading to many different \textit{ocean spectra} \cite{tessendorfGilliganPrototypeFramework2017}.
-In its original paper, Tessendorf (2001) \cite{tessendorfSimulating2001} used the \textit{Phillips Spectrum} with Gaussian fluctuation, leading to the following expression of $\tilde{h}_0(\mathbf{k})$:
+In its original paper, Tessendorf (2001) \cite{tessendorfSimulatingOceanWater2001} used the \textit{Phillips Spectrum} with Gaussian fluctuation, leading to the following expression of $\tilde{h}_0(\mathbf{k})$:
 \begin{equation}
 	\tilde{h}_0(\mathbf{k}) = \xi_{\mathbf{k}}\sqrt{\frac{4\pi}{L_ik}S(\omega)D(\omega, \theta)\left|\frac{\partial\omega(k)}{\partial k}\right|}
 \end{equation}
@@ -375,7 +375,7 @@ This gives the final expression of the custom Donelan-Banner spectrum used in \f
 \subsection{Water displacement and derivative}
 \label{subsec:water_displacement_and_derivative}
 \Framework uses the horizontal displacement $\mathbf{D}(\mathbf x,t) = \left[D_x(\mathbf x,t)\ D_z(\mathbf x,t)\right]^T$ of seawater to simulate more realistic choppy waves.
-As proposed in Sections 4.5 and 4.6 of Tessendorf (2001) \cite{tessendorfSimulating2001}, it is calculated as follows:
+As proposed in Sections 4.5 and 4.6 of Tessendorf (2001) \cite{tessendorfSimulatingOceanWater2001}, it is calculated as follows:
 \begin{equation}\label{equa:hori-displacement}
 	\mathbf{D}(\mathbf x,t) = \sum_{\mathbf{k}} \mathbf{\tilde{D}}(\mathbf k,t)\exp\left(i\mathbf{k}\cdot\mathbf x\right)
 \end{equation}
@@ -1199,7 +1199,9 @@ The first author David Algis has been supported by the \href{https://www.anrt.as
 % All entries in the bibliography \textbf{must} have URLs unless no URL is possible (e.g., book, very old thesis).
 
 
+
 %-------------------------------------------------------------------------
+% The bibliography as been exported from Zotero in BibLateX (not in Better BiblateX)
 \small
 \bibliographystyle{jcgt}
 \bibliography{bibliography}
