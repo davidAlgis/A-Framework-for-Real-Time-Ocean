@@ -1,5 +1,5 @@
 temp/
-*.pdf
+paper.pdf
 *.log
 main.aux
 main.bbl
