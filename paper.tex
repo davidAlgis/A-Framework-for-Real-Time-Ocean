@@ -28,6 +28,7 @@
 \algrenewcommand{\algorithmiccomment}[1]{\hfill \textcolor{greenF}{// #1}}
 
 
+\usepackage{authblk}
 \usepackage{multirow}
 
 \setciteauthor{David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau}
@@ -49,12 +50,14 @@
 
 \title{Arc Blanc: a real time ocean simulation framework}
 
-\author{%
-    David Algis~\href{https://orcid.org/0009-0004-6033-2389}{\includegraphics[width=8pt]{Figures/ORCIDlogo}}\\Université de Poitiers%\\Univ. Limoges\\CNRS, XLIM, France\\Studio Nyx
-    \and Bérenger Bramas\\INRIA Nancy
-    \and Emmanuelle Darles\\Université de Poitiers%\\ Univ. Limoges\\ CNRS, XLIM, France
-    \and Lilian Aveneau\\Université de Poitiers%\\ Univ. Limoges\\ CNRS, XLIM, France
-}
+\author[1,2]{David Algis}
+\author[3]{Berenger Bramas}
+\author[1]{Emmanuelle Darles}
+\author[1]{Lilian Aveneau}
+
+\affil[1]{Université de Poitiers, Univ. Limoges, CNRS, XLIM, France}
+\affil[2]{Studio Nyx}
+\affil[3]{Inria Nancy Grand Est, ICube, France}
 
 \teaser{
     \includegraphics[width=4in]{Figures/experiment1-contrast.png}
