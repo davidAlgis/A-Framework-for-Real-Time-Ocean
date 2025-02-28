@@ -174,7 +174,7 @@ Gomez (2000) \cite{gomezInteractiveSimulationWater2000} solved the wave equation
 This method was improved by Cords and Staadt (2009) \cite{cordsRealTimeOpenWater2009} to work with moving objects.
 Tessendorf (2004) \cite{tessendorfInteractiveWaterSurface2004} proposed a convolutional method.
 He extended his method by using an exponential solver \cite{tessendorfEWaveUsingExponential2014}.
-Yuksel (2007) \cite{yuksel2007} used a Lagrangian paradigm to model the waves as particles, which he called wave-particles.
+Yuksel (2007) \cite{yukselWaveParticles2007} used a Lagrangian paradigm to model the waves as particles, which he called wave-particles.
 Chentanez and Müller (2010) \cite{chentanezRealTimeSimulationLarge2010} created a hybrid solver combining Eulerian and Lagrangian approaches.
 Canabal \etal (2016) \cite{canabalDispersionKernelsWater2016} improved the physical accuracy of the convolutional method by introducing a dispersion kernel.
 Jeschke and Woktan (2017) \cite{jeschkeWaterWavePackets2017} took the work of C. Yuskel a bit further by introducing the notion of a wave packet, which carries information about an entire wave train.
@@ -672,7 +672,7 @@ Then the body surface is decomposed into a set $\left\lbrace T_i^s\right\rbrace$
 \Framework computes the area of each submerged or not submerged triangle at this step too.
 
 The buoyancy calculation presented in Section \ref{subsubsec:buoyancy} requires the full submerged volume $v_w$ of the mesh.
-\Framework uses the prism approximation similarly to the approximation proposed by Bajo \etal (2020) \cite{bajoRealisticBuoyancyModel2020a}.
+\Framework uses the prism approximation similarly to the approximation proposed by Bajo \etal (2020) \cite{bajoRealisticBuoyancyModel2020}.
 While Bajo \etal compute the submerged volume at the texel level, the same principle can be applied using triangles instead of texels using as they did the divergence theorem.
 Specifically, $v_w$ is approximated as the sum of the prisms with bases corresponding to the triangle areas $A_i$ and heights defined by the distance $d_i$ between the triangle centers $p_i$ and the water surface $h(p_i,t)$.
 Each term in the sum is weighted by the vertical component of the triangle normal $n_i^y$:
