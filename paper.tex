@@ -1,5 +1,5 @@
-% !TEX options=-synctex=-1 %for inverse forward search 
-\documentclass[final]{jcgt}
+% !TEX options=-synctex=-1
+\documentclass[11pt]{article}
 
 \usepackage{graphicx}
 \usepackage[labelsep=quad,indention=10pt]{subfig}
@@ -7,6 +7,8 @@
 \usepackage[english]{babel}
 \usepackage{xspace}
 \usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 \newtheorem{theorem}{Theorem}
 
 \usepackage{tikz}
@@ -23,6 +25,17 @@
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{patterns}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=bleuF,
+    citecolor=bleuF,
+    filecolor=magenta,      
+    urlcolor=bleuF,
+    pdftitle={Arc Blanc: a real time ocean simulation framework},
+    pdfpagemode=FullScreen,
+}
+\usepackage{authblk}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
 \algrenewcommand{\algorithmiccomment}[1]{\hfill \textcolor{greenF}{// #1}}
@@ -30,15 +43,6 @@
 
 \usepackage{multirow}
 
-\setciteauthor{David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau}
-\setcitetitle{Arc Blanc: a real time ocean simulation framework}
-
-% Mark submissions with the date of submission using the following line:
-\submitted{\today}
-
-% Once an article is accepted accepted, switch to the following line and comment the preceding one. The editor will supply the argument values.
-\accepted{submitted}{accepted}{published}{Editor Name}{vol}{issue}{1}{1}{year}
-\seturl{http://jcgt.org/published/vol/issue/num/}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\Framework{The Arc Blanc framework\xspace}
@@ -49,25 +53,34 @@
 
 \title{Arc Blanc: a real time ocean simulation framework}
 
-\author{%
-    David Algis~\href{https://orcid.org/0009-0004-6033-2389}{\includegraphics[width=8pt]{Figures/ORCIDlogo}}\\Université de Poitiers%\\Univ. Limoges\\CNRS, XLIM, France\\Studio Nyx
-    \and Bérenger Bramas\\INRIA Nancy
-    \and Emmanuelle Darles\\Université de Poitiers%\\ Univ. Limoges\\ CNRS, XLIM, France
-    \and Lilian Aveneau\\Université de Poitiers%\\ Univ. Limoges\\ CNRS, XLIM, France
-}
+\author[1,2,*]{David Algis}
+\author[3]{Berenger Bramas}
+\author[1]{Emmanuelle Darles}
+\author[1]{Lilian Aveneau}
 
-\teaser{
-    \includegraphics[width=4in]{Figures/experiment1-contrast.png}
-    \caption{Example of rendering of \framework.}
-    \label{fig:teaser}
+\affil[1]{Université de Poitiers, Univ. Limoges, CNRS, XLIM, France}
+\affil[2]{Studio Nyx}
+\affil[3]{Inria Nancy Grand Est, ICube, France}
+
+\affil[*]{%
+  Corresponding Author : \href{mailto:david.algis@univ-poitiers.fr}{david.algis@univ-poitiers.fr}
 }
+% To avoid using \today as suggested by arxiv : https://info.arxiv.org/help/faq/today.html
+\date{2025-02-13}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\thispagestyle{firstpagestyle}
-
 \maketitle
+
+\begin{figure}[h]
+	\centering
+    \includegraphics[width=4in]{Figures/experiment1-contrast.png}
+    \caption{Example of rendering of \framework.}
+    \label{fig:teaser}
+\end{figure}
 
 \begin{abstract}
 	\small
@@ -1193,7 +1206,7 @@ Hence, to increase the realism of \framework, future works will include the hybr
 %-------------------------------------------------------------------------
 \subsection*{Acknowledgements}
 %Add the ANRT supports here, including the contract number...
-The first author David Algis has been supported by the \href{https://www.anrt.asso.fr/fr}{Association nationale de recherche et de technologie (ANRT)}\footnote{Contract number 2021/1157} and by the \href{https://www.magelis.org/}{Pôle Image Magélis}. We would like to thank the colleague of David Algis at Studio Nyx, particularly Jeremy Bois and David Deckeur. Thanks to Naval Group for initiating this project. Finally, we would also like to thank Yannick Privat at the \href{https://irma.math.unistra.fr/}{Institut de recherche mathématique avancée (IRMA)} which help us on the velocity calculation.
+The first author David Algis has been supported by the \href{https://www.anrt.asso.fr/fr}{Association nationale de recherche et de technologie (ANRT)}\footnote{Contract number 2021/1157} and by the \href{https://www.magelis.org/}{Pôle Image Magélis}. We would like to thank the colleague of David Algis at Studio Nyx, particularly Jeremy Bois and David Deckeur. Thanks to Naval Group for initiating this project. We would also like to thank Yannick Privat at the \href{https://irma.math.unistra.fr/}{Institut de recherche mathématique avancée (IRMA)} which help us on the velocity calculation. Finally, we would like to thanks the reviewers and editors of the Journal of Computer Graphics Techniques (JCGT) for their valuable comments and proposals to this paper. The original publication of this paper is available on their website \url{https://jcgt.org/}.
 
 
 % All entries in the bibliography \textbf{must} have URLs unless no URL is possible (e.g., book, very old thesis).
@@ -1203,7 +1216,7 @@ The first author David Algis has been supported by the \href{https://www.anrt.as
 %-------------------------------------------------------------------------
 % The bibliography as been exported from Zotero in BibLateX (not in Better BiblateX)
 \small
-\bibliographystyle{jcgt}
+\bibliographystyle{plain}
 \bibliography{bibliography}
 
 % \section*{Index of Supplemental Materials}
@@ -1616,8 +1629,5 @@ The second experiment aimed to measure the computational cost associated with va
 	\label{fig:execution_time}
 \end{figure}
 
-%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%
-\afterdoc
 %%%%%%%%%%%%%%%
 \end{document}
