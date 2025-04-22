@@ -20,3 +20,4 @@ paper.brf
 paper.fdb_latexmk
 paper.fls
 paper.synctex.gz
+*.sublime-workspace
